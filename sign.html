@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>复仇的小猪福袋预约</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="对战版愤怒的小鸟">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" id="app">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: white;">福袋预约&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			</div>
+			<div style="width: 90%;margin-top: 0.2rem;margin-left: 5%;">
+				<img style="width: 100%;" src="images/sign.jpg" />
+			</div>
+			<div style="text-align: center;height: 0.5375rem;line-height: 0.5375rem;font-size: 0.38rem;color: #4B4B4B;margin-top: 0.3483rem;font-weight: bold;">
+				预约可获得福袋空投10~100币加送小猪道具！
+			</div>
+			<div style="width: 6.7209rem;height: 1.3459rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.6rem;margin-left: 1.6942rem;">
+				<input style="width: 6.7209rem;height: 1.3459rem;line-height: 1.3459rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: center;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;" type="tel" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;手机号" id="phone" />
+			</div>
+			<div style="width: 6.7209rem;height: 1.3459rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.2rem;margin-left: 1.6942rem;">
+				<input style="width: 6.7209rem;height: 1.3459rem;line-height: 1.3459rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: center;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;微信号" id="weixin" />
+			</div>
+			<div style="width: 6.7209rem;height: 1.3459rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.2rem;margin-left: 1.6942rem;">
+				<input style="width: 6.7209rem;height: 1.3459rem;line-height: 1.3459rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: center;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;" type="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;邮箱" id="email" />
+			</div>
+			<div style="width: 6.7209rem;height: 1.3459rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.2rem;margin-left: 1.6942rem;">
+				<input style="width: 6.7209rem;height: 1.3459rem;line-height: 1.3459rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: center;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;imToken地址" id="address" />
+			</div>
+
+			<div onclick="register()" style="width: 6.7209rem;height: 1.3459rem;background: #080808;border-radius: 0.1333rem;margin-top: 0.5375rem;line-height: 1.3459rem;text-align: center;font-size: 0.38rem;color: white;font-weight: bold;letter-spacing: -0.0129rem;margin-left: 1.6942rem;">
+				立即预约，获得福袋
+			</div>
+			<div style="width: 4.3rem;height: 0.7525rem;margin-left: 2.9283rem;margin-top: 0.1892rem;font-size: 0.3225rem;line-height: 0.3225rem;color: #337ab7;text-align: center;">
+				<a href="buy.html">兑换更多<span class="glyphicon glyphicon-menu-right"></span></a>
+			</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 0.4rem;font-size: 0.3225rem;color: #999999;">活动规则：</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 0.2rem;font-size: 0.3225rem;color: #999999;">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此次福袋发放限量100万份，名额有限先到先得，福袋中含有空投10~100币，具体个数根据预约人数确定，人数越多每人获得的币越多（如100万人报名预约，则每人获得100币），福袋中还含有小猪道具，预约后福袋将在游戏上线后统一发放，届时请用预约手机号注册游戏，避免发生不必要的损失。
+			</div>
+
+			<div style="height: 0.4rem;"></div>
+
+			<!--<img src="images/zhuce.jpg" />-->
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+	<script>
+		var is_back = true;
+		var uid = '';
+		$(document).ready(function() {
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			if(uid&&uid!=null&&uid!="null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+
+		})
+
+		function back() {
+			history.go(-1)
+		}
+
+		function register() {
+			if(is_back) {
+
+			} else {
+				return;
+			}
+			var phone = $("#phone").val();
+			var weixin = $("#weixin").val();
+			var email = $("#email").val();
+			var address = $("#address").val();
+			if(!(/^1[0-9][0-9]\d{4,8}$/.test(phone))) {
+				alert("不是完整的11位手机号或者正确的手机号前七位");
+				return false;
+			}
+			if(weixin == '' || weixin == null || weixin == 'null') {
+				alert("请输入微信号")
+				return false;
+			}
+			if(email == '' || email == null || email == 'null') {
+				alert("请输入邮箱")
+				return false;
+			}
+			if(address == '' || address == null || address == 'null') {
+				alert("请输入地址")
+				return false;
+			}
+			is_back = false;
+			req(PIG_SEND, {
+					'uid': uid,
+					'phone': phone,
+					'weixin': weixin,
+					'email': email,
+					'address': address
+				}, function(data) {
+					is_back = true
+					alert("预约成功！");
+					window.location.href = "index.html"
+				},
+				function(e) {
+					is_back = true
+					var dat = e.code;
+					if(dat == 190 || dat == '190') {
+						alert("您已经预约了");
+						window.location.href = "index.html"
+					} else if(dat == 191 || dat == '191') {
+						alert("名额已满感谢参与");
+						window.location.href = "index.html"
+					} else {
+						alert("请完整填写参数")
+					}
+					return false
+				})
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<!--<meta name="format-detection" content="telephone=no">-->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>复仇的小猪邀请好友</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="愤怒的小鸟对战版">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css?3">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<!--<script type="text/javascript" src="js/index.js"></script>-->
+		<script src="js/clipboard.min.js"></script>
+		<link rel="stylesheet" href="css/nativeShare.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	</head>
+	<style>
+		html,
+		body {
+			height: 100%;
+			/*display: -webkit-box;*/
+			display: -ms-flexbox;
+			/*display: flex;*/
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		.panel {
+			/*width: 340px;*/
+			padding: 10px;
+			text-align: center;
+			/*background-color: #FF3C3C;*/
+			border-radius: 0 0 8px 8px;
+		}
+		
+		.activity {
+			width: 80%;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			height: 3.6rem;
+			background-color: #fff;
+			border-radius: 5px;
+			border: 1px solid #ff8d09;
+		}
+		
+		.activity ul {
+			top: -15px;
+			padding: 0;
+			color: #666;
+			position: relative;
+		}
+		
+		.activity li {
+			height: 34px;
+			padding: 0;
+			font-size: 12px;
+			line-height: 34px;
+			list-style: none;
+			border-bottom: 1px dotted #ff8d09;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" style="background: rgb(255, 255, 255);height: 18rem;">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: white;">邀请好友&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div id="logn" style="margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
+					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+				</div>
+			</div>
+			<!--<div style="width: 90%;margin-top: 0.2rem;margin-left: 5%;">
+				<img style="width: 100%;" src="images/yqh.jpg" />
+			</div>-->
+			<div style="width: 100%;margin-top: 0rem;">
+				<img style="width: 100%;" src="images/yq.jpg" />
+			</div>
+			<div style="text-align: center;height: 0.5375rem;line-height: 0.5375rem;font-size: 0.38rem;color: #4B4B4B;letter-spacing: -0.51px;margin-top: 0.3483rem;font-weight: bold;">
+				立刻邀请好友一起赚IPG
+			</div>
+			<div class="qd_div1" style="height: 6rem;">
+				<img style="width: 5.4rem;height: 5.4rem;margin-left: 2.2rem;position: absolute;" id="twoDimension" src="http://www.gbtags.com/gb/qrcode?t=http://www.oo600.com/yyhy_html/pigs/index.html&s=400" />
+				<div style="position: absolute;top: 12.6rem;width:100%;color: #333;font-size: 0.36rem;">邀请码：<span id="code"></span>&nbsp;<span data-clipboard-text="http://www.oo600.com/yyhy_html/pigs/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+				<div style="position: absolute;top: 13.2rem;width:100%;color: #333;font-size: 0.36rem;">邀请所得：<span id="coint" style="color: red;">0</span>个IPG(IPG)</div>
+			</div>
+			<div id="copy" style="background-color: rgb(255, 255, 255);margin-top: 1%;height: 1rem;line-height: 1.4rem;" class="copy">
+				<div id="nativeShare">
+					<div class="list clearfix">
+						<span onclick="call('wechatTimeline')" class="nativeShare weixin_timeline fenx"><i></i></span>
+						<span onclick="call('wechatFriend')" class="nativeShare weixin fenx"><i></i></span>
+						<span onclick="call('qqFriend')" class="nativeShare qq fenx"><i></i></span>
+						<span onclick="call('weibo')" class="nativeShare weibo fenx"><i></i></span>
+					</div>
+				</div>
+				<button style="display: none;" onclick="call()">通用分享</button>
+				<button style="display: none;" onclick="setTitle('fa-ge NativeShare')">设置标题</button>
+			</div>
+			<div style="margin-top: 1rem;color: #333;font-size: 0.3rem;text-align: center;">如果浏览器不支持，请截屏分享</div>
+		</div>
+
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/nativeShare.js"></script>
+
+	<script>
+		var uid = "";
+		var code = '';
+		var nativeShare = new NativeShare()
+		$(document).ready(function() {
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			if(uid && uid == null && uid == "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			req(IPG_USER_MONEY_QUERY, {
+				'uid': uid
+			}, function(data) {
+				var dat = data.userMoney;
+				var money = dat.invite_money;
+				$("#coint").text(money)
+				$.ajax({
+					type: "post",
+					url: IPG_USER_GET_INVIT_CODE,
+					async: true,
+					dataType: "json",
+					data: {
+						"uid": uid
+					},
+					success: function(obj) {
+						if(obj.err == "NOT ACCOUNT ERR") {} else {
+							var data = obj.data;
+							var urlss = "http://www.gbtags.com/gb/qrcode?t=http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + data.code + '&s=400'
+							$("#twoDimension").attr("src", urlss)
+							$("#code").text(data.code)
+							var urls = "http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + data.code
+							$(".btn1").attr("data-clipboard-text", urls);
+							code = data.code
+							var shareData = {
+								title: '复仇的小猪',
+								desc: '小鸟对战版，注册赢IPG！',
+								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+								link: 'http://oo600.com/yyhy_html/pigs/zhuce.html?info_id=' + data.code,
+								icon: '',
+								// 不要过于依赖以下两个回调，很多浏览器是不支持的
+								success: function() {
+									alert('success')
+
+								},
+								fail: function() {
+									alert('fail')
+								}
+							}
+							nativeShare.setShareData(shareData)
+						}
+
+					},
+					error: function(e) {
+
+					}
+				});
+			}, function(e) {
+
+			})
+		})
+		var shareData = {
+			title: '复仇的小猪',
+			desc: '小鸟对战版，注册赢IPG！',
+			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+			link: 'http://oo600.com/yyhy_html/pigs/zhuce.html?info_id=' + code,
+			icon: '',
+			// 不要过于依赖以下两个回调，很多浏览器是不支持的
+			success: function() {
+				alert('success')
+
+			},
+			fail: function() {
+				alert('fail')
+			}
+		}
+		nativeShare.setShareData(shareData)
+
+		function call(command) {
+			try {
+				nativeShare.call(command)
+			} catch(err) {
+				// 如果不支持，你可以在这里做降级处理
+				//		alert(err.message)
+				alert("您的浏览器不支持此项一键分享")
+			}
+		}
+
+		var clipboard = new Clipboard('.btn1');
+
+		clipboard.on('success', function(e) {
+			alert("复制成功！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + code
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('复制成功！');
+		}
+
+		function back() {
+			history.go(-1)
+		}
+	</script>
+
+</html>

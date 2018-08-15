@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>复仇的小猪</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="对战版愤怒的小鸟">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script src="js/clipboard.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" id="app">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;z-index: 1000;position: fixed;width: 100%;">
+				<div class="head_txt" style="color: white;">复仇的小猪</div>
+				<div style="position: absolute;margin-left: 0.4rem;margin-top: -1.26rem;" class="dropdown">
+					<button style="background-color: #333;color: white;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    语言
+					    <span class="caret"></span>
+					  </button>
+					<ul style="background-color: #333;color: white;" style="width: 2.5rem;min-width: 2.5rem;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;">中文</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cen', 'Chinese_to_English', 'resizable,scrollbars,status'))">English</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cja', 'Chinese_to_Japanese', 'resizable,scrollbars,status'))">日本語</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cko', 'Chinese_to_Korean', 'resizable,scrollbars,status'))">한국어.</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.26rem;">
+					<a href="denglu.html" style="color: white;">登录</a>/
+					<a href="zhuce.html" style="color: white;">注册</a>
+				</div>
+				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
+					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+				</div>
+
+			</div>
+			<div style="height: 1.26rem;"></div>
+			<img style="width: 100%;" src="images/indexh.jpg" />
+
+			<button id="gogame" type="button" style="width:48%;margin-left:26%;background-color: #ffd33f;font-weight: bold;margin-top: 0.6rem;color: #333;border-radius: 1rem;height: 1rem;font-size: 0.4rem;line-height: 0rem;" class="btn btn-primary btn-lg btn-block">
+				<span class="glyphicon glyphicon-gift"></span>&nbsp;|&nbsp;试玩赢ETH
+			</button>
+
+			<div style="width: 90%;margin-left: 5%;margin-top: 0.4rem;font-size: 0.5rem;font-weight: bold;color: #333;text-align: center;">受尽屈辱，忍无可忍，<br />复仇战争，一触即发！</div>
+			<div style="font-size: 0.4rem;width: 90%;margin-left: 5%;margin-top: 0.2rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;改变命运是这个世界上最难的事情。人生太苦逼，复仇的小猪提供公平竞技的机会，角色互换可以让你改变命运，重新开始！</div>
+			<div style="width: 90%;margin-left: 5%;margin-top: 0.4rem;">
+				<video id="video" src="images/111.mov" poster="images/vidie.jpg" controls="controls" loop="loop" autoplay="autoplay" style="width: 100%;">
+
+				</video>
+			</div>
+
+			<div style="text-align: center;color: #333;margin-top: 0.6rem;font-size: 0.5rem;text-align: center;font-weight: bold;">游戏简介</div>
+			<div style="font-size: 0.4rem;width: 90%;margin-left: 5%;margin-top: 0.2rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区块链技术让复仇的小猪的游戏对战结果变得真实可靠且不可篡改。能够实现线上竞技游戏的绝对公平、透明，彻底杜绝作弊行为。复仇的小猪限时空投1亿IPG，参与游戏即挖矿，赢到的IPG可ETH交易！</div>
+			<div style="background-color: aliceblue;margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+				<img style="width: 90%;margin-left: 5%;padding-top: 0.4rem;" src="images/ai7.jpg" />
+				<div style="font-size: 0.42rem;font-weight: bold;text-align: center;margin-top: 0.4rem;">战前准备</div>
+				<div style="text-align: left;margin-top: 0.2rem;font-size: 0.38rem;width: 90%;margin-left: 5%;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;玩家可用IPG兑换各类道具加强战斗力，游戏正式开始前可以测试搭建好的堡垒。
+				</div>
+				<div style="height: 0.4rem;"></div>
+			</div>
+			<div style="background-color: aliceblue;margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+				<img style="width: 90%;margin-left: 5%;padding-top: 0.4rem;" src="images/ai11.jpg" />
+				<div style="font-size: 0.42rem;font-weight: bold;text-align: center;margin-top: 0.4rem;">选择战场</div>
+				<div style="text-align: left;margin-top: 0.2rem;font-size: 0.38rem;width: 90%;margin-left: 5%;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;玩家选择对战场并锁定IPG作为奖池筹码 。
+				</div>
+				<div style="height: 0.4rem;"></div>
+			</div>
+			<div style="background-color: aliceblue;margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+				<img style="width: 90%;margin-left: 5%;padding-top: 0.4rem;" src="images/ai3.jpg" />
+				<div style="font-size: 0.42rem;font-weight: bold;text-align: center;margin-top: 0.4rem;">对战过程</div>
+				<div style="text-align: left;margin-top: 0.2rem;font-size: 0.38rem;width: 90%;margin-left: 5%;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小猪方（防御方）挑选堡垒。小鸟方（进攻方）选择合适的小鸟并决定出战顺序。 <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小鸟方在限定时间内攻击。小鸟全部出战或小猪被全歼后，双方互换角色。
+				</div>
+				<div style="height: 0.4rem;"></div>
+			</div>
+			<div style="background-color: aliceblue;margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+				<img style="width: 90%;margin-left: 5%;padding-top: 0.4rem;" src="images/ai5.jpg" />
+				<div style="font-size: 0.42rem;font-weight: bold;text-align: center;margin-top: 0.4rem;">结算方式</div>
+				<div style="text-align: left;margin-top: 0.2rem;font-size: 0.38rem;width: 90%;margin-left: 5%;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得分高的一方胜利，获得奖池筹码。
+				</div>
+				<div style="height: 0.4rem;"></div>
+			</div>
+			<div style="background-color: aliceblue;margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+				<img style="width: 90%;margin-left: 5%;padding-top: 0.4rem;" src="images/ai6.jpg" />
+				<div style="font-size: 0.42rem;font-weight: bold;text-align: center;margin-top: 0.4rem;">赢取IPG</div>
+				<div style="text-align: left;margin-top: 0.2rem;font-size: 0.38rem;width: 90%;margin-left: 5%;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赚到的IPG可随时交易ETH。发挥聪明才智，把别人手里的ETH赢过来吧。
+				</div>
+				<div style="height: 0.4rem;"></div>
+			</div>
+
+			<button onclick="gozc()" type="button" style="width:48%;margin-left:26%;background-color: #ffd33f;font-weight: bold;color: #333;border-radius: 1rem;height: 1rem;font-size: 0.4rem;line-height: 0rem;margin-top: 0.6rem;" class="btn btn-primary btn-lg btn-block">
+					<span class="glyphicon glyphicon-check"></span>&nbsp;|&nbsp;立即预约
+			</button>
+			<!--<button id="gozhuce" type="button" style="width:60%;margin-left:20%;background-color: #ffd33f;font-weight: bold;margin-top: 0.6rem;color: #333;border-radius: 0.4rem;height: 2rem;font-size: 0.6rem;" class="btn btn-primary btn-lg btn-block">
+				现在预约，<br />&nbsp;&nbsp;开抢IPG
+			</button>-->
+			<div style="width: 90%;margin-left: 5%;text-align: center;font-size: 0.38rem;color: #333;margin-top: 0.6rem;">前2000名预约用户，可免费获取更多IPG！</div>
+			<div style="width: 90%;margin-left: 5%;text-align: center;font-size: 0.38rem;color: #333;margin-top: 0.2rem;">预约火爆，名额有限！</div>
+
+			<div style="display: table; width: 100%;margin-top: 0.4rem;">
+				<div style="float: left;width: 30%;margin-left: 15%;border: 1px solid;border-radius: 0.1rem;height: 1rem;">
+					<div style="text-align: center;font-size: 0.3rem;">当前预约人数</div>
+					<div id="pn" style="text-align: center;">1288</div>
+				</div>
+				<div style="float: right;width: 30%;margin-right: 15%;border: 1px solid;border-radius: 0.1rem;height: 1rem;">
+					<div style="text-align: center;font-size: 0.3rem;">活动截止倒计时</div>
+					<div id="pn" style="text-align: center;font-size: 0.38rem;"><span style="font-size: 0.38rem;" id="day">88</span>天<span style="font-size: 0.38rem;" id="hour">88</span>:<span style="font-size: 0.38rem;" id="minute">88</span>:<span style="font-size: 0.38rem;" id="second">88</span></div>
+				</div>
+			</div>
+
+			
+			<div style="width: 100%;margin-top: 0rem;">
+				<div style="width: 90%;margin-left: 5%;">
+					<!--<div style="font-size: 0.7rem;color: white;font-weight: bold;font-family: BlackOpsOne-Regular;">FAQ<span style="font-size: 0.5rem;">s</span></div>-->
+					<div style="text-align: center;color: #333;margin-top: 0.6rem;font-size: 0.5rem;text-align: center;font-weight: bold;">IPG介绍</div>
+					<div style="margin-top: 0.2rem;font-size: 0.5rem;font-weight: bold;">IPG的获取方式：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册即可免费领取100IPG，邀请好友可获更多IPG。玩家也可在游戏中挖矿或通过ETH兑换IPG。 </div>
+					<!--<img src="images/ai11.jpg" style="width: 90%;margin-left: 5%;margin-top: 0.2rem;" />-->
+					<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">IPG的使用：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每局游戏玩家双方需拿出一定IPG作为奖池筹码，胜利方赢得全部筹码。玩家也需要通过IPG兑换各类小鸟、堡垒材料以增强实力赢取更多IPG。同时我们会开放道具交易系统，玩家间可以通过IPG交易稀有道具及皮肤。</div>
+					<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">IPG的升值：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着游戏内容的逐渐丰富，玩家对筹码及各类道具的需求量也会增加，对IPG的需求量会不断上涨，IPG的供不应求必然会导致价值的提升。</div>
+					<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">挖矿方式：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏上线前发行总量为1亿，可通过注册及邀请好友获得。游戏上线后发行总量为3亿，对战即挖矿，战的越多赢的越多。</div>
+					<!--<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">与区块链的结合：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区块链技术将比赛结果及玩家获取的IPG分布式储存，数据真实可靠且不可篡改，去中心化交易保证了交易及资产的安全。能够实现线上竞技游戏的绝对公平、透明，彻底杜绝作弊行为。</div>-->
+
+					<!--<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">好友邀请：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好玩又能赢ETH，这等好事还不赶快叫上好友？邀请人数越多，奖励越丰厚！用户也可与好友进行对战，切磋技艺。</div>-->
+					<!--<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">对币圈外用户的吸引：</div>
+					<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;复仇的小猪是区块链技术与对战类游戏紧密结合的产物，游戏本身具有一定策略性、技巧性，新颖的对战方式、超高的可玩性及优质的对战体验必将引起玩家的蜂拥而至。</div>-->
+						
+					<!--<div style="height: 1rem;"></div>-->
+				</div>
+
+				<!--<div style="width: 90%;margin-left: 5%;color: white;margin-top: 0.8rem;color: white;">
+					<div style="font-size: 0.7rem;color: white;font-weight: bold;font-family: BlackOpsOne-Regular;">ABOUT&nbsp;US</div>
+					<div style="font-weight: bold;font-size: 0.5rem;margin-top: 0.6rem;">张曦婷&nbsp;<span style="font-size: 0.4rem;">首席执行官</span></div>
+					<div style="font-size:0.38rem ;">芬兰奥卢大学MBA，原愤怒的小鸟中国区创始人，创业团队曾获得过愤怒的小鸟董事长和李嘉诚联合投资。曾在3家获得过芬兰总统奖状的高科技公司出任高管，在此期间为芬兰和中国的科技贸易作出巨大贡献。</div>
+					<div style="font-weight: bold;font-size: 0.5rem;margin-top: 0.4rem;">柏成嵩&nbsp;<span style="font-size: 0.4rem;">首席全栈工程师</span></div>
+					<div style="font-size:0.38rem ;">在计算机应用中钻研多年的工程师，并且在计算机软件工程领域具有极高造诣。擅长开发区块链底层协议及技术拓展、效率同步、密码学等技术。</div>
+					<div style="font-weight: bold;font-size: 0.5rem;margin-top: 0.4rem;">张佳宁&nbsp;<span style="font-size: 0.4rem;">产品工程师</span></div>
+					<div style="font-size:0.38rem ;">北京航空航天大学探测制导与控制学士，美国南加州大学（USC）计算机科学硕士。作为全栈工程师开发过音乐游戏Rhythm hero和赛车游戏Furious。</div>
+					<div style="font-weight: bold;font-size: 0.5rem;margin-top: 0.4rem;">Nikolina Zidar&nbsp;<span style="font-size: 0.4rem;">海外研发团队负责人</span></div>
+					<div style="font-size:0.38rem ;">原芬兰愤怒的小鸟研发部负责人 带领9人资深研发团队在芬兰负责游戏研发。</div>
+				</div>-->
+			</div>
+			
+
+			<!--<div style="width: 100%;margin-top: 0.2rem;height: 1px;background-color: #333;"></div>-->
+			<!--<div style="width: 90%;margin-top: 0.8rem;height: 0.1rem;background-color: #333;margin-left: 5%;"></div>-->
+			<div style="text-align: center;color: #333;margin-top: 0.6rem;font-size: 0.5rem;text-align: center;font-weight: bold;">兑换计划</div>
+
+			<img style="width: 90%;margin-left: 5%;margin-top: 0.4rem;" src="images/buy.jpg" />
+			<button onclick="gobuy()" type="button" style="width:48%;margin-left:26%;background-color: #ffd33f;font-weight: bold;color: #333;border-radius: 1rem;height: 1rem;font-size: 0.4rem;line-height: 0rem;margin-top: 0.4rem;" class="btn btn-primary btn-lg btn-block">
+				<span class="glyphicon glyphicon-piggy-bank"></span>&nbsp;|&nbsp;优惠套餐
+			</button>
+			<div style="text-align: center;color: #333;margin-top: 0.6rem;font-size: 0.5rem;text-align: center;font-weight: bold;">邀请好友</div>
+			<div style="margin-top: 0.4rem;font-size: 0.35rem;width: 90%;margin-left: 5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好玩又能拿IPG，这等好事还不赶快叫上好友？邀请人数越多，奖励越丰厚！用户也可与好友进行对战，切磋技艺。</div>
+			<div style="margin-top: 0.4rem;font-size: 0.35rem;"><img style="width: 90%;margin-left: 5%;" src="images/yq.jpg" /></div>
+			<button onclick="goyq()" type="button" style="width:48%;margin-left:26%;background-color: #ffd33f;font-weight: bold;color: #333;border-radius: 1rem;height: 1rem;font-size: 0.4rem;line-height: 0rem;margin-top: 0.4rem;" class="btn btn-primary btn-lg btn-block">
+				<span class="glyphicon glyphicon-log-in"></span>&nbsp;|&nbsp;立即邀请
+			</button>
+
+			<div style="height: 0.4rem;"></div>
+			<div class="contact" id="contact">
+				<div class="container">
+					<div class="padding-contact">
+
+						<div style="width: 100%;" class="col-md-4 address">
+							<h3 style="text-align: center;margin-top: -1rem;color: white;">Contact&nbsp;Us</h3>
+							<address style="text-align: center;line-height: 0.6rem;">
+								gopig.io&nbsp;<span data-clipboard-text="gopig.io" style="display: inline-block;color: white;" class="glyphicon glyphicon-book btn1"></span><br>
+								
+							ipg_foundation@aliyun.com<br>
+				微信：bibiblueblue<br>
+				IPG合约地址：<br /><span style="font-size: 0.3rem;display: inline;color: white;padding-top: 0;">0x6750b81427fa648db03c7a09e88e62ecc65b55d1</span>&nbsp;<span data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="display: inline-block;color: white;" class="glyphicon glyphicon-book btn2"></span><br>
+				<!--<span>Phone : 13810790460</span><br>-->
+				加入官方微信群：<br />
+				<img style="width: 20%;margin-top: 5px;margin-left: 40%;" src="images/qun.png" />
+				<div style="height: 1rem;"></div>
+			</address>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+	<script type="text/javascript">
+		var uid = "";
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setItem("pigphone", phone)
+		setLocal("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigUID", uid)
+		$(document).ready(function() {
+			document.getElementById('video').play()
+			//Vertical Tab
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			$("#gosign").on("click", function() {
+				if(uid) {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gobuy").on("click", function() {
+				if(uid) {
+					window.location.href = "buy.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#twoDimension").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gogame").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.open("game.html");
+				} else {
+					window.open("game.html");
+					//					alert("请先登录")
+					//					window.location.href = "denglu.html"
+				}
+			})
+			$("#gozhuce").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					alert("您已注册")
+				} else {
+					window.location.href = "zhuce.html"
+				}
+			})
+			//			var ndate = new Date().toLocaleDateString();
+			//			var ndate = new Date(ndate)
+			var ndate = 1535731200
+			//			var ndate = Math.round(ndate.getTime() / 1000)
+			var nnn = new Date()
+			nnn = Math.round(nnn.getTime() / 1000)
+			var nu = 1535731200 - nnn
+			//			var hour = Math.round(nu / 3600)
+			//			var minute = Math.round((nu % 3600) / 60)
+			//			var second = (nu % 3600) % 60
+			//			if(hour < 10) {
+			//				hour = '0' + hour
+			//			}
+			//			if(minute < 10) {
+			//				minute = '0' + minute
+			//			}
+			//			if(second < 10) {
+			//				second = '0' + second
+			//			}
+			//			$("#hour").text(hour)
+			//			$("#minute").text(minute)
+			//			$("#second").text(second)
+			countDown(nu)
+			//			countDown(ndate)
+			req(GET_USER_IPG_C, {
+
+				}, function(data) {
+					var num = data.user;
+					num = Number(num)
+					$("#pn").text(num)
+				},
+				function(e) {
+					$("#pn").text(888)
+				})
+
+		});
+
+		function gozc() {
+			if(uid && uid != null && uid != "null") {
+				alert("您已注册")
+			} else {
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function goyq() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "twoDimension.html"
+			} else {
+				alert("请先注册")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function gobuy() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "buy.html"
+			} else {
+				alert("请先注册")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function countDown(times) {
+			var timer = null;
+			timer = setInterval(function() {
+				var day = 0,
+					hour = 0,
+					minute = 0,
+					second = 0; //时间默认值
+				if(times > 0) {
+					day = Math.floor(times / (60 * 60 * 24));
+					hour = Math.floor(times / (60 * 60)) - (day * 24);
+					minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				} else {
+					times = 86400;
+				}
+
+				if(day <= 9) day = '0' + day;
+				if(hour <= 9) hour = '0' + hour;
+				if(minute <= 9) minute = '0' + minute;
+				if(second <= 9) second = '0' + second;
+				$("#day").text(day)
+				$("#hour").text(hour)
+				$("#minute").text(minute)
+				$("#second").text(second)
+
+				//
+				//  console.log(day+"天:"+hour+"小时："+minute+"分钟："+second+"秒");
+				times--;
+			}, 1000);
+			if(times <= 0) {
+				clearInterval(timer);
+			}
+		}
+		var clipboard = new Clipboard('.btn1');
+		var clipboard2 = new Clipboard('.btn2');
+
+		clipboard.on('success', function(e) {
+			alert("复制成功！")
+		});
+		clipboard2.on('success', function(e) {
+			alert("复制成功！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "gopig.io"
+			Copy(copy_body);
+		});
+		clipboard2.on('error', function(e) {
+			var copy_body = "0x6750b81427fa648db03c7a09e88e62ecc65b55d1"
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('复制成功！');
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>

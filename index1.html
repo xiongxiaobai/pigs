@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>复仇的小猪</title>
+		<!--for-mobile-apps-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!--//for-mobile-apps-->
+
+		<!-- Custom-Theme-Files -->
+		<!-- Bootstrap-CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- JQuery -->
+		<script src="js/jquery.min.js">
+		</script>
+		<!-- Bootstrap-Main -->
+		<script src="js/bootstrap.min.js">
+		</script>
+		<!-- Index-Page-Styling -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<!-- Start-Smooth-Scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<!--<script type="text/javascript" src="js/flexible.js"></script>-->
+		<script src="js/ajax3.js"></script>
+		<script type="text/javascript" src="js/myslideup.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 2000);
+				});
+			});
+		</script>
+		<!-- //End-Smooth-Scrolling -->
+
+		<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+		<script src="js/easyResponsiveTabs.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="header">
+
+			<div class="nav">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>-->
+							<div id="nologn" style="color: white;font-weight: bold;float: right;margin-top: 3.7%;margin-right: 5%;">
+								<a href="denglu.html" style="color: white;">登录</a>/
+								<a href="zhuce.html" style="color: white;">注册</a>
+							</div>
+							<div id="logn" style="color: white;font-weight: bold;float: right;margin-top: 3.7%;margin-right: 5%;display: none;">
+								<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+							</div>
+							<a class="navbar-brand" style="color: white;font-weight: bold;" href="#">复仇的小猪</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+
+						<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="#home" class="active scroll">Home</a>
+								</li>
+								<li>
+									<a href="#about" class="scroll">About</a>
+								</li>
+								<li>
+									<a href="#ourteam" class="scroll">Team</a>
+								</li>
+								<li>
+									<a href="#contact" class="scroll">Contact</a>
+								</li>
+							</ul>
+
+						</div>-->
+						<!-- navbar-collapse -->
+					</div>
+					<!-- container -->
+				</nav>
+			</div>
+			<!-- Nav Ends -->
+			<div style="height: 50px;width: 100%;"></div>
+			<!--<video id="video" src="images/111.mov" controls="controls" loop="loop" autoplay="autoplay" style="width: 100%;">
+
+				</video>-->
+			<!--<div class="banner" id="home">
+				<div class="container">
+					<div class="banner-content">
+					</div>
+				</div>
+			</div>-->
+			<img style="width: 100%;" src="" />
+			<!-- Banner Ends Here -->
+		</div>
+		<div style="margin-top: -6px;" class="shadow">
+			<img src="./images/ai11.jpg" alt="image">
+		</div>
+		<!-- Header Ends -->
+
+		<!--<div style="height: 40px;width: 100%;margin-top: 10px;">
+			<a href="#about">
+				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;border-right: 1px rgba(52,52,52,0.2) solid;color: #0097ff;">
+					<span class="glyphicon glyphicon-lamp"> </span>&nbsp;<span>游戏介绍</span>
+				</div>
+			</a>
+			<a style="color: #333;" id="gosign">
+				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;border-right: 1px rgba(52,52,52,0.2) solid;">
+					<span class="glyphicon glyphicon-share"> </span>&nbsp;<span>邀请奖励</span>
+				</div>
+			</a>
+			<a style="color: #333;" id="gobuy">
+				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;">
+					<span class="glyphicon glyphicon-log-in"> </span>&nbsp;<span>优惠套餐</span>
+				</div>
+			</a>
+		</div>-->
+		<div style="clear: both;"></div>
+		<div style="margin-top: 10px;">
+			<button id="gogame" type="button" style="width: 32%;margin-left: 34%;background-color: #7cca5a;font-weight: bold;height: 40px;" class="btn btn-primary btn-lg btn-block">试玩赢ETH
+			</button>
+		</div>
+		<div class="about" id="about">
+			<div id="newsgame" class="container">
+
+				<h4 style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限时空投1亿鸟币，先到先得，对战赢家赢取筹码，参与游戏即挖矿！赚到的鸟币可以ETH交易！</h4>
+
+			</div>
+			<!--<div id="goodgame" style="display: none;" class="container">
+
+				<h3>自己搭建<span>小猪堡垒？</span> </h3>
+				<h4 style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经玩愤怒的小鸟的时候，都是去打电脑的堡垒，你有没有冲动自己搭建一个小猪堡垒？我们也曾收到过无数粉丝发来的堡垒设计思想，但现在我们来了！复仇的小猪（愤怒的小鸟对战版）将给与你更高的自由度搭建自己的小猪堡垒！守护好你的小猪！抵御别的玩家进攻！</h4>
+
+				<div class="about-image">
+
+					<div class="col-md-4 about-size">
+						<div class="shadow">
+							<img src="./images/ai1.jpg" alt="image">
+						</div>
+						<h5>属于自己的小鸟们</h5>
+						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏中你会选择自己的小鸟，组合成完美队形去攻打对方玩家搭建好的堡垒，要注意，每个小鸟的分值不同，越厉害的小鸟花费你的分值越多哦，小心最后变成负分。</p>
+
+					</div>
+
+					<div class="col-md-4 about-size">
+						<div class="shadow">
+							<img src="./images/ai2.jpg" alt="image">
+						</div>
+						<h5>属于自己的小猪堡垒</h5>
+						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有的防御道具木墙、箱子、石头、小猪的头盔你都可以拥有！请发挥想象，展现才华用自己的小猪们还有道具搭建好属于自己的防御堡垒吧，在对战中让对方一只小猪都打不着！你要注意的是每只不同样式的小猪分数不一样哦，越难打掉的小猪如戴头盔的小猪，分数越高，小心不要让对面一次打个爽。</p>
+
+					</div>
+
+					<div class="col-md-4 about-size">
+						<div class="shadow">
+							<img src="./images/ai3.jpg" alt="image">
+						</div>
+						<h5>属于自己的刺激对战</h5>
+						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛开始，是时候展现真正的技术了！双方分别会进攻对方的防御堡垒，尽量用分数最低的小鸟打到对面最高分的小猪！双方比赛结束后会根据比分判断胜负，胜利者将获得奖励哦~</p>
+
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+
+			</div>-->
+			<!-- Container ends -->
+		</div>
+		<!-- About Ends -->
+
+		<!--<div class="requirement" id="requirements">
+			<div class="container">
+				<div class="all-require">
+
+					<div style="padding-bottom: 0;" class="heading">
+						<h3><span style="color: #333;">邀请好友</span> </h3>
+					</div>
+
+					<div class="specification">
+
+						<div class="col-md-4 require-size">
+							<div style="padding: 0;" class="grid">
+								<i class="pc"> </i>
+								<img style="width: 100%;" src="images/yq.jpg" />
+								<p><span>邀请好友可获得100个IPG</span></p>
+								<p><span>你邀请的好友邀请他的好友成功你也会获得30个IPG</span></p>
+								<div style="margin-top: 10px;">
+					<button id="twoDimension" type="button" style="width: 60%;margin-left: 20%;background-color: #333;font-weight: bold;" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-share"> </span>&nbsp;点击邀请</button>
+				</div>
+								<p style="text-align: center;padding: 0;margin-top: 10px;"><span class="glyphicon glyphicon-share"> </span>&nbsp;<span>点击邀请</span></p>
+							</div>
+						</div>
+
+						<div class="col-md-4 require-size">
+
+							<div class="grid">
+								<i class="ps"> </i>
+								<h5> PS 2 </h5>
+								<p> Storage : <span>40 GB of free space </span> </p>
+								<p> HD Video Output : <span>1080px	</span> </p>
+
+								<div class="grid-bottom">
+									<h5> PS 3 </h5>
+									<p> Storage : <span>50 GB of free space </span> </p>
+									<p> HD Video Output : <span>1920px	</span> </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<!-- requirement Ends -->
+
+		<!--Plug-in Initialisation-->
+		<script type="text/javascript">
+			var uid = "";
+			var phone = "";
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			$(document).ready(function() {
+				document.getElementById('video').play()
+				//Vertical Tab
+				$('#parentVerticalTab').easyResponsiveTabs({
+					type: 'vertical', //Types: default, vertical, accordion
+					width: 'auto', //auto or any width like 600px
+					fit: true, // 100% fit in a container
+					closed: 'accordion', // Start closed if in accordion view
+					tabidentify: 'hor_1', // The tab groups identifier
+					activate: function(event) { // Callback function if tab is switched
+						var $tab = $(this);
+						var $info = $('#nested-tabInfo2');
+						var $name = $('span', $info);
+						$name.text($tab.text());
+						$info.show();
+					}
+				});
+				if(uid) {
+					$("#nologn").hide()
+					$("#logn").show()
+				} else {
+					$("#nologn").show()
+					$("#logn").hide()
+				}
+				$("#gosign").on("click", function() {
+					if(uid) {
+						window.location.href = "twoDimension.html"
+					} else {
+						alert("请先登录")
+						window.location.href = "denglu.html"
+					}
+				})
+				$("#gobuy").on("click", function() {
+					if(uid) {
+						window.location.href = "buy.html"
+					} else {
+						alert("请先登录")
+						window.location.href = "denglu.html"
+					}
+				})
+				$("#twoDimension").on("click", function() {
+					if(uid) {
+						window.location.href = "twoDimension.html"
+					} else {
+						alert("请先登录")
+						window.location.href = "denglu.html"
+					}
+				})
+				$("#gogame").on("click", function() {
+					if(uid) {
+						window.open("game.html");
+					} else {
+						alert("请先登录")
+						window.location.href = "denglu.html"
+					}
+				})
+			});
+		</script>
+		<!-- Up Coming Games Ends Here -->
+
+		<!--<div class="our-team">
+			<div class="container">
+				<div class="team" id="ourteam">
+					<h3>Team Members </h3>
+
+					<div class="team-up">
+						<div class="col-md-3 team-size">
+							<div class="team-img">
+								<img src="./images/8.png" alt="image">
+								<h4>张曦婷</h4>
+								<p>首席执行官</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 team-size">
+							<div class="team-img">
+								<img src="./images/9.png" alt="image">
+								<h4>柏成嵩</h4>
+								<p>首席全栈工程师</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 team-size">
+							<div class="team-img">
+								<img src="./images/10.png" alt="image">
+								<h4>Nikolina Zidar</h4>
+								<p>海外研发团队CEO</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 team-size">
+							<div class="team-img">
+								<img src="./images/11.png" alt="image">
+								<h4>Paula Penttinen</h4>
+								<p>首席营销经理</p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					 
+
+					<div class="clearfix"></div>
+				</div>
+				 
+
+			</div>
+		</div>-->
+		<!-- Our-team Ends -->
+
+		<div class="contact" id="contact">
+			<div class="container">
+				<div class="padding-contact">
+
+					<div style="width: 100%;" class="col-md-4 address">
+						<h3 style="text-align: center;">Contact&nbsp;Us</h3>
+						<address style="text-align: center;">
+							ipg_foundation@aliyun.com<br>
+				微信：1504997349<br>
+				
+				<!--<span>Phone : 13810790460</span><br>-->
+				加入官方微信群：<br />
+				<img style="width: 20%;margin-top: 5px;" src="images/qun.png" />
+			</address>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>
