@@ -24,26 +24,23 @@
 		
 		input::-webkit-input-placeholder {
 			/*WebKit browsers*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 		
 		input::-moz-input-placeholder {
 			/*Mozilla Firefox*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 		
 		input::-ms-input-placeholder {
 			/*Internet Explorer*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 	</style>
 
@@ -54,63 +51,33 @@
 				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
 				<div class="head_txt" style="color: white;">账号注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			</div>
-			<div style="width: 100%;height: 5rem;background-color: #02b1c5;">
-				<div style="color: #333;text-align: center;font-size: 0.8rem;padding-top: 1.1rem;">欢迎加入复仇的小猪</div>
-				<div style="color: #333;text-align: center;font-size: 0.8rem;margin-top: 0.2rem;">注册即送100个IPG!</div>
+			<img style="width: 100%;" src="images/zc1.png" />
+			<img style="width: 7.79rem;height: 0.43rem;margin-left: 1.11rem;margin-top: 0.46rem;" src="images/zc2.png" />
+			
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.86rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.31rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.35rem;" src="images/zc3.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.28rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;" placeholder="请输入手机号" type="tel" id="phone" />
 			</div>
-			<!--<div style="width: 90%;margin-top: 0.2rem;margin-left: 5%;">
-				<img style="width: 100%;" src="images/zc.jpg" />
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.32rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.31rem;" src="images/zc4.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;" placeholder="请输入密码" type="password" id="password" />
 			</div>
-			<div style="text-align: center;height: 0.5375rem;line-height: 0.5375rem;font-size: 0.38rem;color: #4B4B4B;letter-spacing: -0.51px;margin-top: 0.3483rem;font-weight: bold;">
-				复仇的小猪
-			</div>-->
-
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.8rem;margin-left: 0.5rem;">
-				手机号
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="tel" id="phone" />
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.32rem;height: 0.35rem;float: left;margin-left: 0.51rem;margin-top: 0.4rem;" src="images/zc5.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;" placeholder="imToken地址(选填)" type="text" id="address" />
 			</div>
-			<!--<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				昵称
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="text" id="name" />
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.38rem;height: 0.4rem;float: left;margin-left: 0.46rem;margin-top: 0.38rem;" src="images/zc6.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;" placeholder="邀请码(选填)" type="text" id="inviteCode" />
 			</div>
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				邮箱
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="email" id="email" />
+			<div style="margin-left: 0.4rem;margin-top: 0.5rem;" id="c1"></div>
+			<img onclick="register()" style="height: 1.52rem;width: 8.08rem;margin-top: 0.5rem;margin-left: 0.96rem;" src="images/zc7.png" />
+			<img onclick="agreement()" style="width: 3.56rem;height: 0.76rem;margin-top: 0.31rem;margin-left: 3.22rem;" src="images/zc8.png" />
+			<div style="width: 8.48rem;height: 9.28rem;border-radius: 0.3rem;margin-top: 0.67rem;margin-left: 0.76rem;background-color: #5DA615;">
+				<img style="width: 3.7rem;padding-top: 0.82rem;margin-left: 2.4rem;height: 4.54rem;" src="images/zc9.png" />
+				<img style="width: 3.55rem;height: 3.55rem;margin-top: 0.36rem;margin-left: 2.47rem;" src="images/zc10.png" />
 			</div>
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				微信号
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="text" id="weixin" />
-			</div>-->
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				密码
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="password" id="password" />
-			</div>
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				imToken地址(选填)
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="text" id="address" />
-			</div>
-			<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				邀请码(选填)
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="text" id="inviteCode" />
-			</div>
-			<div style="margin-left: 0.5rem;margin-top: 0.4rem;" id="c1"></div>
-			<!--<div style="width: 9rem;height: 2.1rem;background: #FFFFFF;border: 0rem solid #DCE2EE;border-radius: 0.1333rem;margin-top: 0.4rem;margin-left: 0.5rem;">
-				验证码
-				<input style="width: 9rem;height: 1.5rem;line-height: 1.5rem;background: #FFFFFF;border: 0.0258rem solid #DCE2EE;border-radius: 0.1333rem;text-align: left;font-size: 0.4042rem;color: #535376;font-weight: bold;letter-spacing: -0.0086rem;padding: 0.5rem;" type="text" id="pic_id" />
-				<img src="" id="pic_code" style="width: 2.1801rem;height: 1.3459rem;border-radius: 0.1333rem;position: absolute;margin-top: -1.42rem;margin-left: 6.7rem;" onclick="changePic()">
-			</div>-->
-			<div onclick="register()" style="width: 6.7209rem;height: 1.3459rem;background: #333;border-radius: 0.1333rem;margin-top: 0.5375rem;line-height: 1.3459rem;text-align: center;font-size: 0.38rem;color: white;font-weight: bold;letter-spacing: -0.0129rem;margin-left: 1.6942rem;">
-				注册领IPG
-			</div>
-			<div style="width: 4.3rem;height: 0.7525rem;margin-left: 2.9283rem;margin-top: 0.1892rem;font-size: 0.3225rem;line-height: 0.3225rem;color: #999999;text-align: center;">注册成功即视为阅读并已同意<br /><span onclick="agreement()" style="text-align: center;color: #F5A623;height: 0.3225rem;line-height: 0.5rem;font-size: 0.3225rem;">《服务协议》</span></div>
-			<div style="background-color: #333;margin-top: 0.6rem;">
-				<div style="text-align: center;color: #5bb2fc;padding-top: 0.4rem;font-size: 0.5rem;font-weight: bold;">官方联系方式</div>
-				<div style="text-align: center;color: white;margin-top: 0.1rem;font-size: 0.3rem;font-weight: bold;">ipg_foundation@aliyun.com</div>
-				<div style="text-align: center;color: white;margin-top: 0.1rem;font-size: 0.3rem;font-weight: bold;">微信：bibiblueblue</div>
-				<div style="text-align: center;color: white;margin-top: 0.1rem;font-size: 0.3rem;font-weight: bold;">加入官方微信群：</div>
-				<img style="width: 20%;margin-left: 40%;margin-top: 0.1rem;" src="images/qun.png" />
-				<div style="height: 0.4rem;"></div>
-			</div>
+			<img style="width: 100%;" src="images/zc11.png" />
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
 		<script src="js/base/util.js"></script>

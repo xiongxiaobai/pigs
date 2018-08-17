@@ -67,19 +67,18 @@
 							优惠套餐
 						</button>
 					</a>
-					<div style="font-size: 0.4rem;color: #6A6A77;margin-top: 2.1rem;margin-right: 0.4042rem;text-align: right;">邀请人数：<span style="font-size: 0.4rem;" id="num">0</span></div>
+					<div style="font-size: 0.4rem;color: #6A6A77;margin-top: 1.6rem;margin-right: 0.4042rem;text-align: right;">邀请人数：<span style="font-size: 0.4rem;" id="num">0</span></div>
 					<a href="twoDimension.html">
 						<button type="button" style="width: 21%;margin-left: 34%;background-color: #ffd33f;font-weight: bold;height: 0.6rem;margin-top: 0.4rem;color: #333;font-size: 0.3rem;line-height: 0rem;border-radius: 0.4rem;position: absolute;margin-left: 2.5rem;" class="btn btn-primary btn-lg btn-block">
 							邀请有奖
 						</button>
 					</a>
-
-					
+					<div style="margin-top: 1.4rem;font-size: 0.38rem;">邀请码：<span style="font-size: 0.38rem;" id="inviteCode"></span></div>
 
 				</div>
 
 			</div>
-			
+
 			<div style="width: 9.2708rem;margin-left: 0.4042rem;margin-top: 0.2rem;">
 				<div style="text-align: center;">我的imToken地址：</div>
 				<input type="text" style="width: 90%;margin-left: 5%;" id="address">
@@ -143,6 +142,36 @@
 					$("#num").text(num);
 					var address = data.address;
 					$("#address").val(address)
+					req(IPG_USER_MONEY_QUERY, {
+						'uid': uid
+					}, function(data) {
+						var dat = data.userMoney;
+						var money = dat.invite_money;
+						$("#coint").text(money)
+						$.ajax({
+							type: "post",
+							url: IPG_USER_GET_INVIT_CODE,
+							async: true,
+							dataType: "json",
+							data: {
+								"uid": uid
+							},
+							success: function(obj) {
+								if(obj.err == "NOT ACCOUNT ERR") {} else {
+									var data = obj.data;
+									$("#inviteCode").text(data.code)
+//									$(".btn1").attr("data-clipboard-text", data.code);
+									
+								}
+
+							},
+							error: function(e) {
+
+							}
+						});
+					}, function(e) {
+
+					})
 				},
 				function(e) {
 
@@ -151,34 +180,33 @@
 				alert("暂未开放")
 			})
 		})
-		function changeAddress(){
+
+		function changeAddress() {
 			var address = $("#address").val()
-			if(!address){
+			if(!address) {
 				alert("请输入imToken地址")
 				return
 			}
-			if(uid==''||uid=='null'||uid==null){
+			if(uid == '' || uid == 'null' || uid == null) {
 				alert("请先登录")
-				window.location.href="denglu.html"
+				window.location.href = "denglu.html"
 				return
 			}
-			if(!is_back){
+			if(!is_back) {
 				return;
 			}
-			is_back=false
+			is_back = false
 			req(USER_IPG_CHANGE_ADDRESS, {
 					'uid': uid,
-					'address':address
+					'address': address
 				}, function(data) {
 					alert("修改成功！")
-					is_back=true
+					is_back = true
 				},
 				function(e) {
 					alert("修改失败，请重试")
 				})
-			
-			
-			
+
 		}
 
 		function back() {
