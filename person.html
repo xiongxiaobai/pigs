@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/clipboard.min.js"></script>
 	</head>
 	<style>
 		#cnzz_stat_icon_1270505203 {
@@ -73,7 +74,7 @@
 							邀请有奖
 						</button>
 					</a>
-					<div style="margin-top: 1.4rem;font-size: 0.38rem;">邀请码：<span style="font-size: 0.38rem;" id="inviteCode"></span></div>
+					<div style="margin-top: 1.4rem;font-size: 0.3rem;">邀请码：<span style="font-size: 0.3rem;" id="inviteCode"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
 
 				</div>
 
@@ -122,6 +123,7 @@
 	<script>
 		var is_back = true;
 		var uid = '';
+		var code = '';
 		$(document).ready(function() {
 			uid = getLocal("pigUID")
 			phone = getLocal("pigphone")
@@ -160,8 +162,8 @@
 								if(obj.err == "NOT ACCOUNT ERR") {} else {
 									var data = obj.data;
 									$("#inviteCode").text(data.code)
-//									$(".btn1").attr("data-clipboard-text", data.code);
-									
+									$(".btn1").attr("data-clipboard-text", data.code);
+									code = data.code
 								}
 
 							},
@@ -207,6 +209,27 @@
 					alert("修改失败，请重试")
 				})
 
+		}
+		var clipboard = new Clipboard('.btn1');
+
+		clipboard.on('success', function(e) {
+			alert("复制成功！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = code
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('复制成功！');
 		}
 
 		function back() {
