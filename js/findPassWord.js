@@ -191,7 +191,7 @@ function register() {
 }
 
 function back() {
-	window.location = 'denglu.html'
+	history.go(-1)
 }
 
 
