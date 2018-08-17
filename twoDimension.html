@@ -96,8 +96,8 @@
 				立刻邀请好友一起赚IPG
 			</div>
 			<div class="qd_div1" style="height: 6rem;">
-				<img style="width: 4.4rem;height: 4.4rem;margin-left: 2.7rem;position: absolute;margin-top: 0.2rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://www.oo600.com/yyhy_html/pigs/index.html" />
-				<div style="position: absolute;top: 12.6rem;width:100%;color: #333;font-size: 0.36rem;">邀请码：<span id="code"></span>&nbsp;<span data-clipboard-text="http://www.oo600.com/yyhy_html/pigs/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+				<img style="width: 4.4rem;height: 4.4rem;margin-left: 2.7rem;position: absolute;margin-top: 0.2rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/index.html" />
+				<div style="position: absolute;top: 12.6rem;width:100%;color: #333;font-size: 0.36rem;">邀请码：<span id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
 				<div style="position: absolute;top: 13.2rem;width:100%;color: #333;font-size: 0.36rem;">邀请所得：<span id="coint" style="color: red;">0</span>个IPG(IPG)</div>
 			</div>
 			<div id="copy" style="background-color: rgb(255, 255, 255);margin-top: 1%;height: 1rem;line-height: 1.4rem;" class="copy">
@@ -158,17 +158,17 @@
 					success: function(obj) {
 						if(obj.err == "NOT ACCOUNT ERR") {} else {
 							var data = obj.data;
-							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + data.code;
+							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/zhuce.html?info_id=" + data.code;
 							$("#twoDimension").attr("src", urlss)
 							$("#code").text(data.code)
-							var urls = "http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + data.code
+							var urls = "http://gopig.io/zhuce.html?info_id=" + data.code
 							$(".btn1").attr("data-clipboard-text", urls);
 							code = data.code
 							var shareData = {
 								title: '复仇的小猪',
 								desc: '小鸟对战版，注册赢IPG！',
 								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-								link: 'http://oo600.com/yyhy_html/pigs/zhuce.html?info_id=' + data.code,
+								link: 'http://gopig.io/zhuce.html?info_id=' + data.code,
 								icon: '',
 								// 不要过于依赖以下两个回调，很多浏览器是不支持的
 								success: function() {
@@ -195,7 +195,7 @@
 			title: '复仇的小猪',
 			desc: '小鸟对战版，注册赢IPG！',
 			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-			link: 'http://oo600.com/yyhy_html/pigs/zhuce.html?info_id=' + code,
+			link: 'http://gopig.io/zhuce.html?info_id=' + code,
 			icon: '',
 			// 不要过于依赖以下两个回调，很多浏览器是不支持的
 			success: function() {
@@ -225,7 +225,7 @@
 		});
 
 		clipboard.on('error', function(e) {
-			var copy_body = "http://www.oo600.com/yyhy_html/pigs/zhuce.html?info_id=" + code
+			var copy_body = "http://gopig.io/zhuce.html?info_id=" + code
 			Copy(copy_body);
 		});
 
