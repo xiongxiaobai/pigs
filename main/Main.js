@@ -293,6 +293,7 @@ function onframe() {
 						alert("您赢得了50IPG，请输入打币地址领取")
 						window.location.href = "zhuce.html"
 					}, 2000)
+					return
 				} else {
 					req(PIG_SEND, {
 							'uid': uid

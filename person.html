@@ -144,36 +144,29 @@
 					$("#num").text(num);
 					var address = data.address;
 					$("#address").val(address)
-					req(IPG_USER_MONEY_QUERY, {
-						'uid': uid
-					}, function(data) {
-						var dat = data.userMoney;
-						var money = dat.invite_money;
-						$("#coint").text(money)
-						$.ajax({
-							type: "post",
-							url: IPG_USER_GET_INVIT_CODE,
-							async: true,
-							dataType: "json",
-							data: {
-								"uid": uid
-							},
-							success: function(obj) {
-								if(obj.err == "NOT ACCOUNT ERR") {} else {
-									var data = obj.data;
-									$("#inviteCode").text(data.code)
-									$(".btn1").attr("data-clipboard-text", data.code);
-									code = data.code
-								}
 
-							},
-							error: function(e) {
-
+					$.ajax({
+						type: "post",
+						url: IPG_USER_GET_INVIT_CODE,
+						async: true,
+						dataType: "json",
+						data: {
+							"uid": uid
+						},
+						success: function(obj) {
+							if(obj.err == "NOT ACCOUNT ERR") {} else {
+								var data = obj.data;
+								$("#inviteCode").text(data.code)
+								$(".btn1").attr("data-clipboard-text", data.code);
+								code = data.code
 							}
-						});
-					}, function(e) {
 
-					})
+						},
+						error: function(e) {
+
+						}
+					});
+
 				},
 				function(e) {
 
