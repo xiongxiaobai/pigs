@@ -24,26 +24,23 @@
 		
 		input::-webkit-input-placeholder {
 			/*WebKit browsers*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 		
 		input::-moz-input-placeholder {
 			/*Mozilla Firefox*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 		
 		input::-ms-input-placeholder {
 			/*Internet Explorer*/
-			color: rgba(0, 0, 0, 0.51);
-			font-size: 0.38rem;
-			letter-spacing: 0;
-			text-align: left;
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
 	</style>
 
@@ -54,64 +51,53 @@
 				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
 				<div class="head_txt" style="color: white;">个人中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			</div>
-
-			<div class="showmoney" style="margin-top: 0.5375rem;width: 100%;height: 5.9125rem;">
-				<div style="float: left;margin-left: 0.5375rem;width: 4.4075rem;height: 5.9125rem;border-radius: 0.1333rem;background-color: #F5F5FA;opacity: 0.81;">
-					<img style="width: 3.8313rem;height: 5.3406rem;margin-top: 0.2967rem;margin-left: 0.2967rem;" src="images/personicon.jpg" />
-				</div>
-				<div style="float: right;">
-					<div id="srb" style="color: #656589;font-size: 0.48rem;margin-right: 0.4042rem;font-weight: bold;text-align: right;height: 0.5375rem;line-height: 0.5375rem;">Today</div>
-					<div style="width: 4.8375rem;height: 0.0258rem;background-color: #E3E3E3;border: 0.01505rem solid #E3E3E3;margin-top: 0.2838rem;"></div>
-					<div style="font-size: 0.4rem;color: #6A6A77;margin-top: 0.2021rem;margin-right: 0.4042rem;text-align: right;">IPG：<span style="font-size: 0.4rem;" id="coint">0</span>&nbsp;IPG</div>
+			<!--<img style="width: 100%;" src="images/img3.png" />-->
+			<div style="background-image: url(images/gr1.png);height: 16.15rem;width: 100%; background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;margin-top: 0.38rem;background-color: white;">
+				<div style="height: 4.37rem;"></div>
+				<div style="height: 0.8rem;line-height: 0.8rem;">
+					<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 1.14rem;">IPG数量：</div>
+					<div style="float: left;margin-left: 0.32rem;background-color: white;width: 2.96rem;height: 0.8rem;border-radius: 1rem;">
+						<span id="coint" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span>
+					</div>
 					<a href="buy.html">
-						<button type="button" style="width: 21%;margin-left: 34%;background-color: #ffd33f;font-weight: bold;height: 0.6rem;margin-top: 0.4rem;color: #333;font-size: 0.3rem;line-height: 0rem;border-radius: 0.4rem;position: absolute;margin-left: 2.5rem;" class="btn btn-primary btn-lg btn-block">
-							优惠套餐
-						</button>
+					<div style="float: left;margin-left: 0.35rem;width: 2.56rem;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.35rem;background-color: rgb(255,211,68);border-radius: 1rem;">优惠套餐</div>
 					</a>
-					<div style="font-size: 0.4rem;color: #6A6A77;margin-top: 1.6rem;margin-right: 0.4042rem;text-align: right;">邀请人数：<span style="font-size: 0.4rem;" id="num">0</span></div>
+				</div>
+				<div style="margin-top: 0.32rem;height: 0.8rem;line-height: 0.8rem;">
+					<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 1.14rem;">邀请人数：</div>
+					<div style="float: left;margin-left: 0.2rem;background-color: white;width: 2.96rem;height: 0.8rem;border-radius: 1rem;">
+						<span id="num" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span>
+					</div>
 					<a href="twoDimension.html">
-						<button type="button" style="width: 21%;margin-left: 34%;background-color: #ffd33f;font-weight: bold;height: 0.6rem;margin-top: 0.4rem;color: #333;font-size: 0.3rem;line-height: 0rem;border-radius: 0.4rem;position: absolute;margin-left: 2.5rem;" class="btn btn-primary btn-lg btn-block">
-							邀请有奖
-						</button>
+					<div style="float: left;margin-left: 0.35rem;width: 2.56rem;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.35rem;background-color: rgb(255,211,68);border-radius: 1rem;">邀请有奖</div>
 					</a>
-					<div style="margin-top: 1.4rem;font-size: 0.3rem;text-align: right;margin-right: 0.2rem;">邀请码：<span style="font-size: 0.3rem;" id="inviteCode"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
-
 				</div>
-
-			</div>
-
-			<div style="width: 9.2708rem;margin-left: 0.4042rem;margin-top: 0.2rem;">
-				<div style="text-align: center;">我的imToken地址：</div>
-				<input type="text" style="width: 90%;margin-left: 5%;" id="address">
-				<button onclick="changeAddress()" type="button" style="width: 24%;margin-left: 36%;background-color: #ffd33f;font-weight: bold;height: 0.6rem;margin-top: 0.2rem;color: #333;font-size: 0.3rem;line-height: 0rem;border-radius: 0.4rem;" class="btn btn-primary btn-lg btn-block">
-						修改地址
-				</button>
-			</div>
-
-			<div style="background: #FFFFFF;box-shadow: 0 2px 12px 0 rgba(0,0,0,0.11);border-radius: 0.1075rem;width: 9.2708rem;height: 4.9058rem;margin-left: 0.4042rem;margin-top: 0.5375rem;">
-				<div style="height: 1.2384rem;width: 8.1657rem;margin-left: 0.5676rem;border-bottom: 0.0258rem solid #F0F0F0;;">
-					<div style="float: left;margin-top: 0.5375rem;height: 0.5375rem;line-height: 0.5375rem;font-size: 0.38rem;color: #383838;opacity: 0.3;">提币地址</div>
-					<div style="height: 0.4558rem;line-height: 0.4558rem;margin-top: 0.5633rem;float: right;text-align: right;font-size: 0.3225rem;opacity: 0.3;">
-						<input type="text" style="float: right;text-align: right;border: none;background-color: #FFFFFF;height: 0.4558rem;line-height: 0.4558rem;font-size: 0.3225rem;" id="realname">
+				<div style="margin-top: 0.32rem;height: 0.8rem;line-height: 0.8rem;">
+					<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 1.14rem;">邀&nbsp;请&nbsp;码：</div>
+					<div style="float: left;margin-left: 0.34rem;background-color: white;width: 2.96rem;height: 0.8rem;border-radius: 1rem;">
+						<span id="inviteCode" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.2rem;"></span>
 					</div>
+					<div style="float: left;margin-left: 0.35rem;width: 2.56rem;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.35rem;background-color: rgb(255,211,68);border-radius: 1rem;" data-clipboard-text="http://gopig.io/zhuce.html" class="btn1">复制</div>
 				</div>
-				<div style="height: 1.505rem;width: 8.1657rem;margin-left: 0.5676rem;border-bottom: 0.0258rem solid #F0F0F0;;">
-					<div style="float: left;margin-top: 0.8084rem;height: 0.5375rem;line-height: 0.5375rem;font-size: 0.38rem;color: #383838;opacity: 0.3;">提币数量</div>
-					<div style="height: 0.4558rem;line-height: 0.4558rem;margin-top: 0.8342rem;float: right;text-align: right;font-size: 0.3225rem;opacity: 0.3;">
-						<input type="text" style="float: right;text-align: right;border: none;background-color: #FFFFFF;height: 0.4558rem;line-height: 0.4558rem;font-size: 0.3225rem;" disabled="disabled" id="zhifubaoID">
+				<div style="width: 9.07rem;height: 3.18rem;border-radius: 0.3rem;margin-top: 0.66rem;background-color: rgb(74,133,17);margin-left: 0.7rem;">
+					<div style="height: 0.39rem;"></div>
+					<div style="text-align: center;font-size: 0.4rem;color: rgb(255,255,255);">我的imToken地址；</div>
+					<div style="width: 7.83rem;height: 0.79rem;margin-left: 0.64rem;margin-top: 0.22rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;background-color: white;">
+						<img style="width: 0.32rem;height: 0.36rem;float: left;margin-left: 0.46rem;margin-top: 0.22rem;" src="images/gr2.png" />
+						<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.22rem;height: 0.39rem;margin-top: 0.2rem;width: 5.64rem;padding-left: 0.15rem;font-size: 0.28rem;color: #535376;line-height: 0.39rem;border-radius: 0;" placeholder="请输入imToken地址" type="text"  id="address" />
 					</div>
+					<div onclick="changeAddress()" style="margin-left: 3.28rem;width: 2.56rem;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.35rem;background-color: rgb(255,211,68);border-radius: 1rem;line-height: 0.8rem;margin-top: 0.2rem;">修改地址</div>
 				</div>
-				<div style="margin-top: 0.5375rem;height: 0.9933rem;">
-					<div id="do_money" style="float: left;height: 0.9933rem;line-height: 0.9933rem;width: 8.5rem;margin-left: 0.3698rem;border-radius: 0.1075rem;color: rgba(57,57,57,0.40);font-size: 0.3225rem;text-align: center;border: 1px solid rgba(57,57,57,0.40);">
-						提币
-					</div>
-
+				<div style="width: 9.07rem;height: 4.18rem;border-radius: 0.3rem;margin-top: 0.34rem;background-color: rgb(74,133,17);margin-left: 0.7rem;">
+					<div style="height: 0.36rem;"></div>
+					<input style="border: 0;margin-left: 0.64rem;height: 0.8rem;width: 7.83rem;padding-left: 0.43rem;font-size: 0.28rem;color: #535376;line-height: 0.8rem;border-radius: 1rem;" placeholder="提币地址" type="text" disabled="disabled" />
+					<input style="border: 0;margin-left: 0.64rem;height: 0.8rem;width: 7.83rem;padding-left: 0.43rem;font-size: 0.28rem;color: #535376;line-height: 0.8rem;border-radius: 1rem;margin-top: 0.31rem;" placeholder="提币数量" type="text" disabled="disabled" />
+					<div style="width: 2.56rem;height: 0.79rem;margin-left: 3.28rem;margin-top: 0.31rem;text-align: center;line-height: 0.79rem;border-radius: 1rem;background-color: rgb(190,190,190);color: rgb(255,255,255);font-size: 0.35rem;" id="do_money">提币</div>
+					<div style="text-align: center;color: rgb(255,255,255);font-size: 0.28rem;margin-top: 0.3rem;">暂未开放（客服QQ：2791823419）</div>
 				</div>
-				<div style="text-align: center;margin-top: 0.1333rem;height: 0.3784rem;line-height: 0.3784rem;color: #88889C;opacity: 0.33;font-size: 0.2709rem;">
-					暂未开放
-				</div>
+				<div style="height: 0.43rem;"></div>
 			</div>
-			<div style="height: 0.2rem;"></div>
+			<div style="height: 2rem;background-color: rgb(93,166,21);"></div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
 		<script src="js/base/util.js"></script>
