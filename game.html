@@ -88,7 +88,7 @@
 			setItem("pigUID", uid)
 			setLocal("pigphone", phone)
 			setLocal("pigUID", uid)
-			
+			maidian()
 		})
 		resetTime(20)
 
@@ -165,6 +165,14 @@
 						return false
 					})
 			}
+		}
+		
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_game"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 
