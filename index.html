@@ -115,7 +115,7 @@
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">游戏简介</div>
 					<div style="width: 7.62rem;height: 4.9rem;font-size: 0.4rem;color: rgb(51,51,51);margin-left: 0.62rem;margin-top: 0.5rem;">区块链技术让复仇的小猪的游戏对战结果变得真实可靠且不可篡改。能够实现线上竞技游戏的绝对公平、透明，彻底<br /> 杜绝作弊行为。复仇的小<br /> 猪限时空投1亿IPG，<br /> 参与游戏即挖矿，<br /> 赢到的IPG可 <br />ETH交易！。</div>
-						<img style="width: 4.56rem;height: 4.2rem;margin-left: 4.28rem;margin-top: -3.2rem;" src="images/img6.png" />
+					<img style="width: 4.56rem;height: 4.2rem;margin-left: 4.28rem;margin-top: -3.2rem;" src="images/img6.png" />
 				</div>
 				<div style="width: 8.86rem;height: 41.98rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">游戏简介</div>
@@ -185,7 +185,7 @@
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">IPG介绍</div>
 					<img style="width: 7.42rem;height: 16.47rem;margin-left: 0.74rem;margin-top: 0.9rem;" src="images/img18.png" />
-					
+
 				</div>
 				<div style="width: 8.84rem;height: 22.63rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">活动预约</div>
@@ -213,7 +213,7 @@
 						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
 						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">立即邀请</div>
 					</div>
-					
+
 				</div>
 				<img style="width: 100%;margin-top: 0.55rem;" src="images/img23.png" />
 				<div data-clipboard-text="gopig.io" style="position: absolute;width: 0.5rem;height: 0.5rem;margin-top: -8.3rem;margin-left: 5.5rem;" class="btn1"></div>
@@ -222,8 +222,6 @@
 					<div style="position: absolute;margin-top: -4.3rem;font-size: 0.32rem;color: white;margin-left: 4rem;">下载白皮书</div>
 				</a>
 			</div>
-			
-			
 
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -323,18 +321,19 @@
 				}, function(data) {
 					var num = data.user;
 					num = Number(num)
-					var g = parseInt(num%10);
-					var s = parseInt(num/10%10);
-					var b = parseInt(num/100%10);
-					var q = parseInt(num/1000%10);
-					$("#g").attr("src","images/n"+g+".png");
-					$("#s").attr("src","images/n"+s+".png");
-					$("#b").attr("src","images/n"+b+".png");
-					$("#q").attr("src","images/n"+q+".png");
-					
+					var g = parseInt(num % 10);
+					var s = parseInt(num / 10 % 10);
+					var b = parseInt(num / 100 % 10);
+					var q = parseInt(num / 1000 % 10);
+					$("#g").attr("src", "images/n" + g + ".png");
+					$("#s").attr("src", "images/n" + s + ".png");
+					$("#b").attr("src", "images/n" + b + ".png");
+					$("#q").attr("src", "images/n" + q + ".png");
+					maidian()
+
 				},
 				function(e) {
-//					$("#pn").text(888)
+					//					$("#pn").text(888)
 				})
 
 		});
@@ -380,51 +379,48 @@
 				} else {
 					times = 86400;
 				}
-				
-				if(day <= 9){
-					$("#t1").attr("src","images/n0.png")
-					$("#t2").attr("src","images/n"+day+".png")
-//					day = '0' + day;
-				}else{
-					var day1 = parseInt(Number(day)/10%10);
-					var day2 = parseInt(Number(day)%10);
-					$("#t1").attr("src","images/n"+day1+".png")
-					$("#t2").attr("src","images/n"+day2+".png")
+
+				if(day <= 9) {
+					$("#t1").attr("src", "images/n0.png")
+					$("#t2").attr("src", "images/n" + day + ".png")
+					//					day = '0' + day;
+				} else {
+					var day1 = parseInt(Number(day) / 10 % 10);
+					var day2 = parseInt(Number(day) % 10);
+					$("#t1").attr("src", "images/n" + day1 + ".png")
+					$("#t2").attr("src", "images/n" + day2 + ".png")
 				}
-				if(hour <= 9){
-					$("#s1").attr("src","images/n0.png")
-					$("#s2").attr("src","images/n"+hour+".png")
-//					hour = '0' + hour;
-				}else{
-					var hour1 = parseInt(Number(hour)/10%10);
-					var hour2 = parseInt(Number(hour)%10);
-					$("#s1").attr("src","images/n"+hour1+".png")
-					$("#s2").attr("src","images/n"+hour2+".png")
+				if(hour <= 9) {
+					$("#s1").attr("src", "images/n0.png")
+					$("#s2").attr("src", "images/n" + hour + ".png")
+					//					hour = '0' + hour;
+				} else {
+					var hour1 = parseInt(Number(hour) / 10 % 10);
+					var hour2 = parseInt(Number(hour) % 10);
+					$("#s1").attr("src", "images/n" + hour1 + ".png")
+					$("#s2").attr("src", "images/n" + hour2 + ".png")
 				}
-				if(minute <= 9){
-					$("#f1").attr("src","images/n0.png")
-					$("#f2").attr("src","images/n"+minute+".png")
-//					minute = '0' + minute;
-				}else{
-					var minute1 = parseInt(Number(minute)/10%10);
-					var minute2 = parseInt(Number(minute)%10);
-					$("#f1").attr("src","images/n"+minute1+".png")
-					$("#f2").attr("src","images/n"+minute2+".png")
+				if(minute <= 9) {
+					$("#f1").attr("src", "images/n0.png")
+					$("#f2").attr("src", "images/n" + minute + ".png")
+					//					minute = '0' + minute;
+				} else {
+					var minute1 = parseInt(Number(minute) / 10 % 10);
+					var minute2 = parseInt(Number(minute) % 10);
+					$("#f1").attr("src", "images/n" + minute1 + ".png")
+					$("#f2").attr("src", "images/n" + minute2 + ".png")
 				}
-				if(second <= 9){
-					$("#m1").attr("src","images/n0.png")
-					$("#m2").attr("src","images/n"+second+".png")
-//					second = '0' + second;
-				}else{
-					var second1 = parseInt(Number(second)/10%10);
-					var second2 = parseInt(Number(second)%10);
-					$("#m1").attr("src","images/n"+second1+".png")
-					$("#m2").attr("src","images/n"+second2+".png")
+				if(second <= 9) {
+					$("#m1").attr("src", "images/n0.png")
+					$("#m2").attr("src", "images/n" + second + ".png")
+					//					second = '0' + second;
+				} else {
+					var second1 = parseInt(Number(second) / 10 % 10);
+					var second2 = parseInt(Number(second) % 10);
+					$("#m1").attr("src", "images/n" + second1 + ".png")
+					$("#m2").attr("src", "images/n" + second2 + ".png")
 				}
-				
-				
-				
-				
+
 				$("#day").text(day)
 				$("#hour").text(hour)
 				$("#minute").text(minute)
@@ -466,6 +462,14 @@
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
 			alert('复制成功！');
+		}
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_index"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 
