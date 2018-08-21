@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>复仇的小猪账号登录</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="愤怒的小鸟对战版">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+	</style>
+
+	<body style="background-color: white;">
+
+		<div style="background-color: white;" class="wrap" id="app">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: white;">账号登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div id="gozhuce" class="fr" style="margin-top: -1.26rem;margin-right: 0.2rem;font-weight: bold;font-size: 0.3rem;">注册</div>
+			</div>
+			<img style="width: 100%;" src="images/zc1.png" />
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.86rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.31rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.35rem;" src="images/zc3.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.28rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="请输入手机号" type="tel" id="phone" />
+			</div>
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.32rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.31rem;" src="images/zc4.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="请输入密码" type="password" id="password" />
+			</div>
+			<img onclick="login()" style="width: 8.08rem;height: 1.54rem;margin-left: 0.96rem;margin-top: 4.68rem;" src="images/dl1.png" />
+			<div id="getPassword" style="text-align: center;height: 0.645rem;line-height: 0.645rem;margin-top: 0.1892rem;color:rgb(204, 204, 204);font-size: 0.3225rem;">忘记密码？</div>
+			<div style="height: 0.4rem;"></div>
+		</div>
+
+	</body>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var isback = true;
+		var uid = '';
+		$(document).ready(function() {
+			$("#gozhuce").on("click", function() {
+				window.location.href = "zhuce.html"
+			})
+			$("#getPassword").on("click",function(){
+				window.location.href="findPassWord.html"
+			})
+
+		})
+
+		function login() {
+			if(isback == false) {
+				return;
+			}
+			
+			var phone = $("#phone").val()
+			var password = $("#password").val()
+			if(phone == '' || phone == null || phone == 'null') {
+				alert("请输入手机号")
+				return false;
+			}
+			if(password == '' || password == null || password == 'null') {
+				alert("请输入密码")
+				return false;
+			}
+			isback = false;
+			req(USER_IPG_LOGIN, {
+				'phone': phone,
+				'password': password
+			}, function(data) {
+				isback = true;
+				uid = data.user.uid
+				phone = data.user.phone
+				setItem("pigphone", phone)
+				setItem("pigUID", uid)
+				setLocal("pigUID", uid)
+				setLocal("pigphone", phone)
+				alert("登录成功")
+				window.location.href="index.html"
+			}, function(err) {
+				alert(err.msg)
+				isback = true;
+			})
+		}
+
+		function back() {
+			history.go(-1)
+		}
+	</script>
+
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>复仇的小猪</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="对战版愤怒的小鸟">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="all">-->
+		<script src="js/clipboard.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body>
+		<div style="color: white;background-color: #333;width: 49.466em;height: 2.236em;line-height: 2.236em;">
+			<div style="position: absolute;margin-left: 0.8em;" class="dropdown">
+				<button style="background-color: #333;color: white;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    语言
+					    <span class="caret"></span>
+					  </button>
+				<ul style="background-color: #333;color: white;" style="width: 5em;min-width: 5em;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li style="background-color: #333;color: white;">
+						<a style="background-color: #333;color: white;">中文</a>
+					</li>
+					<li style="background-color: #333;color: white;">
+						<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cen', 'Chinese_to_English', 'resizable,scrollbars,status'))">English</a>
+					</li>
+					<li style="background-color: #333;color: white;">
+						<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cja', 'Chinese_to_Japanese', 'resizable,scrollbars,status'))">日本語</a>
+					</li>
+					<li style="background-color: #333;color: white;">
+						<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cko', 'Chinese_to_Korean', 'resizable,scrollbars,status'))">한국어.</a>
+					</li>
+				</ul>
+			</div>
+			<div id="nologn" class="fr" style="margin-right:0.8em ;">
+				<a href="denglu.html" style="color: white;font-size: 0.485em;">登录</a>/
+				<a href="zhuce.html" style="color: white;font-size: 0.485em;">注册</a>
+			</div>
+			<div id="logn" style="display: none;margin-right:0.8em;" class="fr">
+				<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+			</div>
+			<div class="fr" style="margin-right:3em ;height: 2.236em;line-height: 1.8em;">
+				<a href="" style="color: white;font-size: 0.485em;">下载白皮书</a>
+				<!--<div style="height: 0.08em;background-color: rgb(255,255,255);"></div>-->
+				
+			</div>
+			<div class="fr" style="margin-right:3em ;height: 2.236em;line-height: 1.8em;">
+				<a href="" style="color: white;font-size: 0.485em;">邀请好友</a>
+			</div>
+			<div class="fr" style="margin-right:3em ;height: 2.236em;line-height: 1.8em;">
+				<a href="" style="color: white;font-size: 0.485em;">兑换套餐</a>
+			</div>
+			
+			<div class="fr" style="margin-right:3em ;height: 2.236em;line-height: 1.8em;">
+				<a href="" style="color: white;font-size: 0.485em;">首页</a>
+				<div style="height: 0.08em;background-color: rgb(255,255,255);margin-top: -0.4em;"></div>
+			</div>
+			
+
+		</div>
+		<img style="width: 49.466em;height: 19.03em;" src="images/img3.png" />
+		<img style="width: 19.95em;position: absolute;margin-left: 14.78em;margin-top: -12.8em;" src="images/img3.gif" />
+		<div style="float: left;width: 7.44em;height: 156.61em;"></div>
+
+		<div style="float: left;display: table;width: 34.57em;height: 156.61em;background-color: #3da900;">
+			<div style="height:  0.809em;"></div>
+			<div style="width: 28.65em;height: 8.08em;border-radius: 0.6em;background-color: rgb(255,255,255);margin-left: 2.96em;">
+				<div style="height: 0.5em;"></div>
+				<div style="width: 27.28em;height: 1.368em;margin-left: 0.69em;background-color: rgb(250,131,38);color: rgb(255,255,255);">
+					<div style="width: 2.956em;height: 1.1em;margin-left: 1.79em;float: left;margin-top: 0.29em;text-align: center;background-color: rgb(255,255,255);color: rgb(250,131,38);line-height: 1.1em;font-size: 0.59em;">综合</div>
+				</div>
+			</div>
+			
+			
+			
+
+			<div style="margin-top: 2.1rem;width: 7.96rem;height: 0.67rem;margin-left: 1.12rem;">
+				<img style="width: 100%;" src="images/img1.png" />
+			</div>
+			<div style="width: 8.67rem;height: 1.42rem;margin-left: 0.63rem;margin-top: 0.52rem;">
+				<img style="width: 100%;" src="images/img2.png" />
+			</div>
+			<div style="width: 10rem;">
+				<img style="width: 100%;" src="images/img3.png" />
+				<div style="width: 7.34rem;height: 1.43rem;color: rgb(255,255,255);font-size: 1.54rem;margin-left: 1.36rem;margin-top: -2rem;text-align: center;font-weight: bold;">Play&Earn</div>
+			</div>
+			<div style="width: 10rem;background-color: #5DA615;">
+				<div style="text-align: center;width: 5.78rem;height: 0.7rem;font-size: 0.75rem;color: rgb(255,255,255);margin-left: 2.12rem;margin-top: 0.5rem;">玩游戏轻松赢ETH</div>
+				<div id="gogame" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
+					<img style="width: 100%;" src="images/img4.png" />
+					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">试玩赢ETH</div>
+				</div>
+				<div style="width: 8.84rem;height: 11.7rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
+					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;padding-top: 0.9rem;">受尽屈辱，忍无可忍!</div>
+					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;">复仇战争，一触即发!</div>
+					<div style="margin-top: 0.76rem;width: 7.62rem;margin-left: 0.62rem;color: rgb(51,51,51);font-size: 0.4rem;">改变命运是这个世界上最难的事情。人生太苦逼，复仇的小猪提供公平竞技的机会，角色互换可以让你改变命运，重新开始。</div>
+					<div style="width: 7.64rem;height: 4.34rem;margin-left: 0.6rem;margin-top: 0.79rem;margin-bottom: 0.56rem;">
+						<video id="video" src="http://ozlo7ug2t.bkt.clouddn.com/1534470914195863_2.mp4" poster="images/vidie.jpg" controls="controls" loop="loop" autoplay="autoplay" style="width: 100%;">
+							浏览器暂不支持！
+						</video>
+					</div>
+				</div>
+				<div style="width: 8.84rem;height: 7.1rem;margin-left: 0.56rem;margin-top: 1.18rem;border-radius: 0.3rem;background-color: white;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">游戏简介</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">游戏简介</div>
+					<div style="width: 7.62rem;height: 4.9rem;font-size: 0.4rem;color: rgb(51,51,51);margin-left: 0.62rem;margin-top: 0.5rem;">区块链技术让复仇的小猪的游戏对战结果变得真实可靠且不可篡改。能够实现线上竞技游戏的绝对公平、透明，彻底<br /> 杜绝作弊行为。复仇的小<br /> 猪限时空投1亿IPG，<br /> 参与游戏即挖矿，<br /> 赢到的IPG可 <br />ETH交易！。</div>
+					<img style="width: 4.56rem;height: 4.2rem;margin-left: 4.28rem;margin-top: -3.2rem;" src="images/img6.png" />
+				</div>
+				<div style="width: 8.86rem;height: 41.98rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">游戏简介</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">游戏玩法</div>
+					<img style="width: 7.43rem;height: 1.82rem;margin-left: 0.62rem;margin-top: 0.9rem;" src="images/img7.png" />
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.47rem;margin-left: 0.24rem;" src="images/img8.png" />
+					<img style="width: 7.34rem;height: 1.16rem;margin-left: 0.62rem;margin-top: 1.1rem;" src="images/img9.png" />
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img10.jpg" />
+					<img style="width: 7.63rem;height: 3.11rem;margin-left: 0.62rem;margin-top: 1.08rem;" src="images/img11.png" />
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.46rem;margin-left: 0.24rem;" src="images/img12.jpg" />
+					<img style="width: 6.16rem;height: 1.18rem;margin-left: 0.62rem;margin-top: 1.07rem;" src="images/img13.png" />
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.58rem;margin-left: 0.24rem;" src="images/img14.png" />
+					<img style="width: 7.62rem;height: 1.83rem;margin-left: 0.62rem;margin-top: 1.04rem;" src="images/img15.png" />
+					<img style="width: 8.38rem;height: 4.72rem;margin-top: 0.68rem;margin-left: 0.22rem;" src="images/img16.jpg" />
+				</div>
+				<div style="background-color: white;border-radius: 0.3rem;margin-top: 1.18rem;margin-left: 0.58rem;width: 8.84rem;height: 13.47rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">活动预约</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">活动预约</div>
+					<img style="width: 7.35rem;height: 1.46rem;margin-top: 0.7rem;margin-left: 0.71rem;" src="images/img17.png" />
+					<div style="width: 7.42rem;height: 7.02rem;border-radius: 0.3rem;margin-top: 0.44rem;margin-left: 0.72rem;background-color: #eaf4ea;">
+						<div style="text-align: center;padding-top: 0.67rem;font-size: 0.51rem;color: rgb(51,51,51);height: 0.45rem;font-weight: bold;">当前预约人数</div>
+						<div style="height: 1.06rem;margin-top: 1.16rem;">
+							<img id="q" style="height: 1.06rem;width: 0.66rem;margin-left: 2.34rem;float: left;" src="images/n0.png" />
+							<img id="b" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<img id="s" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<img id="g" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.54rem;margin-left: 0.1rem;margin-top: 0.4rem;float: left;font-weight: bold;">人</div>
+						</div>
+						<div style="text-align: center;font-size: 0.51rem;margin-top: 0.79rem;color: rgb(51,51,51);height: 0.5rem;font-weight: bold;">
+							活动截止倒计时
+						</div>
+						<div style="height: 1.06rem;margin-top: 0.58rem;">
+							<img id="t1" style="height: 1.06rem;width: 0.66rem;margin-left: 0.6rem;float: left;" src="images/n0.png" />
+							<img id="t2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;float: left;width: 0.12rem;font-size: 0.7rem;font-weight: bold;margin-left: 0.05rem;">:</div>
+							<img id="s1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="s2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;width: 0.12rem;font-size: 0.7rem;font-weight: bold;float: left;margin-left: 0.05rem;">:</div>
+							<img id="f1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="f2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;width: 0.12rem;font-size: 0.7rem;font-weight: bold;float: left;margin-left: 0.05rem;">:</div>
+							<img id="m1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="m2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+						</div>
+						<div style="height: 0.36rem;margin-top: 0.27rem;">
+							<div style="float: left;margin-left:1.08rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.35rem;width: 0.36rem;font-weight: bold;">天</div>
+							<div style="float: left;margin-left:1.27rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.35rem;width: 0.35rem;font-weight: bold;">时</div>
+							<div style="float: left;margin-left:1.26rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.36rem;width: 0.36rem;font-weight: bold;">分</div>
+							<div style="float: left;margin-left:1.24rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.36rem;width: 0.38rem;font-weight: bold;">秒</div>
+						</div>
+					</div>
+					<div onclick="gozc()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">立即预约</div>
+					</div>
+				</div>
+				<div style="width: 8.84rem;height: 18.9rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">活动预约</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">IPG介绍</div>
+					<img style="width: 7.42rem;height: 16.47rem;margin-left: 0.74rem;margin-top: 0.9rem;" src="images/img18.png" />
+
+				</div>
+				<div style="width: 8.84rem;height: 22.63rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">活动预约</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">兑换计划</div>
+					<img style="width: 6.78rem;height: 2.26rem;margin-left: 1.04rem;margin-top: 0.8rem;" src="images/img19.png" />
+					<div style="font-size: 0.4rem;color: rgb(51,51,51);width: 7.54rem;height: 1.03rem;margin-left: 0.52rem;margin-top: 0.59rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;复仇的小猪小鸟对战版发行游戏IPG鸟币 1ETH=8800 IPG鸟币+赠送（X为ETH数量）</div>
+					<img style="width: 7.7rem;height: 13.45rem;margin-top: 0.87rem;margin-left: 0.56rem;" src="images/img20.jpg" />
+					<div onclick="gobuy()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">兑换套餐</div>
+					</div>
+				</div>
+				<div style="width: 8.84rem;height: 11.96rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">活动预约</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">好友邀请</div>
+					<img style="width: 7.14rem;height: 2.26rem;margin-left: 0.9rem;margin-top: 0.9rem;" src="images/img21.png" />
+					<img style="width: 7.59rem;height: 4.5rem;margin-top: 0.88rem;margin-left: 0.63rem;" src="images/img22.png" />
+					<div onclick="goyq()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">立即邀请</div>
+					</div>
+
+				</div>
+				<img style="width: 100%;margin-top: 0.55rem;" src="images/img23.png" />
+				<div data-clipboard-text="gopig.io" style="position: absolute;width: 0.5rem;height: 0.5rem;margin-top: -8.3rem;margin-left: 5.5rem;" class="btn1"></div>
+				<div data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="position: absolute;width: 0.5rem;height: 0.5rem;margin-top: -5.15rem;margin-left: 8.4rem;" class="btn2"></div>
+				<a href="http://gopig.io/IPGWhitePaper.pdf">
+					<div style="position: absolute;margin-top: -4.3rem;font-size: 0.32rem;color: white;margin-left: 4rem;">下载白皮书</div>
+				</a>
+			</div>
+
+		</div>
+		<div style="float: right;width: 7.44em;height: 156.61em;"></div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+	<script type="text/javascript">
+		var uid = "";
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setItem("pigphone", phone)
+		setLocal("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigUID", uid)
+		$(document).ready(function() {
+			document.getElementById('video').play()
+			//Vertical Tab
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			$("#gosign").on("click", function() {
+				if(uid) {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gobuy").on("click", function() {
+				if(uid) {
+					window.location.href = "buy.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#twoDimension").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("请先登录")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gogame").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.open("game.html");
+				} else {
+					window.open("game.html");
+					//					alert("请先登录")
+					//					window.location.href = "denglu.html"
+				}
+			})
+			$("#gozhuce").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					alert("您已注册")
+				} else {
+					window.location.href = "zhuce.html"
+				}
+			})
+			//			var ndate = new Date().toLocaleDateString();
+			//			var ndate = new Date(ndate)
+			var ndate = 1535731200
+			//			var ndate = Math.round(ndate.getTime() / 1000)
+			var nnn = new Date()
+			nnn = Math.round(nnn.getTime() / 1000)
+			var nu = 1535731200 - nnn
+			//			var hour = Math.round(nu / 3600)
+			//			var minute = Math.round((nu % 3600) / 60)
+			//			var second = (nu % 3600) % 60
+			//			if(hour < 10) {
+			//				hour = '0' + hour
+			//			}
+			//			if(minute < 10) {
+			//				minute = '0' + minute
+			//			}
+			//			if(second < 10) {
+			//				second = '0' + second
+			//			}
+			//			$("#hour").text(hour)
+			//			$("#minute").text(minute)
+			//			$("#second").text(second)
+			countDown(nu)
+			//			countDown(ndate)
+			req(GET_USER_IPG_C, {
+
+				}, function(data) {
+					var num = data.user;
+					num = Number(num)
+					var g = parseInt(num % 10);
+					var s = parseInt(num / 10 % 10);
+					var b = parseInt(num / 100 % 10);
+					var q = parseInt(num / 1000 % 10);
+					$("#g").attr("src", "images/n" + g + ".png");
+					$("#s").attr("src", "images/n" + s + ".png");
+					$("#b").attr("src", "images/n" + b + ".png");
+					$("#q").attr("src", "images/n" + q + ".png");
+					maidian()
+
+				},
+				function(e) {
+					//					$("#pn").text(888)
+				})
+			$("#")
+
+		});
+
+		function gozc() {
+			if(uid && uid != null && uid != "null") {
+				alert("您已注册")
+			} else {
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function goyq() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "twoDimension.html"
+			} else {
+				alert("请先注册")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function gobuy() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "buy.html"
+			} else {
+				alert("请先注册")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function countDown(times) {
+			var timer = null;
+			timer = setInterval(function() {
+				var day = 0,
+					hour = 0,
+					minute = 0,
+					second = 0; //时间默认值
+				if(times > 0) {
+					day = Math.floor(times / (60 * 60 * 24));
+					hour = Math.floor(times / (60 * 60)) - (day * 24);
+					minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				} else {
+					times = 86400;
+				}
+
+				if(day <= 9) {
+					$("#t1").attr("src", "images/n0.png")
+					$("#t2").attr("src", "images/n" + day + ".png")
+					//					day = '0' + day;
+				} else {
+					var day1 = parseInt(Number(day) / 10 % 10);
+					var day2 = parseInt(Number(day) % 10);
+					$("#t1").attr("src", "images/n" + day1 + ".png")
+					$("#t2").attr("src", "images/n" + day2 + ".png")
+				}
+				if(hour <= 9) {
+					$("#s1").attr("src", "images/n0.png")
+					$("#s2").attr("src", "images/n" + hour + ".png")
+					//					hour = '0' + hour;
+				} else {
+					var hour1 = parseInt(Number(hour) / 10 % 10);
+					var hour2 = parseInt(Number(hour) % 10);
+					$("#s1").attr("src", "images/n" + hour1 + ".png")
+					$("#s2").attr("src", "images/n" + hour2 + ".png")
+				}
+				if(minute <= 9) {
+					$("#f1").attr("src", "images/n0.png")
+					$("#f2").attr("src", "images/n" + minute + ".png")
+					//					minute = '0' + minute;
+				} else {
+					var minute1 = parseInt(Number(minute) / 10 % 10);
+					var minute2 = parseInt(Number(minute) % 10);
+					$("#f1").attr("src", "images/n" + minute1 + ".png")
+					$("#f2").attr("src", "images/n" + minute2 + ".png")
+				}
+				if(second <= 9) {
+					$("#m1").attr("src", "images/n0.png")
+					$("#m2").attr("src", "images/n" + second + ".png")
+					//					second = '0' + second;
+				} else {
+					var second1 = parseInt(Number(second) / 10 % 10);
+					var second2 = parseInt(Number(second) % 10);
+					$("#m1").attr("src", "images/n" + second1 + ".png")
+					$("#m2").attr("src", "images/n" + second2 + ".png")
+				}
+
+				$("#day").text(day)
+				$("#hour").text(hour)
+				$("#minute").text(minute)
+				$("#second").text(second)
+
+				//
+				//  console.log(day+"天:"+hour+"小时："+minute+"分钟："+second+"秒");
+				times--;
+			}, 1000);
+			if(times <= 0) {
+				clearInterval(timer);
+			}
+		}
+		var clipboard = new Clipboard('.btn1');
+		var clipboard2 = new Clipboard('.btn2');
+
+		clipboard.on('success', function(e) {
+			alert("复制成功！")
+		});
+		clipboard2.on('success', function(e) {
+			alert("复制成功！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "gopig.io"
+			Copy(copy_body);
+		});
+		clipboard2.on('error', function(e) {
+			var copy_body = "0x6750b81427fa648db03c7a09e88e62ecc65b55d1"
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('复制成功！');
+		}
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_index"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>
