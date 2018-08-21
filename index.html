@@ -99,8 +99,8 @@
 					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">试玩赢ETH</div>
 				</div>-->
 				<div onclick="gozc()" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
-						<img style="width: 100%;" src="images/img4.png" />
-						<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">立即注册</div>
+					<img style="width: 100%;" src="images/img4.png" />
+					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">立即注册</div>
 				</div>
 				<div style="width: 8.84rem;height: 11.7rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
 					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;padding-top: 0.9rem;">受尽屈辱，忍无可忍!</div>
@@ -247,7 +247,14 @@
 		setLocal("pigphone", phone)
 		setItem("pigUID", uid)
 		setLocal("pigUID", uid)
+
 		$(document).ready(function() {
+			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+
+			} else {
+				window.location.href = "http://gopig.io/c/index.html"
+			}
+
 			document.getElementById('video').play()
 			//Vertical Tab
 			if(uid && uid != null && uid != "null") {
