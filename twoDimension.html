@@ -154,10 +154,10 @@
 					success: function(obj) {
 						if(obj.err == "NOT ACCOUNT ERR") {} else {
 							var data = obj.data;
-							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/zhuce.html?info_id=" + data.code;
+							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/zhuce2.html?info_id=" + data.code;
 							$("#twoDimension").attr("src", urlss)
 							$("#code").text(data.code)
-							var urls = "http://gopig.io/zhuce.html?info_id=" + data.code
+							var urls = "http://gopig.io/zhuce2.html?info_id=" + data.code
 							$(".btn1").attr("data-clipboard-text", urls);
 							code = data.code
 							var shareData = {
@@ -191,7 +191,7 @@
 			title: '复仇的小猪',
 			desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
 			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-			link: 'http://gopig.io/zhuce.html?info_id=' + code,
+			link: 'http://gopig.io/zhuce2.html?info_id=' + code,
 			icon: '',
 			// 不要过于依赖以下两个回调，很多浏览器是不支持的
 			success: function() {
@@ -221,7 +221,7 @@
 		});
 
 		clipboard.on('error', function(e) {
-			var copy_body = "http://gopig.io/zhuce.html?info_id=" + code
+			var copy_body = "http://gopig.io/zhuce2.html?info_id=" + code
 			Copy(copy_body);
 		});
 
