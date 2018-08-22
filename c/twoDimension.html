@@ -203,7 +203,7 @@
 			setLocal("pigphone", phone)
 			setItem("pigUID", uid)
 			setLocal("pigUID", uid)
-			if(uid && uid == null && uid == "null") {
+			if(uid && uid != null && uid != "null") {
 				$("#nologn").hide()
 				$("#logn").show()
 			} else {
