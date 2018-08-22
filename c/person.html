@@ -212,6 +212,13 @@
 			setItem("pigUID", uid)
 			setLocal("pigUID", uid)
 			$("#phone").text(phone)
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
 			req(IPG_USER_MONEY_QUERY, {
 					'uid': uid
 				}, function(data) {
