@@ -149,7 +149,8 @@
 					<div style="width: 7.42rem;height: 7.02rem;border-radius: 0.3rem;margin-top: 0.44rem;margin-left: 0.72rem;background-color: #eaf4ea;">
 						<div style="text-align: center;padding-top: 0.67rem;font-size: 0.51rem;color: rgb(51,51,51);height: 0.45rem;font-weight: bold;">当前预约人数</div>
 						<div style="height: 1.06rem;margin-top: 1.16rem;">
-							<img id="q" style="height: 1.06rem;width: 0.66rem;margin-left: 2.34rem;float: left;" src="images/n0.png" />
+							<img id="w" style="height: 1.06rem;width: 0.66rem;margin-left: 1.9rem;float: left;" src="images/n0.png" />
+							<img id="q" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
 							<img id="b" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
 							<img id="s" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
 							<img id="g" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
@@ -337,10 +338,12 @@
 					var s = parseInt(num / 10 % 10);
 					var b = parseInt(num / 100 % 10);
 					var q = parseInt(num / 1000 % 10);
+					var w = parseInt(num / 10000 % 10);
 					$("#g").attr("src", "images/n" + g + ".png");
 					$("#s").attr("src", "images/n" + s + ".png");
 					$("#b").attr("src", "images/n" + b + ".png");
 					$("#q").attr("src", "images/n" + q + ".png");
+					$("#w").attr("src", "images/n" + w + ".png");
 					maidian()
 
 				},

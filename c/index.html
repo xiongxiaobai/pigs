@@ -223,7 +223,8 @@
 							<div style="height: 0.4rem;"></div>
 							<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">当前预约人数</div>
 							<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
-								<img id="q" style="float: left;width: 15%;height: 0.8rem;margin-left: 17%;" src="images/n0.png" />
+								<img id="w" style="float: left;width: 15%;height: 0.8rem;margin-left: 8%;" src="images/n0.png" />
+								<img id="q" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
 								<img id="b" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
 								<img id="s" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
 								<img id="g" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
@@ -417,10 +418,12 @@
 					var s = parseInt(num / 10 % 10);
 					var b = parseInt(num / 100 % 10);
 					var q = parseInt(num / 1000 % 10);
+					var w = parseInt(num / 10000 % 10);
 					$("#g").attr("src", "images/n" + g + ".png");
 					$("#s").attr("src", "images/n" + s + ".png");
 					$("#b").attr("src", "images/n" + b + ".png");
 					$("#q").attr("src", "images/n" + q + ".png");
+					$("#w").attr("src", "images/n" + w + ".png");
 					maidian()
 
 				},
