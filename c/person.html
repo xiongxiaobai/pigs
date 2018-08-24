@@ -244,6 +244,7 @@
 								$("#inviteCode").text(data.code)
 								$(".btn1").attr("data-clipboard-text", data.code);
 								code = data.code
+								maidian()
 							}
 
 						},
@@ -312,6 +313,13 @@
 
 		function back() {
 			history.go(-1)
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_person_pc"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 

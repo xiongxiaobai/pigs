@@ -178,6 +178,7 @@
 			$("#getPassword").on("click", function() {
 				window.location.href = "findPassWord.html"
 			})
+			maidian()
 
 		})
 
@@ -218,6 +219,13 @@
 
 		function back() {
 			history.go(-1)
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_denglu_pc"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 

@@ -4,8 +4,8 @@ var isback = true;
 var back_code = '';
 var uid = '';
 $(document).ready(function() {
-
-	changePic()
+	maidian()
+//	changePic()
 
 })
 
@@ -201,4 +201,15 @@ function getUrlParam(name) {
 	if(r != null) return unescape(r[2]);
 	return null; //返回参数值
 }
+function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_findPassWord_pc"
+			}, function(data) {
+				changePic()
+			}, function(err) {
+				changePic()
+			})
+		}
 

@@ -249,6 +249,7 @@
 								}
 							}
 							nativeShare.setShareData(shareData)
+							maidian()
 						}
 
 					},
@@ -311,6 +312,13 @@
 
 		function back() {
 			history.go(-1)
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_twoDimension_pc"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 

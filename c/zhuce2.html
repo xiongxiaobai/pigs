@@ -194,6 +194,7 @@
 		$(document).ready(function() {
 			var info_id = getUrlParam("info_id");
 			$("#inviteCode").val(info_id);
+			maidian()
 		})
 
 		function register() {
@@ -304,6 +305,13 @@
 
 		function agreement() {
 			window.location = 'agreementText.html'
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_zhuce2_pc"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 

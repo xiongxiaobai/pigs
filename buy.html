@@ -132,6 +132,7 @@
 				$("#nologn").show()
 				$("#logn").hide()
 			}
+			maidian()
 		})
 
 		function back() {
@@ -232,6 +233,13 @@
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
 			alert('复制成功！');
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_buy"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 

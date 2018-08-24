@@ -160,6 +160,7 @@
 							var urls = "http://gopig.io/zhuce2.html?info_id=" + data.code
 							$(".btn1").attr("data-clipboard-text", urls);
 							code = data.code
+							maidian()
 							var shareData = {
 								title: '复仇的小猪',
 								desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
@@ -238,6 +239,13 @@
 
 		function back() {
 			history.go(-1)
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_twodimension"
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 
