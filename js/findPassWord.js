@@ -46,7 +46,7 @@ function goTime() {
 		if(time <= 0) {
 			is_code = true;
 			time = 60
-			$("#btn").text("获取验证码");
+			$("#btn").text("獲取驗證碼");
 			clearInterval(settime);
 			return false;
 		}
@@ -63,13 +63,13 @@ function sendCode() {
 	var phone = $("#phone").val()
 	if(!(/^1[0-9][0-9]\d{4,8}$/.test(phone))) {
 		is_code = true
-		alert("不是完整的11位手机号或者正确的手机号前七位");
+		alert("不是完整的11位手機號或者正確的手機號前七位");
 		//		document.mobileform.mobile.focus();
 		return false;
 	}
 	var pic_id = $("#pic_id").val()
 	if(pic_id == '' || pic_id == null || pic_id == 'null') {
-		alert("输入正确的图片验证码才能获取短信验证码")
+		alert("輸入正確的圖片驗證碼才能獲取簡訊驗證碼")
 		is_code = true
 		return false;
 	}
@@ -98,7 +98,7 @@ function sendCode() {
 			}
 		},
 		error: function(e) {
-			alert('图片验证码有误')
+			alert('圖片驗證碼有誤')
 
 			is_code = true;
 			changePic()
@@ -115,11 +115,11 @@ function send() {
 			'randomCode': back_code
 		}, function(data) {
 
-			alert("验证码获取成功");
+			alert("驗證碼獲取成功");
 			goTime()
 		},
 		function(e) {
-			alert("获取验证码失败！");
+			alert("獲取驗證碼失敗！");
 			is_code = true;
 			changePic()
 			return false
@@ -138,21 +138,21 @@ function register() {
 	var inviteCode = $("#inviteCode").val()
 //	var password_again = $("#password_again").val()
 	if(phone == '' || phone == null || phone == 'null') {
-		alert("手机号不能为空")
+		alert("手機號不能爲空")
 		isback = true;
 		return
 	}
 	if(code == '' || code == null || code == 'null') {
 		isback = true;
-		alert("验证码不能为空")
+		alert("驗證碼不能爲空")
 		return
 	}
 	if(password.length < 6) {
 		isback = true;
-		alert("密码至少6位！")
+		alert("密碼至少6位！")
 	} else if(password == '' || password == null || password == 'null') {
 		isback = true;
-		alert("密码不能为空！")
+		alert("密碼不能爲空！")
 	} else {
 		req(IPGUSER_FINDPASSWORD_URL, {
 			'phone': phone,
@@ -169,7 +169,7 @@ function register() {
 			setLocal("pigUID", uid)
 			setLocal("pigphone", phone)
 			isback = true;
-			alert("修改成功！请记住新密码："+password)
+			alert("修改成功！請記住新密碼："+password)
 //			var is_news = confirm("注册成功，每天抽奖必中奖，中奖率100%,是否立即去抽奖？");
 //			if(is_news == true) {
 //				isback = true;

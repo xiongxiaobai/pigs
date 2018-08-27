@@ -9,9 +9,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<link rel="icon" href="" />
-		<title>复仇的小猪邀请好友</title>
-		<meta name="keywords" content="对战版愤怒的小鸟">
-		<meta name="description" content="愤怒的小鸟对战版">
+		<title>復仇的小猪邀請好友</title>
+		<meta name="keywords" content="對戰版憤怒的小鳥">
+		<meta name="description" content="對戰版憤怒的小鳥">
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css?3">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/jquery-2.1.4.min.js"></script>
@@ -81,7 +81,7 @@
 		<div class="wrap" style="background: rgb(255, 255, 255);">
 			<div class="header2 clearfix" style="color: white;background-color: #080808;">
 				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
-				<div class="head_txt" style="color: white;">邀请好友&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div class="head_txt" style="color: white;">邀請好友&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<div id="logn" style="margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
 					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
 				</div>
@@ -90,10 +90,10 @@
 			<img style="width: 8.08rem;height: 3.47rem;margin-top: 0.39rem;margin-left: 0.95rem;" src="images/yq1.png" />
 			<img style="width: 3.5rem;height: 3.47rem;margin-left: 3.26rem;margin-top: 0.6rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/index.html" />
 			<div style="text-align: center;font-size: 0.34rem;color: rgb(0,0,0);margin-top: 0.16rem;font-weight: bold;">
-				立刻邀请好友一起赚IPG
+				立刻邀請好友一起賺IPG
 			</div>
-			<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀请码：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
-			<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">邀请所得：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>个IPG(IPG)</div>
+			<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀請碼：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+			<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">邀請所得：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>個IPG(IPG)</div>
 			
 			
 			<div id="copy" style="background-color: rgb(255, 255, 255);margin-top: 1%;height: 1rem;line-height: 1.4rem;" class="copy">
@@ -106,9 +106,9 @@
 					</div>
 				</div>
 				<button style="display: none;" onclick="call()">通用分享</button>
-				<button style="display: none;" onclick="setTitle('fa-ge NativeShare')">设置标题</button>
+				<button style="display: none;" onclick="setTitle('fa-ge NativeShare')">設置標題</button>
 			</div>
-			<div style="margin-top: 1rem;color: #333;font-size: 0.3rem;text-align: center;">如果浏览器不支持，请截屏分享</div>
+			<div style="margin-top: 1rem;color: #333;font-size: 0.3rem;text-align: center;">如果瀏覽器不支持，請截屏分享</div>
 			<div style="height: 0.6rem;"></div>
 		</div>
 
@@ -162,8 +162,8 @@
 							code = data.code
 							maidian()
 							var shareData = {
-								title: '复仇的小猪',
-								desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
+								title: '復仇的小豬',
+								desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
 								link: 'http://gopig.io/zhuce.html?info_id=' + data.code,
 								icon: '',
@@ -189,8 +189,8 @@
 			})
 		})
 		var shareData = {
-			title: '复仇的小猪',
-			desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
+			title: '復仇的小豬',
+			desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
 			link: 'http://gopig.io/zhuce2.html?info_id=' + code,
 			icon: '',
@@ -211,14 +211,14 @@
 			} catch(err) {
 				// 如果不支持，你可以在这里做降级处理
 				//		alert(err.message)
-				alert("您的浏览器不支持此项一键分享")
+				alert("您的瀏覽器不支持此項一鍵分享")
 			}
 		}
 
 		var clipboard = new Clipboard('.btn1');
 
 		clipboard.on('success', function(e) {
-			alert("复制成功！")
+			alert("複製成功！")
 		});
 
 		clipboard.on('error', function(e) {
@@ -234,7 +234,7 @@
 			document.addEventListener('copy', save);
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
-			alert('复制成功！');
+			alert('複製成功！');
 		}
 
 		function back() {
