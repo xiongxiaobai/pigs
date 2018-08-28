@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" href="" />
-		<title>复仇的小猪邀请好友</title>
-		<meta name="keywords" content="对战版愤怒的小鸟">
-		<meta name="description" content="愤怒的小鸟对战版">
+		<title>復仇的小豬邀請好友</title>
+		<meta name="keywords" content="對戰版憤怒的小鳥">
+		<meta name="description" content="對戰版憤怒的小鳥">
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css?3">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/base/util.js"></script>
@@ -90,7 +90,7 @@
 					<ul class="nav navbar-nav">
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">语言 <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">語言 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">中文</a>
@@ -109,22 +109,22 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="index.html">首页</a>
+							<a href="index.html">首頁</a>
 						</li>
 						<li>
-							<a href="buy.html">兑换套餐</a>
+							<a href="buy.html">兌換套餐</a>
 						</li>
 						<li class="active">
-							<a>邀请好友</a>
+							<a>邀請好友</a>
 						</li>
 						<li>
-							<a href="http://gopig.io/IPGWhitePaper.pdf">下载白皮书</a>
+							<a href="http://gopig.io/IPGWhitePaper.pdf">下載白皮書</a>
 						</li>
 						<li id="logn" style="display: none;">
 							<a href="person.html"><span class="glyphicon glyphicon-user"> </span></a>
 						</li>
 						<li id="nologn">
-							<a href="denglu.html">登录</a>
+							<a href="denglu.html">登錄</a>
 						</li>
 
 					</ul>
@@ -158,15 +158,29 @@
 				<div style="height:  0.4rem;"></div>
 				<div style="width: 90%;margin-left: 5%;background-color: white;border-radius: 0.3rem;">
 					<div style="height:  0.4rem;"></div>
-					<img style="width: 70%;margin-top: 0.68rem;margin-left: 15%;" src="images/yq1.png" />
+					<div style="width: 70%;margin-top: 0.68rem;margin-left: 15%;">
+						<div style="width: 100%;display: table;">
+							<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;position: absolute;">1</div>
+							<div style="float: left;font-weight: bold;margin-left: 8%;font-size: 0.4rem;">完成注冊：獲得100IPG</div>
+						</div>
+						<div style="width: 100%;display: table;margin-top: 0.2rem;">
+							<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;position: absolute;">2</div>
+							<div style="float: left;font-weight: bold;margin-left: 8%;font-size: 0.4rem;">邀請好友完成注冊：每人獎勵50IPG</div>
+						</div>
+						<div style="width: 100%;display: table;margin-top: 0.2rem;">
+							<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;position: absolute;">3</div>
+							<div style="float: left;font-weight: bold;margin-left: 8%;font-size: 0.4rem;">好友邀請下級好友：每人獎勵30IPG</div>
+						</div>
+						<div style="width: 100%;margin-top: 0.2rem;font-size: 0.36rem;color: #333;">例：A完成注冊且邀請了好友B和C，B和C分別完成注冊并且邀請了自己的兩位好友，則A的收益為：100+2*50+4*30=320（IPG）</div>
+					</div>
+					<!--<img style="width: 70%;margin-top: 0.68rem;margin-left: 15%;" src="images/yq1.png" />-->
 					<img style="width: 30%;margin-left: 35%;margin-top: 0.6rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/index.html" />
 					<div style="text-align: center;font-size: 0.34rem;color: rgb(0,0,0);margin-top: 0.16rem;font-weight: bold;">
-						立刻邀请好友一起赚IPG
+						立刻邀請好友一起賺IPG
 					</div>
-					<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀请码：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
-					<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">邀请所得：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>个IPG(IPG)</div>
+					<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀請碼：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+					<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">邀請所得：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>個IPG</div>
 
-					
 					<div style="height: 0.8rem;"></div>
 				</div>
 				<img src="images/zc11.png" />
@@ -234,8 +248,8 @@
 							$(".btn1").attr("data-clipboard-text", urls);
 							code = data.code
 							var shareData = {
-								title: '复仇的小猪',
-								desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
+								title: '復仇的小豬',
+								desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
 								link: 'http://gopig.io/zhuce2.html?info_id=' + data.code,
 								icon: '',
@@ -262,8 +276,8 @@
 			})
 		})
 		var shareData = {
-			title: '复仇的小猪',
-			desc: '你玩过愤怒的小鸟吗？来注册领100鸟币赢ETH！',
+			title: '復仇的小豬',
+			desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
 			link: 'http://gopig.io/zhuce2.html?info_id=' + code,
 			icon: '',
@@ -284,14 +298,14 @@
 			} catch(err) {
 				// 如果不支持，你可以在这里做降级处理
 				//		alert(err.message)
-				alert("您的浏览器不支持此项一键分享")
+				alert("您的瀏覽器不支持此項一鍵分享")
 			}
 		}
 
 		var clipboard = new Clipboard('.btn1');
 
 		clipboard.on('success', function(e) {
-			alert("复制成功！")
+			alert("複製成功！")
 		});
 
 		clipboard.on('error', function(e) {
@@ -307,12 +321,13 @@
 			document.addEventListener('copy', save);
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
-			alert('复制成功！');
+			alert("複製成功！")
 		}
 
 		function back() {
 			history.go(-1)
 		}
+
 		function maidian() {
 
 			req(BURIED_POINT_RECORD, {

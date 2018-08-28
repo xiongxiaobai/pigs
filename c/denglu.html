@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" href="" />
-		<title>复仇的小猪账号登录</title>
-		<meta name="keywords" content="对战版愤怒的小鸟">
-		<meta name="description" content="愤怒的小鸟对战版">
+		<title>復仇的小豬賬號登錄</title>
+		<meta name="keywords" content="對戰版憤怒的小鳥">
+		<meta name="description" content="對戰版憤怒的小鳥">
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script src="js/jquery-2.1.4.min.js"></script>
@@ -62,7 +62,7 @@
 					<ul class="nav navbar-nav">
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">语言 <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">語言 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">中文</a>
@@ -81,7 +81,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="index.html">首页</a>
+							<a href="index.html">首頁</a>
 						</li>
 						<!--<li>
 							<a href="buy.html">兑换套餐</a>
@@ -90,17 +90,17 @@
 							<a href="twoDimension.html">邀请好友</a>
 						</li>-->
 						<li>
-							<a href="http://gopig.io/IPGWhitePaper.pdf">下载白皮书</a>
+							<a href="http://gopig.io/IPGWhitePaper.pdf">下載白皮書</a>
 						</li>
 
 						<!--<li id="logn" style="display: none;">
 							<a href="person.html"><span class="glyphicon glyphicon-user"> </span></a>
 						</li>-->
 						<li class="active">
-							<a>登录</a>
+							<a>登錄</a>
 						</li>
 						<li>
-							<a href="zhuce.html">注册</a>
+							<a href="zhuce.html">注冊</a>
 						</li>
 
 					</ul>
@@ -136,14 +136,14 @@
 					<div style="height:  0.4rem;"></div>
 					<div style="width: 80%;height: 1.15rem;margin-left: 10%;margin-top: 0.86rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
 						<img style="width: 0.31rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.35rem;" src="images/zc3.png" />
-						<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.28rem;height: 0.56rem;margin-top: 0.3rem;width: 84%;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="请输入手机号" type="tel" id="phone" />
+						<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.28rem;height: 0.56rem;margin-top: 0.3rem;width: 84%;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="請輸入手機號" type="tel" id="phone" />
 					</div>
 					<div style="width: 80%;height: 1.15rem;margin-left: 10%;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
 						<img style="width: 0.32rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.31rem;" src="images/zc4.png" />
-						<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 84%;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="请输入密码" type="password" id="password" />
+						<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 84%;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="請輸入密碼" type="password" id="password" />
 					</div>
 					<img onclick="login()" style="width: 50%;margin-left: 25%;margin-top: 2rem;" src="images/dl1.png" />
-					<div id="getPassword" style="text-align: center;height: 0.645rem;line-height: 0.645rem;margin-top: 0.1892rem;color:rgb(204, 204, 204);font-size: 0.3225rem;">忘记密码？</div>
+					<div id="getPassword" style="text-align: center;height: 0.645rem;line-height: 0.645rem;margin-top: 0.1892rem;color:rgb(204, 204, 204);font-size: 0.3225rem;">忘記密碼？</div>
 
 					<div style="height: 0.8rem;"></div>
 				</div>
@@ -190,11 +190,11 @@
 			var phone = $("#phone").val()
 			var password = $("#password").val()
 			if(phone == '' || phone == null || phone == 'null') {
-				alert("请输入手机号")
+				alert("請輸入手機號")
 				return false;
 			}
 			if(password == '' || password == null || password == 'null') {
-				alert("请输入密码")
+				alert("請輸入密碼")
 				return false;
 			}
 			isback = false;
@@ -209,7 +209,7 @@
 				setItem("pigUID", uid)
 				setLocal("pigUID", uid)
 				setLocal("pigphone", phone)
-				alert("登录成功")
+				alert("登錄成功")
 				window.location.href = "index.html"
 			}, function(err) {
 				alert(err.msg)
