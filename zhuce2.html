@@ -112,10 +112,20 @@
 		var isback = true;
 		var uid = '';
 		var tk = '';
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigphone", phone)
+		setLocal("pigUID", uid)
 		$(document).ready(function() {
 			var info_id = getUrlParam("info_id");
 			$("#inviteCode").val(info_id);
 			maidian()
+			if(uid && uid != null && uid != "null"){
+				window.location.href = "index.html"
+			}
 		})
 
 		function register() {

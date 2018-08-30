@@ -74,6 +74,13 @@
 	<script>
 		var isback = true;
 		var uid = '';
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigphone", phone)
+		setLocal("pigUID", uid)
 		$(document).ready(function() {
 			$("#gozhuce").on("click", function() {
 				window.location.href = "zhuce.html"
@@ -82,7 +89,9 @@
 				window.location.href="findPassWord.html"
 			})
 			maidian()
-
+			if(uid && uid != null && uid != "null"){
+				window.location.href = "index.html"
+			}
 		})
 
 		function login() {
