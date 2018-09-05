@@ -1,387 +1,639 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" style="background-color: white;">
 
 	<head>
-		<title>复仇的小猪</title>
-		<!--for-mobile-apps-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="" />
-		<script type="application/x-javascript">
-			addEventListener("load", function() {
-				setTimeout(hideURLbar, 0);
-			}, false);
-
-			function hideURLbar() {
-				window.scrollTo(0, 1);
-			}
-		</script>
-		<!--//for-mobile-apps-->
-
-		<!-- Custom-Theme-Files -->
-		<!-- Bootstrap-CSS -->
+		<meta charset="utf-8">
+		<link rel="icon" href="" />
+		<title>復仇的小豬</title>
+		<meta name="keywords" content="對戰版憤怒的小鳥">
+		<meta name="description" content="對戰版憤怒的小鳥">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- JQuery -->
-		<script src="js/jquery.min.js">
-		</script>
-		<!-- Bootstrap-Main -->
-		<script src="js/bootstrap.min.js">
-		</script>
-		<!-- Index-Page-Styling -->
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-		<!-- Start-Smooth-Scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="all">-->
+		<script src="js/clipboard.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		.fr {
+			float: right;
+			display: inline-block;
+		}
+		
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	</style>
+
+	<body>
+		<nav class="navbar navbar-default navbar-inverse" style="margin-bottom: 0;">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">語言 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">中文</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cen', 'Chinese_to_English', 'resizable,scrollbars,status'))">English</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cja', 'Chinese_to_Japanese', 'resizable,scrollbars,status'))">日本語</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cko', 'Chinese_to_Korean', 'resizable,scrollbars,status'))">한국어.</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="#">首頁</a>
+						</li>
+						<li>
+							<a href="#buy">兌換套餐</a>
+						</li>
+						<li>
+							<a href="#invite">邀請好友</a>
+						</li>
+						<li>
+							<a href="#whitepaper">下載白皮書</a>
+						</li>
+						<li id="logn" style="display: none;">
+							<a href="person.html"><span class="glyphicon glyphicon-user"> </span></a>
+						</li>
+						<li id="nologn">
+							<a href="denglu.html">登錄</a>
+						</li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div class="row" style="margin-left: 0;margin-right: 0;">
+			<div style="padding-left: 0;padding-right: 0;" class="col-md-12">
+				<img src="images/img3.png" class="img-responsive" alt="Responsive image">
+				<img class="img-responsive" alt="Responsive image" style="width: 35%;position: absolute;margin-left: 32%;margin-top: -25%;" src="images/img3.gif" />
+			</div>
+		</div>
+		<div class="row">
+			<div style="padding-right: 0;padding-left: 0;width: 15%;" class="col-md-2">
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+			</div>
+
+			<div style="padding-right: 0;padding-left: 0;background-color: #3da900;width: 70%;" class="col-md-8">
+				<div style="height:  0.4rem;"></div>
+				<!--<div style="width: 90%;height: 4rem;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;">
+					<div style="height: 1em;"></div>
+					<div style="width: 90%;height: 0.6rem;margin-left: 5%;background-color: rgb(250,131,38);color: rgb(255,255,255);">
+						<div style="width: 1.4rem;height: 0.5rem;margin-left: 0.8rem;float: left;margin-top: 0.1rem;text-align: center;background-color: rgb(255,255,255);color: rgb(250,131,38);line-height: 0.5rem;font-size: 0.3rem;">综合</div>
+						<div style="width: 8%;height: 1.9em;float: left;margin-top: 1.09em;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);line-height: 2.1em;font-size: 1em;">新闻</div>
+						<div style="width: 8%;height: 1.9em;float: left;margin-top: 1.09em;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);line-height: 2.1em;font-size: 1em;">活动</div>
+						<div style="float: right;color: rgb(255,255,255);margin-right: 1em;font-size: 0.59em;margin-top: 0.39em;">更多>></div>
+					</div>
+					<div style="height: 0.6rem;margin-top: 0.25rem;width: 90%;margin-left: 5%;border-bottom: 1px dotted #333;line-height: 0.6rem;">
+						<a href="http://m.qukuaiwang.com.cn/news/11648.html?from=singlemessage">
+						<div style="float: left;width: 0.6rem;height: 0.3rem;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);font-size: 0.16rem;line-height: 0.3rem;margin-top: 0.15rem;">新闻</div>
+						<div style="float: left;margin-left: 0.2rem;color: #333;font-size: 0.16rem;">《​复仇的小猪 》基于区块链技术的对战游戏</div>
+						</a>
+					</div>
+					<div style="height: 1.4em;width: 27em;margin-left: 0.94em;border-bottom: 1px dotted #333;line-height: 1.4em;">
+						<div style="float: left;width: 3.37em;height: 2em;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);font-size: 0.4em;line-height: 2em;margin-top: 0.6em;">公告</div>
+						<div style="float: left;margin-left: 0.41em;color: #333;font-size: 0.44em;">复仇的小猪在线预约火爆开启，小伙伴们快来预约获得IPG</div>
+					</div>
+					<div style="height: 1.4em;width: 27em;margin-left: 0.94em;border-bottom: 1px dotted #333;line-height: 1.4em;">
+						<div style="float: left;width: 3.37em;height: 2em;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);font-size: 0.4em;line-height: 2em;margin-top: 0.6em;">活动</div>
+						<div style="float: left;margin-left: 0.41em;color: #333;font-size: 0.44em;">复仇的小猪在线预约火爆开启，小伙伴们快来预约获得IPG</div>
+					</div>
+					<div style="height: 1.4em;width: 27em;margin-left: 0.94em;line-height: 1.4em;">
+						<div style="float: left;width: 3.37em;height: 2em;text-align: center;background-color: rgb(250,131,38);color: rgb(255,255,255);font-size: 0.4em;line-height: 2em;margin-top: 0.6em;">新闻</div>
+						<div style="float: left;margin-left: 0.41em;color: #333;font-size: 0.44em;">复仇的小猪在线预约火爆开启，小伙伴们快来预约获得IPG</div>
+					</div>
+				</div>-->
+				<div style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;">
+					<div style="height: 0.4rem;"></div>
+					<div style="text-align: center;font-size: 0.5rem;font-weight: bold;">受盡屈辱，忍無可忍！復仇戰爭，一觸即發！</div>
+					<div style="margin-top: 0.2rem;width: 90%;margin-left: 5%;font-size: 0.2rem;">改變命運是這個世界上最難的事情。人生太苦逼，復仇的小豬提供公平競技的機會，角色互換可以讓你改變命運，重新開始。區塊鏈科技讓復仇的小豬的遊戲對戰結果變得真實可靠且不可篡改。能够實現線上競技遊戲的絕對公平、透明，徹底杜絕作弊行為。復仇的小豬限時贈送1億IPG，參與遊戲即可獲取，贏到的IPG可ETH交易！</div>
+					<div style="margin-top: 0.6rem;margin: auto;width: 7rem;height:3.5rem;background: url(images/img24.png) no-repeat;background-size: 100% 100%;">
+						<video id="video" src="http://ozlo7ug2t.bkt.clouddn.com/1534470914195863_2.mp4" poster="images/vidie.jpg" controls="controls" loop="loop" autoplay="autoplay" style="width: 67%;margin-left: 1.18rem;margin-top: 0.48rem;">
+							瀏覽器暫不支持！
+						</video>
+					</div>
+					<div style="height: 0.4rem;"></div>
+					<!--<img style="margin-left: 16.8%;width: 63.9%;margin-top: -3.33rem;height: 60.9%;" src="images/img24.png" />-->
+				</div>
+				<div style="width: 90%;height: 10.6rem;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
+					<div style="text-align: center;font-size: 0.2rem;color: rgb(255,255,255);">游戲玩法</div>
+					<div style="width: 2.6rem;height: 0.42rem;margin-left: 0.6rem;margin-top: -0.36rem;">
+						<img style="width: 100%;" src="images/img25.png" />
+					</div>
+					<div class="row" style="margin-top: 0.4rem;display: table;width: 100%;">
+						<img class="col-md-3" style="float: left;height: 1.5rem;margin-left: 0.4rem;" src="images/img8.png" />
+						<div class="col-md-8" style="float: left;height: 1.5rem;margin-left: 0.2rem;border-radius: 0.3rem;background-color: rgb(232,232,232);">
+							<div style="height: 0.6rem;"></div>
+							<div style="margin-left: 0.2rem;display: table;">
+								<div style="width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;background-color: black;color: white;text-align: center;font-weight: bold;line-height: 0.26rem;">1</div>
+								<div style="float: left;margin-left: 4%;font-weight: bold;font-size: 0.24rem;line-height: 0.28rem;">戰前準備</div>
+								<div style="clear: both;"></div>
+								<div style="font-size: 0.148rem;margin-top: 2%;font-weight: bold;">玩家可用IPG兌換各類道具加强戰鬥力，游戲正式開始前可以測試搭建好的堡壘。</div>
+							</div>
+							<!--<img style="width: 66%;height: 34%;margin-left: 0.2rem;" src="images/img26.png" />-->
+						</div>
+					</div>
+					<div class="row" style="margin-top: 0.4rem;display: table;width: 100%;">
+						<img class="col-md-3" style="float: left;height: 1.5rem;margin-left: 0.4rem;" src="images/img10.png" />
+						<div class="col-md-8" style="float: left;height: 1.5rem;margin-left: 0.2rem;border-radius: 0.3rem;background-color: rgb(232,232,232);">
+							<div style="height: 0.6rem;"></div>
+							<div style="margin-left: 0.2rem;display: table;">
+								<div style="width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;background-color: black;color: white;text-align: center;font-weight: bold;line-height: 0.26rem;">2</div>
+								<div style="float: left;margin-left: 4%;font-weight: bold;font-size: 0.24rem;line-height: 0.28rem;">選擇戰場</div>
+								<div style="clear: both;"></div>
+								<div style="font-size: 0.148rem;margin-top: 2%;font-weight: bold;">玩家選擇對戰場并鎖定IPG作爲獎池籌碼。</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 0.4rem;display: table;width: 100%;">
+						<img class="col-md-3" style="float: left;height: 1.5rem;margin-left: 0.4rem;" src="images/img12.png" />
+						<div class="col-md-8" style="float: left;height: 1.5rem;margin-left: 0.2rem;border-radius: 0.3rem;background-color: rgb(232,232,232);">
+							<div style="height: 0.4rem;"></div>
+							<div style="margin-left: 0.2rem;display: table;">
+								<div style="width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;background-color: black;color: white;text-align: center;font-weight: bold;line-height: 0.26rem;">3</div>
+								<div style="float: left;margin-left: 4%;font-weight: bold;font-size: 0.24rem;line-height: 0.28rem;">對戰過程</div>
+								<div style="clear: both;"></div>
+								<div style="font-size: 0.148rem;margin-top: 2%;font-weight: bold;line-height: 0.22rem;">小猪方（防禦方）挑選堡壘。小鳥方（進攻方）選擇合適的小鳥幷决定出戰順序。<br />小鳥方在限定時間內攻擊。小鳥全部出戰或猪被全殲後，雙方互換角色。</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 0.4rem;display: table;width: 100%;">
+						<img class="col-md-3" style="float: left;height: 1.5rem;margin-left: 0.4rem;" src="images/img14.png" />
+						<div class="col-md-8" style="float: left;height: 1.5rem;margin-left: 0.2rem;border-radius: 0.3rem;background-color: rgb(232,232,232);">
+							<div style="height: 0.6rem;"></div>
+							<div style="margin-left: 0.2rem;display: table;">
+								<div style="width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;background-color: black;color: white;text-align: center;font-weight: bold;line-height: 0.26rem;">4</div>
+								<div style="float: left;margin-left: 4%;font-weight: bold;font-size: 0.24rem;line-height: 0.28rem;">結算方式</div>
+								<div style="clear: both;"></div>
+								<div style="font-size: 0.148rem;margin-top: 2%;font-weight: bold;">得分高的一方勝利，獲得獎池籌碼。</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 0.4rem;display: table;width: 100%;">
+						<img class="col-md-3" style="float: left;height: 1.5rem;margin-left: 0.4rem;" src="images/img16.png" />
+						<div class="col-md-8" style="float: left;height: 1.5rem;margin-left: 0.2rem;border-radius: 0.3rem;background-color: rgb(232,232,232);">
+							<div style="height: 0.6rem;"></div>
+							<div style="margin-left: 0.2rem;display: table;">
+								<div style="width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;background-color: black;color: white;text-align: center;font-weight: bold;line-height: 0.26rem;">5</div>
+								<div style="float: left;margin-left: 4%;font-weight: bold;font-size: 0.24rem;line-height: 0.28rem;">贏取IPG</div>
+								<div style="clear: both;"></div>
+								<div style="font-size: 0.148rem;margin-top: 2%;font-weight: bold;">賺到的IPG可隨時交易ETH。發揮聰明才智，把別人手裏的ETH贏過來吧。</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
+					<div style="text-align: center;font-size: 0.2rem;color: rgb(255,255,255);">活動預約</div>
+					<div style="width: 2.6rem;height: 0.42rem;margin-left: 0.6rem;margin-top: -0.36rem;">
+						<img style="width: 100%;" src="images/img31.png" />
+					</div>
+					<img style="margin-top: 0.4rem;width: 50%;margin-left: 25%;" src="images/img32.png" />
+					<div style="width: 90%;margin-top: 0.6rem;margin-left: 5%;display: table;">
+						<div style="float: left;width: 30%;height: 3rem;background-color: rgb(232,232,232);border-radius: 0.3rem;">
+							<div style="height: 0.4rem;"></div>
+							<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">當前預約人數</div>
+							<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
+								<img id="w" style="float: left;width: 15%;height: 0.8rem;margin-left: 8%;" src="images/n0.png" />
+								<img id="q" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+								<img id="b" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+								<img id="s" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+								<img id="g" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							</div>
+							<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);margin-top: 0.2rem;">人</div>
+						</div>
+						<div style="float: left;width: 60%;height: 3rem;background-color: rgb(232,232,232);border-radius: 0.3rem;margin-left: 8%;">
+							<div style="height: 0.4rem;"></div>
+							<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">活動截至倒計時</div>
+							<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
+								<img id="t1" style="float: left;width: 8%;height: 0.8rem;margin-left: 13%;" src="images/n0.png" />
+								<img id="t2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
+								<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
+								<img id="s1" style="float: left;width: 8%;height: 0.8rem;;" src="images/n0.png" />
+								<img id="s2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
+								<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
+								<img id="f1" style="float: left;width: 8%;height: 0.8rem;" src="images/n0.png" />
+								<img id="f2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
+								<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
+								<img id="m1" style="float: left;width: 8%;height: 0.8rem;" src="images/n0.png" />
+								<img id="m2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
+							</div>
+							<div style="margin-top: 0.2rem;">
+								<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 19%;">天</div>
+								<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 14%;">時</div>
+								<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 14%;">分</div>
+								<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 14%;">秒</div>
+							</div>
+						</div>
+					</div>
+					<img onclick="gozc()" style="width: 30%;margin-top: 0.4rem;margin-left: 35%;" src="images/img33.png" />
+					<div style="height: 0.8rem;"></div>
+
+				</div>
+				<div style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
+					<div style="text-align: center;font-size: 0.2rem;color: rgb(255,255,255);">IPG介紹</div>
+					<div style="width: 2.6rem;height: 0.42rem;margin-left: 0.6rem;margin-top: -0.36rem;">
+						<img style="width: 100%;" src="images/img34.png" />
+					</div>
+					<div style="margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+						<div style="margin-top: 0.6rem;">
+							<div style="font-size: 0.27rem;font-weight: 600;color: #0ca70c;">IPG的獲取方式：</div>
+							<div style="margin-top: 0.2rem;color: black;font-size: 0.18rem;">注冊即可免費領取100IPG，邀請一級好友可獲50IPG，邀請二級好友可獲30IPG。游戲上綫后，玩家可通過積纍在綫時長、獲得連勝、提升等級、完成任務等方式獲得IPG，也可通過ETH直接兌換IPG。</div>
+						</div>
+						<div style="margin-top: 0.6rem;">
+							<div style="font-size: 0.27rem;font-weight: 600;color: #0ca70c;">IPG的使用：</div>
+							<div style="margin-top: 0.2rem;color: black;font-size: 0.18rem;">每局游戲玩家雙方須拿出一定IPG作爲獎池籌碼，勝利方贏得全部籌碼。玩家也需要通過IPG兌換各類小鳥、堡壘材料以增强實力贏取更多IPG。同時我們會開放道具交易系統，玩家通過IPG或以物換物的方式交易各類道具及皮膚。</div>
+						</div>
+						<div style="margin-top: 0.6rem;">
+							<div style="font-size: 0.27rem;font-weight: 600;color: #0ca70c;">IPG的升值：</div>
+							<div style="margin-top: 0.2rem;color: black;font-size: 0.18rem;">游戲上綫后，出色的游戲性及優質的對戰體驗將會吸引大量的玩家。隨著游戲内容的逐漸豐富，玩家對籌碼及各類道具的需求量也會增加，對IPG的需求量會不斷上漲。而IPG總量固定，IPG的供不應求必然導致其價值的提升。</div>
+						</div>
+
+					</div>
+					<!--<img style="margin-top: 0.4rem;width: 90%;margin-left: 5%;" src="images/img35.png" />-->
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<div id="buy" style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
+					<div style="text-align: center;font-size: 0.2rem;color: rgb(255,255,255);">兌換計劃</div>
+					<div style="width: 2.6rem;height: 0.42rem;margin-left: 0.6rem;margin-top: -0.36rem;">
+						<img style="width: 100%;" src="images/img36.png" />
+					</div>
+					<img style="margin-top: 0.4rem;width: 90%;margin-left: 5%;" src="images/img37.png" />
+					<div style="text-align: center;margin-top: 0.2rem;font-size: 0.22rem;color: rgb(51,51,51);">復仇的小豬小鳥對戰版發行游戲IPG1ETH=8800 IPG+贈送（x為ETH數量）</div>
+					<img style="margin-top: 0.4rem;width: 60%;margin-left: 20%;" src="images/img38.png" />
+					<div style="margin-top: 0.2rem;width: 50%;margin-left: 25%;text-align: center;font-size: 0.18rem;color: black;line-height: 0.32rem;">
+						收藏者請將兌換憑證發至郵箱：<span style="color: #3bbf3b;">info@gopig.io</span>基金會確認後會統一打幣。<br /> 志願者招募中，有意者請聯係鳥司。
+						<br /> 微信：1504997349
+					</div>
+					<!--<img style="margin-top: 0.2rem;width: 50%;margin-left: 25%;" src="images/img39.png" />-->
+					<img onclick="gobuy()" style="width: 30%;margin-top: 0.4rem;margin-left: 35%;" src="images/img40.png" />
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<div id="invite" style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
+					<div style="text-align: center;font-size: 0.2rem;color: rgb(255,255,255);">邀請好友</div>
+					<div style="width: 2.6rem;height: 0.42rem;margin-left: 0.6rem;margin-top: -0.36rem;">
+						<img style="width: 100%;" src="images/img42.png" />
+					</div>
+					<img style="margin-top: 0.4rem;width: 60%;margin-left: 20%;" src="images/img41.png" />
+					<div style="margin-top: 0.4rem;width: 90%;margin-left: 5%;">
+						<div style="display: table;width: 100%;">
+							<div style="float: left;width: 25%;">
+								<div style="color: white;background-color: #5d9d15;width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.26rem;font-weight: bold;font-size: 0.22rem;position: absolute;">1</div>
+								<div style="float: left;font-weight: bold;margin-left: 14%;font-size: 0.18rem;">完成注冊：獲得100IPG</div>
+							</div>
+							<div style="float: left;width: 35%;">
+								<div style="color: white;background-color: #5d9d15;width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.26rem;font-weight: bold;font-size: 0.22rem;position: absolute;">2</div>
+								<div style="float: left;font-weight: bold;margin-left: 10%;font-size: 0.18rem;">邀請好友完成注冊：每人次獎勵50IPG</div>
+							</div>
+							<div style="float: left;width: 35%;">
+								<div style="color: white;background-color: #5d9d15;width: 0.26rem;height: 0.26rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.26rem;font-weight: bold;font-size: 0.22rem;position: absolute;">3</div>
+								<div style="float: left;font-weight: bold;margin-left: 10%;font-size: 0.18rem;">好友邀請下級好友：每人次獎勵30IPG</div>
+							</div>
+
+						</div>
+
+						<div style="margin-top: 0.2rem;font-size: 0.17rem;color: black;">例：A完成注冊且邀請了好友B和C，B和C分別完成注冊并且邀請了自己的兩位好友，則A的收益為：100+2*50+4*30=320（IPG）</div>
+
+					</div>
+					<!--<img style="margin-top: 0.4rem;width: 80%;margin-left: 10%;" src="images/img43.png" />-->
+					<img onclick="goyq()" style="width: 30%;margin-top: 0.4rem;margin-left: 35%;" src="images/img44.png" />
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<img style="width: 100%;margin-top: 1.5rem;" src="images/img45.png" />
+				<img style="width: 10%;margin-top: -49%;margin-left: 45%;" src="images/qun.png" />
+				<div data-clipboard-text="gopig.io" style="position: absolute;width: 2%;height: 0.46%;margin-top: -34.8%;margin-left: 52%;" class="btn1"></div>
+				<div data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="position: absolute;width: 2%;height: 0.46%;margin-top: -17.2%;margin-left: 68.3%;" class="btn2"></div>
+				<a id="whitepaper" href="http://gopig.io/IPGWhitePaper.pdf">
+					<div style="position: absolute;margin-top: 4%;font-size: 0.2rem;color: white;margin-left: 47%;font-weight: bold;">下載白皮書</div>
+				</a>
+			</div>
+
+			<div style="padding-right: 0;padding-left: 0;width: 15%;" class="col-md-2">
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="js/base/util.js"></script>
 		<script src="js/base/url.js"></script>
 		<script src="js/base/base_net.js"></script>
-		<!--<script type="text/javascript" src="js/flexible.js"></script>-->
-		<script src="js/ajax3.js"></script>
-		<script type="text/javascript" src="js/myslideup.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event) {
-					event.preventDefault();
-					$('html,body').animate({
-						scrollTop: $(this.hash).offset().top
-					}, 2000);
-				});
-			});
-		</script>
-		<!-- //End-Smooth-Scrolling -->
-
-		<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
-		<script src="js/easyResponsiveTabs.js"></script>
-
-	</head>
-
-	<body>
-
-		<div class="header">
-
-			<div class="nav">
-				<nav class="navbar navbar-inverse navbar-fixed-top">
-					<div class="container">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>-->
-							<div id="nologn" style="color: white;font-weight: bold;float: right;margin-top: 3.7%;margin-right: 5%;">
-								<a href="denglu.html" style="color: white;">登录</a>/
-								<a href="zhuce.html" style="color: white;">注册</a>
-							</div>
-							<div id="logn" style="color: white;font-weight: bold;float: right;margin-top: 3.7%;margin-right: 5%;display: none;">
-								<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
-							</div>
-							<a class="navbar-brand" style="color: white;font-weight: bold;" href="#">复仇的小猪</a>
-						</div>
-
-						<!-- Collect the nav links, forms, and other content for toggling -->
-
-						<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a href="#home" class="active scroll">Home</a>
-								</li>
-								<li>
-									<a href="#about" class="scroll">About</a>
-								</li>
-								<li>
-									<a href="#ourteam" class="scroll">Team</a>
-								</li>
-								<li>
-									<a href="#contact" class="scroll">Contact</a>
-								</li>
-							</ul>
-
-						</div>-->
-						<!-- navbar-collapse -->
-					</div>
-					<!-- container -->
-				</nav>
-			</div>
-			<!-- Nav Ends -->
-			<div style="height: 50px;width: 100%;"></div>
-			<!--<video id="video" src="images/111.mov" controls="controls" loop="loop" autoplay="autoplay" style="width: 100%;">
-
-				</video>-->
-			<!--<div class="banner" id="home">
-				<div class="container">
-					<div class="banner-content">
-					</div>
-				</div>
-			</div>-->
-			<img style="width: 100%;" src="" />
-			<!-- Banner Ends Here -->
-		</div>
-		<div style="margin-top: -6px;" class="shadow">
-			<img src="./images/ai11.jpg" alt="image">
-		</div>
-		<!-- Header Ends -->
-
-		<!--<div style="height: 40px;width: 100%;margin-top: 10px;">
-			<a href="#about">
-				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;border-right: 1px rgba(52,52,52,0.2) solid;color: #0097ff;">
-					<span class="glyphicon glyphicon-lamp"> </span>&nbsp;<span>游戏介绍</span>
-				</div>
-			</a>
-			<a style="color: #333;" id="gosign">
-				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;border-right: 1px rgba(52,52,52,0.2) solid;">
-					<span class="glyphicon glyphicon-share"> </span>&nbsp;<span>邀请奖励</span>
-				</div>
-			</a>
-			<a style="color: #333;" id="gobuy">
-				<div style="width: 33.33%;height: 40px;float: left;line-height: 40px;">
-					<span class="glyphicon glyphicon-log-in"> </span>&nbsp;<span>优惠套餐</span>
-				</div>
-			</a>
-		</div>-->
-		<div style="clear: both;"></div>
-		<div style="margin-top: 10px;">
-			<button id="gogame" type="button" style="width: 32%;margin-left: 34%;background-color: #7cca5a;font-weight: bold;height: 40px;" class="btn btn-primary btn-lg btn-block">试玩赢ETH
-			</button>
-		</div>
-		<div class="about" id="about">
-			<div id="newsgame" class="container">
-
-				<h4 style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限时空投1亿鸟币，先到先得，对战赢家赢取筹码，参与游戏即挖矿！赚到的鸟币可以ETH交易！</h4>
-
-			</div>
-			<!--<div id="goodgame" style="display: none;" class="container">
-
-				<h3>自己搭建<span>小猪堡垒？</span> </h3>
-				<h4 style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经玩愤怒的小鸟的时候，都是去打电脑的堡垒，你有没有冲动自己搭建一个小猪堡垒？我们也曾收到过无数粉丝发来的堡垒设计思想，但现在我们来了！复仇的小猪（愤怒的小鸟对战版）将给与你更高的自由度搭建自己的小猪堡垒！守护好你的小猪！抵御别的玩家进攻！</h4>
-
-				<div class="about-image">
-
-					<div class="col-md-4 about-size">
-						<div class="shadow">
-							<img src="./images/ai1.jpg" alt="image">
-						</div>
-						<h5>属于自己的小鸟们</h5>
-						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏中你会选择自己的小鸟，组合成完美队形去攻打对方玩家搭建好的堡垒，要注意，每个小鸟的分值不同，越厉害的小鸟花费你的分值越多哦，小心最后变成负分。</p>
-
-					</div>
-
-					<div class="col-md-4 about-size">
-						<div class="shadow">
-							<img src="./images/ai2.jpg" alt="image">
-						</div>
-						<h5>属于自己的小猪堡垒</h5>
-						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有的防御道具木墙、箱子、石头、小猪的头盔你都可以拥有！请发挥想象，展现才华用自己的小猪们还有道具搭建好属于自己的防御堡垒吧，在对战中让对方一只小猪都打不着！你要注意的是每只不同样式的小猪分数不一样哦，越难打掉的小猪如戴头盔的小猪，分数越高，小心不要让对面一次打个爽。</p>
-
-					</div>
-
-					<div class="col-md-4 about-size">
-						<div class="shadow">
-							<img src="./images/ai3.jpg" alt="image">
-						</div>
-						<h5>属于自己的刺激对战</h5>
-						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛开始，是时候展现真正的技术了！双方分别会进攻对方的防御堡垒，尽量用分数最低的小鸟打到对面最高分的小猪！双方比赛结束后会根据比分判断胜负，胜利者将获得奖励哦~</p>
-
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-
-			</div>-->
-			<!-- Container ends -->
-		</div>
-		<!-- About Ends -->
-
-		<!--<div class="requirement" id="requirements">
-			<div class="container">
-				<div class="all-require">
-
-					<div style="padding-bottom: 0;" class="heading">
-						<h3><span style="color: #333;">邀请好友</span> </h3>
-					</div>
-
-					<div class="specification">
-
-						<div class="col-md-4 require-size">
-							<div style="padding: 0;" class="grid">
-								<i class="pc"> </i>
-								<img style="width: 100%;" src="images/yq.jpg" />
-								<p><span>邀请好友可获得100个IPG</span></p>
-								<p><span>你邀请的好友邀请他的好友成功你也会获得30个IPG</span></p>
-								<div style="margin-top: 10px;">
-					<button id="twoDimension" type="button" style="width: 60%;margin-left: 20%;background-color: #333;font-weight: bold;" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-share"> </span>&nbsp;点击邀请</button>
-				</div>
-								<p style="text-align: center;padding: 0;margin-top: 10px;"><span class="glyphicon glyphicon-share"> </span>&nbsp;<span>点击邀请</span></p>
-							</div>
-						</div>
-
-						<div class="col-md-4 require-size">
-
-							<div class="grid">
-								<i class="ps"> </i>
-								<h5> PS 2 </h5>
-								<p> Storage : <span>40 GB of free space </span> </p>
-								<p> HD Video Output : <span>1080px	</span> </p>
-
-								<div class="grid-bottom">
-									<h5> PS 3 </h5>
-									<p> Storage : <span>50 GB of free space </span> </p>
-									<p> HD Video Output : <span>1920px	</span> </p>
-								</div>
-							</div>
-						</div>
-
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-		</div>-->
-		<!-- requirement Ends -->
-
-		<!--Plug-in Initialisation-->
-		<script type="text/javascript">
-			var uid = "";
-			var phone = "";
-			uid = getLocal("pigUID")
-			phone = getLocal("pigphone")
-			setItem("pigphone", phone)
-			setItem("pigUID", uid)
-			setItem("pigphone", phone)
-			setLocal("pigphone", phone)
-			setItem("pigUID", uid)
-			setLocal("pigUID", uid)
-			$(document).ready(function() {
-				document.getElementById('video').play()
-				//Vertical Tab
-				$('#parentVerticalTab').easyResponsiveTabs({
-					type: 'vertical', //Types: default, vertical, accordion
-					width: 'auto', //auto or any width like 600px
-					fit: true, // 100% fit in a container
-					closed: 'accordion', // Start closed if in accordion view
-					tabidentify: 'hor_1', // The tab groups identifier
-					activate: function(event) { // Callback function if tab is switched
-						var $tab = $(this);
-						var $info = $('#nested-tabInfo2');
-						var $name = $('span', $info);
-						$name.text($tab.text());
-						$info.show();
-					}
-				});
-				if(uid) {
-					$("#nologn").hide()
-					$("#logn").show()
-				} else {
-					$("#nologn").show()
-					$("#logn").hide()
-				}
-				$("#gosign").on("click", function() {
-					if(uid) {
-						window.location.href = "twoDimension.html"
-					} else {
-						alert("请先登录")
-						window.location.href = "denglu.html"
-					}
-				})
-				$("#gobuy").on("click", function() {
-					if(uid) {
-						window.location.href = "buy.html"
-					} else {
-						alert("请先登录")
-						window.location.href = "denglu.html"
-					}
-				})
-				$("#twoDimension").on("click", function() {
-					if(uid) {
-						window.location.href = "twoDimension.html"
-					} else {
-						alert("请先登录")
-						window.location.href = "denglu.html"
-					}
-				})
-				$("#gogame").on("click", function() {
-					if(uid) {
-						window.open("game.html");
-					} else {
-						alert("请先登录")
-						window.location.href = "denglu.html"
-					}
-				})
-			});
-		</script>
-		<!-- Up Coming Games Ends Here -->
-
-		<!--<div class="our-team">
-			<div class="container">
-				<div class="team" id="ourteam">
-					<h3>Team Members </h3>
-
-					<div class="team-up">
-						<div class="col-md-3 team-size">
-							<div class="team-img">
-								<img src="./images/8.png" alt="image">
-								<h4>张曦婷</h4>
-								<p>首席执行官</p>
-							</div>
-						</div>
-
-						<div class="col-md-3 team-size">
-							<div class="team-img">
-								<img src="./images/9.png" alt="image">
-								<h4>柏成嵩</h4>
-								<p>首席全栈工程师</p>
-							</div>
-						</div>
-
-						<div class="col-md-3 team-size">
-							<div class="team-img">
-								<img src="./images/10.png" alt="image">
-								<h4>Nikolina Zidar</h4>
-								<p>海外研发团队CEO</p>
-							</div>
-						</div>
-
-						<div class="col-md-3 team-size">
-							<div class="team-img">
-								<img src="./images/11.png" alt="image">
-								<h4>Paula Penttinen</h4>
-								<p>首席营销经理</p>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					 
-
-					<div class="clearfix"></div>
-				</div>
-				 
-
-			</div>
-		</div>-->
-		<!-- Our-team Ends -->
-
-		<div class="contact" id="contact">
-			<div class="container">
-				<div class="padding-contact">
-
-					<div style="width: 100%;" class="col-md-4 address">
-						<h3 style="text-align: center;">Contact&nbsp;Us</h3>
-						<address style="text-align: center;">
-							ipg_foundation@aliyun.com<br>
-				微信：1504997349<br>
-				
-				<!--<span>Phone : 13810790460</span><br>-->
-				加入官方微信群：<br />
-				<img style="width: 20%;margin-top: 5px;" src="images/qun.png" />
-			</address>
-					</div>
-
-					<div class="clearfix"></div>
-				</div>
-
-			</div>
-		</div>
 
 	</body>
+	<script type="text/javascript">
+		var uid = "";
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setItem("pigphone", phone)
+		setLocal("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigUID", uid)
+		$(document).ready(function() {
+			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+				window.location.href = "http://gopig.io"
+			} else {
+
+			}
+
+			document.getElementById('video').play()
+			//Vertical Tab
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			$("#gosign").on("click", function() {
+				if(uid) {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gobuy").on("click", function() {
+				if(uid) {
+					window.location.href = "buy.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#twoDimension").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gogame").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.open("game.html");
+				} else {
+					window.open("game.html");
+					//					alert("请先登录")
+					//					window.location.href = "denglu.html"
+				}
+			})
+			$("#gozhuce").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					alert("您已注冊")
+				} else {
+					window.location.href = "zhuce.html"
+				}
+			})
+			//			var ndate = new Date().toLocaleDateString();
+			//			var ndate = new Date(ndate)
+			var ndate = 1535731200
+			//			var ndate = Math.round(ndate.getTime() / 1000)
+			var nnn = new Date()
+			nnn = Math.round(nnn.getTime() / 1000)
+			var nu = 1535731200 - nnn
+			//			var hour = Math.round(nu / 3600)
+			//			var minute = Math.round((nu % 3600) / 60)
+			//			var second = (nu % 3600) % 60
+			//			if(hour < 10) {
+			//				hour = '0' + hour
+			//			}
+			//			if(minute < 10) {
+			//				minute = '0' + minute
+			//			}
+			//			if(second < 10) {
+			//				second = '0' + second
+			//			}
+			//			$("#hour").text(hour)
+			//			$("#minute").text(minute)
+			//			$("#second").text(second)
+			countDown(nu)
+			//			countDown(ndate)
+			req(GET_USER_IPG_C, {
+
+				}, function(data) {
+					var num = data.user;
+					num = Number(num)
+					var g = parseInt(num % 10);
+					var s = parseInt(num / 10 % 10);
+					var b = parseInt(num / 100 % 10);
+					var q = parseInt(num / 1000 % 10);
+					var w = parseInt(num / 10000 % 10);
+					$("#g").attr("src", "images/n" + g + ".png");
+					$("#s").attr("src", "images/n" + s + ".png");
+					$("#b").attr("src", "images/n" + b + ".png");
+					$("#q").attr("src", "images/n" + q + ".png");
+					$("#w").attr("src", "images/n" + w + ".png");
+					maidian()
+
+				},
+				function(e) {
+					//					$("#pn").text(888)
+				})
+
+		});
+
+		function gozc() {
+			if(uid && uid != null && uid != "null") {
+				alert("您已注冊")
+			} else {
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function goyq() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "twoDimension.html"
+			} else {
+				alert("請先注冊")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function gobuy() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "buy.html"
+			} else {
+				alert("請先注冊")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function countDown(times) {
+			var timer = null;
+			timer = setInterval(function() {
+				var day = 0,
+					hour = 0,
+					minute = 0,
+					second = 0; //时间默认值
+				if(times > 0) {
+					day = Math.floor(times / (60 * 60 * 24));
+					hour = Math.floor(times / (60 * 60)) - (day * 24);
+					minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				} else {
+					times = 86400;
+				}
+
+				if(day <= 9) {
+					$("#t1").attr("src", "images/n0.png")
+					$("#t2").attr("src", "images/n" + day + ".png")
+					//					day = '0' + day;
+				} else {
+					var day1 = parseInt(Number(day) / 10 % 10);
+					var day2 = parseInt(Number(day) % 10);
+					$("#t1").attr("src", "images/n" + day1 + ".png")
+					$("#t2").attr("src", "images/n" + day2 + ".png")
+				}
+				if(hour <= 9) {
+					$("#s1").attr("src", "images/n0.png")
+					$("#s2").attr("src", "images/n" + hour + ".png")
+					//					hour = '0' + hour;
+				} else {
+					var hour1 = parseInt(Number(hour) / 10 % 10);
+					var hour2 = parseInt(Number(hour) % 10);
+					$("#s1").attr("src", "images/n" + hour1 + ".png")
+					$("#s2").attr("src", "images/n" + hour2 + ".png")
+				}
+				if(minute <= 9) {
+					$("#f1").attr("src", "images/n0.png")
+					$("#f2").attr("src", "images/n" + minute + ".png")
+					//					minute = '0' + minute;
+				} else {
+					var minute1 = parseInt(Number(minute) / 10 % 10);
+					var minute2 = parseInt(Number(minute) % 10);
+					$("#f1").attr("src", "images/n" + minute1 + ".png")
+					$("#f2").attr("src", "images/n" + minute2 + ".png")
+				}
+				if(second <= 9) {
+					$("#m1").attr("src", "images/n0.png")
+					$("#m2").attr("src", "images/n" + second + ".png")
+					//					second = '0' + second;
+				} else {
+					var second1 = parseInt(Number(second) / 10 % 10);
+					var second2 = parseInt(Number(second) % 10);
+					$("#m1").attr("src", "images/n" + second1 + ".png")
+					$("#m2").attr("src", "images/n" + second2 + ".png")
+				}
+
+				$("#day").text(day)
+				$("#hour").text(hour)
+				$("#minute").text(minute)
+				$("#second").text(second)
+
+				//
+				//  console.log(day+"天:"+hour+"小时："+minute+"分钟："+second+"秒");
+				times--;
+			}, 1000);
+			if(times <= 0) {
+				clearInterval(timer);
+			}
+		}
+		var clipboard = new Clipboard('.btn1');
+		var clipboard2 = new Clipboard('.btn2');
+
+		clipboard.on('success', function(e) {
+			alert("複製成功！")
+		});
+		clipboard2.on('success', function(e) {
+			alert("複製成功！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "gopig.io"
+			Copy(copy_body);
+		});
+		clipboard2.on('error', function(e) {
+			var copy_body = "0x6750b81427fa648db03c7a09e88e62ecc65b55d1"
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('複製成功！');
+		}
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_index_pc"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
 
 </html>
