@@ -15309,11 +15309,11 @@ var __extends = this.__extends || function(c, e) {
 						this.checkHit();
 						this._checkHitPlayerWithEnemyBullet();
 						for(c = this.emenies.length - 1; 0 <= c; c--)
-							if(this.temp_enemy = this.emenies[c], GameUtils.hitTest(this.player, this.temp_enemy)) this.emenies.splice(c, 1), this.temp_enemy.parent && this.emenyGroup.removeElement(this.temp_enemy), Caches.cacheEmeny.push(this.temp_enemy), Main.main.showBom(this.temp_enemy.x + this.temp_enemy.width / 2, this.temp_enemy.y + this.temp_enemy.height / 2, 0.8), this._updataLife("hit");
+							if(this.temp_enemy = this.emenies[c], GameUtils.hitTest(this.player, this.temp_enemy)) this.emenies.splice(c, 1), this.temp_enemy.parent && this.emenyGroup.removeElement(this.temp_enemy), Caches.cacheEmeny.push(this.temp_enemy), Main.main.showBom(this.temp_enemy.x + this.temp_enemy.width / 2, this.temp_enemy.y + this.temp_enemy.height / 2, 1.2), this._updataLife("hit");
 							else
 								for(b = this.bts.length - 1; 0 <= b; b--) {
 									var a = this.bts[b];
-									GameUtils.hitTest(this.temp_enemy, a) && (this.emenies.splice(c, 1), this.temp_enemy.parent && this.emenyGroup.removeElement(this.temp_enemy), Caches.cacheEmeny.push(this.temp_enemy), Main.main.showBom(this.temp_enemy.x + this.temp_enemy.width / 2, this.temp_enemy.y + this.temp_enemy.height / 2, 0.8), this.bts.splice(b, 1), this.bulletsGroup.removeElement(a), VPlayUtil.cacheBullet.push(a), this.addScore(100))
+									GameUtils.hitTest(this.temp_enemy, a) && (this.emenies.splice(c, 1), this.temp_enemy.parent && this.emenyGroup.removeElement(this.temp_enemy), Caches.cacheEmeny.push(this.temp_enemy), Main.main.showBom(this.temp_enemy.x + this.temp_enemy.width / 2, this.temp_enemy.y + this.temp_enemy.height / 2, 1.2), this.bts.splice(b, 1), this.bulletsGroup.removeElement(a), VPlayUtil.cacheBullet.push(a), this.addScore(100))
 								}
 						if(this.boss && this.boss.parent) {
 							for(c = this.bts.length - 1; 0 <= c; c--)
@@ -15355,7 +15355,7 @@ var __extends = this.__extends || function(c, e) {
 							Caches.cacheEmeny.push(b);
 							this.addScore(100)
 						}
-						for(c = this.bigEnemies.length - 1; 0 <= c; c--) this.bigEnemy = this.bigEnemies[c], Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 1.6), this.bigEnemies.splice(c, 1), this.bigEnemy.parent && (this.bigEnemy.parent.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy)), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && this.currentBom++;
+						for(c = this.bigEnemies.length - 1; 0 <= c; c--) this.bigEnemy = this.bigEnemies[c], Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.bigEnemies.splice(c, 1), this.bigEnemy.parent && (this.bigEnemy.parent.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy)), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && this.currentBom++;
 						VPlayUtil.SetImgNum(this.lifeGroup, this.currentBom, 0.3)
 					}
 			}
@@ -15412,8 +15412,8 @@ var __extends = this.__extends || function(c, e) {
 			var c,
 				b, a;
 			for(b = this.bts.length - 1; 0 <= b; b--)
-				for(c = this.bts[b], a = this.bigEnemies.length - 1; 0 <= a; a--) this.bigEnemy = this.bigEnemies[a], GameUtils.hitTest(c, this.bigEnemy) && (this.bts.splice(b, 1), this.bulletsGroup.removeElement(c), VPlayUtil.cacheBullet.push(c), this.bigEnemy.life--, 0 >= this.bigEnemy.life && (this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 0.8), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3))));
-			for(b = this.bigEnemies.length - 1; 0 <= b; b--) this.bigEnemy = this.bigEnemies[b], GameUtils.hitTest(this.player, this.bigEnemy) && (this._updataLife("hit"), this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 0.8), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3)))
+				for(c = this.bts[b], a = this.bigEnemies.length - 1; 0 <= a; a--) this.bigEnemy = this.bigEnemies[a], GameUtils.hitTest(c, this.bigEnemy) && (this.bts.splice(b, 1), this.bulletsGroup.removeElement(c), VPlayUtil.cacheBullet.push(c), this.bigEnemy.life--, 0 >= this.bigEnemy.life && (this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3))));
+			for(b = this.bigEnemies.length - 1; 0 <= b; b--) this.bigEnemy = this.bigEnemies[b], GameUtils.hitTest(this.player, this.bigEnemy) && (this._updataLife("hit"), this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3)))
 		};
 		e.prototype.addBigEnemy = function() {
 			this.bigEmenyGroup && (0 == this.EFIndex % 500 && (this.bigEnemy = VPlayUtil.GetBigEmeny(), this.bigEnemy.x = Math.random() * (this.width - this.bigEnemy.width), this.bigEnemy.y = -this.bigEnemy.height, this.bigEmenyGroup.addElement(this.bigEnemy), this.bigEnemies.push(this.bigEnemy)), this.moveBigEnemy())
