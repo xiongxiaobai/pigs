@@ -2329,6 +2329,7 @@ __extends = this.__extends || function(c, e) {
 			return c.Rectangle.identity.initialize(a, b, d - a, e - b)
 		};
 		b.prototype.hitTest = function(a, d, b) {
+			
 			void 0 === b && (b = !1);
 			var x;
 			if(!this._visible) return null;
@@ -2663,7 +2664,7 @@ __extends = this.__extends || function(c, e) {
 				if(a._isPropagationStopped || a._isPropagationImmediateStopped) break
 			}
 		};
-		b.prototype._onTouchMove = function(a) {
+		b.prototype._onTouchMove = function(a) {   //触摸控制范围
 			if(this._lastTouchPosition.x != a.stageX || this._lastTouchPosition.y != a.stageY) {
 				this.delayTouchBeginEvent && (this.delayTouchBeginEvent = null, this.touchBeginTimer.stop());
 				this.touchChildren = !1;
@@ -4510,7 +4511,6 @@ __extends = this.__extends || function(c, e) {
 		};
 		b.prototype.onTouchMove = function(a, d, b) {
 			if(-1 != this.touchingIdentifiers.indexOf(b) && (a != this.lastTouchX || d != this.lastTouchY)) {
-				
 				this.lastTouchX = a;
 				this.lastTouchY = d;
 				var e = c.MainContext.instance.stage.hitTest(a, d);
@@ -15287,7 +15287,8 @@ var __extends = this.__extends || function(c, e) {
 		e.prototype.onTouchEndPlayer = function(c) {
 			this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouchMoveThis, this)
 		};
-		e.prototype.onTouchMoveThis = function(c) { //触摸事件
+		e.prototype.onTouchMoveThis = function(c) { //猪触摸移动事件
+//			console.log(c)
 			var b = c.stageX - this.player.width / 2,
 				a = c.stageY - this.player.height / 2;
 			0 < b && b < this.width - this.player.width && (this.player.x = b);
@@ -15355,7 +15356,7 @@ var __extends = this.__extends || function(c, e) {
 							Caches.cacheEmeny.push(b);
 							this.addScore(100)
 						}
-						for(c = this.bigEnemies.length - 1; 0 <= c; c--) this.bigEnemy = this.bigEnemies[c], Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.bigEnemies.splice(c, 1), this.bigEnemy.parent && (this.bigEnemy.parent.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy)), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && this.currentBom++;
+						for(c = this.bigEnemies.length - 1; 0 <= c; c--) this.bigEnemy = this.bigEnemies[c], Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 1.8), this.bigEnemies.splice(c, 1), this.bigEnemy.parent && (this.bigEnemy.parent.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy)), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && this.currentBom++;
 						VPlayUtil.SetImgNum(this.lifeGroup, this.currentBom, 0.3)
 					}
 			}
@@ -15412,8 +15413,8 @@ var __extends = this.__extends || function(c, e) {
 			var c,
 				b, a;
 			for(b = this.bts.length - 1; 0 <= b; b--)
-				for(c = this.bts[b], a = this.bigEnemies.length - 1; 0 <= a; a--) this.bigEnemy = this.bigEnemies[a], GameUtils.hitTest(c, this.bigEnemy) && (this.bts.splice(b, 1), this.bulletsGroup.removeElement(c), VPlayUtil.cacheBullet.push(c), this.bigEnemy.life--, 0 >= this.bigEnemy.life && (this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3))));
-			for(b = this.bigEnemies.length - 1; 0 <= b; b--) this.bigEnemy = this.bigEnemies[b], GameUtils.hitTest(this.player, this.bigEnemy) && (this._updataLife("hit"), this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 3), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3)))
+				for(c = this.bts[b], a = this.bigEnemies.length - 1; 0 <= a; a--) this.bigEnemy = this.bigEnemies[a], GameUtils.hitTest(c, this.bigEnemy) && (this.bts.splice(b, 1), this.bulletsGroup.removeElement(c), VPlayUtil.cacheBullet.push(c), this.bigEnemy.life--, 0 >= this.bigEnemy.life && (this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 1.8), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3))));
+			for(b = this.bigEnemies.length - 1; 0 <= b; b--) this.bigEnemy = this.bigEnemies[b], GameUtils.hitTest(this.player, this.bigEnemy) && (this._updataLife("hit"), this.bigEnemies.splice(a, 1), this.bigEmenyGroup.removeElement(this.bigEnemy), VPlayUtil.cacheBigEmeny.push(this.bigEnemy), Main.main.showBom(this.bigEnemy.x + this.bigEnemy.width / 2, this.bigEnemy.y + this.bigEnemy.height / 2, 1.8), this.addScore(1E3), 0 == ++this.fullBomIndex % 3 && (this.currentBom++, VPlayUtil.SetImgNum(this.fullBomLabelGroup, this.currentBom, 0.3)))
 		};
 		e.prototype.addBigEnemy = function() {
 			this.bigEmenyGroup && (0 == this.EFIndex % 500 && (this.bigEnemy = VPlayUtil.GetBigEmeny(), this.bigEnemy.x = Math.random() * (this.width - this.bigEnemy.width), this.bigEnemy.y = -this.bigEnemy.height, this.bigEmenyGroup.addElement(this.bigEnemy), this.bigEnemies.push(this.bigEnemy)), this.moveBigEnemy())
@@ -15445,7 +15446,7 @@ var __extends = this.__extends || function(c, e) {
 			for(this.temp_i = c.length - 1; 0 <= this.temp_i; this.temp_i--) this.temp_enemyBullet = c[this.temp_i], GameUtils.hitTest(this.player, this.temp_enemyBullet) && (this.enemyBulletGroup.clearItem(this.temp_i), this._updataLife("hit"))
 		};
 		e.prototype._updataLife = function(c) {
-			console.log(this.gameoverScoreGroup)
+//			console.log(this.gameoverScoreGroup)
 			"hit" == c && (0 < this.currentLife && this.currentLife--, 0 == this.currentLife && (this.gameoverGroup.visible = !0, submit_score(this.currentScore), VPlayUtil.SetImgNum(this.gameoverScoreGroup, this.currentScore, 0.3), this.overGame()), this.lifeBar.scaleX = this.currentLife / 3)    //打击掉血   最后评分位置
 		};
 		e.prototype.tikerHandler = function() {
@@ -16191,7 +16192,7 @@ __extends = this.__extends || function(c, e) {
 				var a = new egret.gui.UIAsset;
 				this.player = a;
 //				this.__s(a, ["source", "x", "y"], ["player_png", 164, 866]);
-				this.__s(a, ["height", "source", "width", "x", "y"], [100, "player_png", 80, 164, 866]);
+				this.__s(a, ["height", "source", "width", "x", "y"], [110, "player_png", 88, 164, 866]);
 				return a
 			};
 			a.prototype.reStartBtn_i = function() {
