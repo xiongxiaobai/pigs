@@ -103,7 +103,7 @@
 					<img style="width: 100%;" src="images/img4.png" />
 					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">立即注冊</div>
 				</div>
-				<div style="width: 8.84rem;height: 11.7rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
+				<div style="width: 8.84rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
 					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;padding-top: 0.9rem;">受盡屈辱，忍無可忍！</div>
 					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;">復仇戰爭，一觸即發！</div>
 					<div style="margin-top: 0.76rem;width: 7.62rem;margin-left: 0.62rem;color: rgb(51,51,51);font-size: 0.4rem;">改變命運是這個世界上最難的事情。人生太苦逼，復仇的小猪提供公平競技的機會，角色互換可以讓你改變命運，重新開始。</div>
@@ -112,6 +112,11 @@
 							瀏覽器暫不支持！
 						</video>
 					</div>
+					
+					<div onclick="gogame()" style="height: 1.58rem;width: 7.23rem;margin-top: 1.22rem;margin: auto;">
+						<img style="width: 100%;" src="images/img25.png" />
+					</div>
+					<div style="height: 0.4rem;"></div>
 				</div>
 				<div style="width: 8.84rem;margin-left: 0.56rem;margin-top: 1.18rem;border-radius: 0.3rem;background-color: white;">
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">游戲簡介</div>
@@ -128,7 +133,7 @@
 						<img style="width: 100%;" src="images/img5.png" />
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">游戲玩法</div>
-					
+
 					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
 						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">1</div>
 						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">戰前準備</div>
@@ -363,15 +368,15 @@
 					window.location.href = "denglu.html"
 				}
 			})
-			$("#gogame").on("click", function() {
-				if(uid && uid != null && uid != "null") {
-					window.open("game.html");
-				} else {
-					window.open("game.html");
-					//					alert("请先登录")
-					//					window.location.href = "denglu.html"
-				}
-			})
+//			$("#gogame").on("click", function() {
+//				if(uid && uid != null && uid != "null") {
+//					window.open("game.html");
+//				} else {
+//					window.open("game.html");
+//					//					alert("请先登录")
+//					//					window.location.href = "denglu.html"
+//				}
+//			})
 			$("#gozhuce").on("click", function() {
 				if(uid && uid != null && uid != "null") {
 					alert("您已注冊")
@@ -560,6 +565,11 @@
 				'name': "pig_index"
 			}, function(data) {}, function(err) {})
 		}
+		
+		function gogame(){
+			window.open("http://gopig.io/game/");
+		}
+		
 	</script>
 
 	<!--<script src="js/zhuce2.js?1"></script>-->
