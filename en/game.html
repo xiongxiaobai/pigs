@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>怀旧一下</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="对战版愤怒的小鸟">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="lib/Box2dWeb-2.1.a.3.min.js"></script>
+		<script type="text/javascript" src="lib/lufylegend-1.9.1.js"></script>
+		<script type="text/javascript" src="main/Main.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			init(10, "mylegend", 800, 580, main);
+		</script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" id="app" style="height: 18rem;">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="head_txt" style="color: white;">怀旧一下</div>
+			</div>
+			<div>
+				<div id="mylegend">loading……</div>
+			</div>
+			<div id="gameok" style="position: fixed;z-index: 2147483643;height: 20rem;display: none;width: 100%;">
+				<img style="width: 70%;margin-left: 15%;margin-top: 1rem;border-radius: 0.2rem;" src="images/game.jpg" />
+			</div>
+			
+			<div style="text-align:center;margin-top: 8rem;">游戏剩余时间：<span id="timer" style="">20</span>秒</div>
+
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+	<script>
+		var isok = false;
+		var uid = "";
+		var is_back = true;
+		$(document).ready(function() {
+			uid = getItem("pigUID")
+			uid = getLocal("pigUID")
+			phone = getItem("pigphone")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigphone", phone)
+			setLocal("pigUID", uid)
+			maidian()
+		})
+		resetTime(20)
+
+		function resetTime(time) {
+			var timer = null;
+			var t = time;
+			var m = 0;
+			var s = 0;
+			m = Math.floor(t / 60 % 60);
+			m < 10 && (m = '0' + m);
+			s = Math.floor(t % 60);
+
+			function countDown() {
+				s--;
+				s < 10 && (s = '0' + s);
+				if(s.length >= 3) {
+					s = 59;
+					m = "0" + (Number(m) - 1);
+				}
+				if(m.length >= 3) {
+					m = '00';
+					s = '00';
+					clearInterval(timer);
+					if(!isok){
+						alert("时间到，游戏失败...")
+						window.location.href = "index.html"
+					}
+				}
+//				console.log(m + "分钟" + s + "秒");
+				$("#timer").text(s)
+			}
+			timer = setInterval(countDown, 1000);
+		}
+
+		function back() {
+			history.go(-1)
+		}
+
+		function game() {
+			if(uid == '' || uid == null || uid == "null") {
+				setTimeout(function() {
+					$("#gameok").show()
+				}, 1000)
+				setTimeout(function() {
+					alert("您赢得了50IPG，请输入打币地址领取")
+					window.location.href = "zhuce.html"
+				}, 2000)
+				return
+			} else {
+				req(PIG_SEND, {
+						'uid': uid
+					}, function(data) {
+						is_back = true
+						setTimeout(function() {
+							$("#gameok").show()
+						}, 1000)
+						setTimeout(function() {
+							window.location.href = "index.html"
+						}, 3000)
+
+					},
+					function(e) {
+						is_back = true
+						var dat = e.code;
+						if(dat == 190 || dat == '190') {
+							alert("您已经领取过了");
+							window.location.href = "index.html"
+						} else if(dat == 191 || dat == '191') {
+							alert("名额已满感谢参与");
+							window.location.href = "index.html"
+						} else {
+							alert("请完整填写参数")
+						}
+						return false
+					})
+			}
+		}
+		
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_game"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>

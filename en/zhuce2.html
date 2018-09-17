@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>Registration</title>
+		<meta name="keywords" content="Gopig battle game">
+		<meta name="description" content="Gopig battle game">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css?2">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="https://cdn.dingxiang-inc.com/ctu-group/captcha-ui/index.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-2.1.4.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" id="app">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: white;">Registration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			</div>
+			<img style="width: 100%;" src="images/zc1.png" />
+			<div style="margin-top: 0.46rem;text-align: center;font-size: 0.46rem;font-weight: bold;color: black;">
+				Welcome to join us! Register and get reward<span style="font-size: 0.46rem;color: #3ea800;">100 IPG</span>
+			</div>
+			<!--<img style="width: 7.79rem;height: 0.43rem;margin-left: 1.11rem;margin-top: 0.46rem;" src="images/zc2.png" />-->
+
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.86rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.31rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.35rem;" src="images/zc3.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.28rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="Insert Phone Number" type="tel" id="phone" />
+			</div>
+			<div style="margin-top: 0.2rem;text-align: center;display: table;width: 100%;">
+				<img style="float: left;width: 0.3rem;margin-left: 1.8rem;" src="images/zc13.png" />
+				<div style="float: left;margin-left: 0.2rem;font-size: 0.2rem;color: #f87f00;">Correct phone number or NO IPG.</div>
+			</div>
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.2rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.32rem;height: 0.46rem;float: left;margin-left: 0.51rem;margin-top: 0.31rem;" src="images/zc4.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="Insert Password" type="password" id="password" />
+			</div>
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.32rem;height: 0.35rem;float: left;margin-left: 0.51rem;margin-top: 0.4rem;" src="images/zc5.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="Ethereum address(Optional)" type="text" id="address" />
+			</div>
+			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.46rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;">
+				<img style="width: 0.38rem;height: 0.4rem;float: left;margin-left: 0.46rem;margin-top: 0.38rem;" src="images/zc6.png" />
+				<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.27rem;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;padding-left: 0.31rem;font-size: 0.28rem;color: #535376;line-height: 0.56rem;border-radius: 0;" placeholder="Invitation code" type="text" id="inviteCode" />
+			</div>
+			<div style="margin: auto;margin-top: 0.5rem;" id="c1"></div>
+			<img onclick="register()" style="height: 1.52rem;width: 8.08rem;margin-top: 0.5rem;margin-left: 0.96rem;" src="images/zc7.png" />
+			<!--<div style="margin-top: 0.31rem;text-align: center;">
+				<div style="font-size: 0.3rem;font-weight: bold;color: black;">注冊成功即視爲閲讀并已同意</div>
+				<div onclick="agreement()" style="color: #60b72c;font-size: 0.3rem;font-weight: bold;margin-top: 0.1rem;">《服務協議》</div>
+			</div>-->
+			<!--<img onclick="agreement()" style="width: 3.56rem;height: 0.76rem;margin-top: 0.31rem;margin-left: 3.22rem;" src="images/zc8.png" />-->
+			<div style="width: 8.48rem;border-radius: 0.3rem;margin-top: 0.67rem;margin-left: 0.76rem;background-color: #5DA615;">
+				<div style="height: 0.82rem;"></div>
+				<div style="text-align: center;color: white;">
+					<img style="width: 3.7rem;margin-left: 2.4rem;" src="images/zc12.png" />
+					<div style="margin-top: 0.6rem;font-size: 0.3rem;">Customer service contacts</div>
+					<div style="margin-top: 0.4rem;font-size: 0.3rem;">info@gopig.io</div>
+					<div style="margin-top: 0.4rem;font-size: 0.3rem;">weichat：1504997349</div>
+					<div style="margin-top: 0.4rem;font-size: 0.3rem;">Join official Wechat group</div>
+				</div>
+				<!--<img style="width: 3.7rem;padding-top: 0.82rem;margin-left: 2.4rem;height: 4.54rem;" src="images/zc9.png" />-->
+				<img style="width: 3.55rem;height: 3.55rem;margin-top: 0.36rem;margin-left: 2.47rem;" src="images/zc10.png" />
+				<div style="height: 0.82rem;"></div>
+			</div>
+			<img style="width: 100%;" src="images/zc11.png" />
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/gVerify.js"></script>
+	</body>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var is_code = true;
+		var isback = true;
+		var uid = '';
+		var tk = '';
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigphone", phone)
+		setLocal("pigUID", uid)
+		$(document).ready(function() {
+			var info_id = getUrlParam("info_id");
+			$("#inviteCode").val(info_id);
+			maidian()
+			if(uid && uid != null && uid != "null"){
+				window.location.href = "index.html"
+			}
+		})
+
+		function register() {
+			if(isback == false) {
+				return;
+			}
+
+			var phone = $("#phone").val()
+			var password = $("#password").val()
+			//			var email = $("#email").val()
+			//			var weixin = $("#weixin").val()
+			var inviteCode = $("#inviteCode").val()
+			//			var name = $("#name").val()
+			var address = $("#address").val()
+
+			if(phone == '' || phone == null || phone == 'null') {
+				alert("Phone Number cannot be null")
+				return
+			}
+//			if(!(/^1[0-9][0-9]\d{8}$/.test(phone))) {
+//				alert("不是完整的11位手機號或者正確的手機號前七位");
+//				return false;
+//			}
+			if(inviteCode == '' || inviteCode == null || inviteCode == 'null') {
+				alert("Invitation code cannot be null")
+				return
+			}
+
+			//			if(email == '' || email == null || email == 'null') {
+			//				alert("邮箱不能为空")
+			//				return
+			//			}
+			//
+			//			if(weixin == '' || weixin == null || weixin == 'null') {
+			//				alert("微信号不能为空")
+			//				return
+			//			}
+			//			if(name == '' || name == null || name == 'null') {
+			//				alert("姓名不能为空")
+			//				return
+			//			}
+
+			if(password.length < 6) {
+				alert("At least 6 digital needed！")
+				return
+			} else if(password == '' || password == null || password == 'null') {
+				alert("Password cannot be null！")
+				return
+			}
+			//			if(address == '' || address == null || address == 'null') {
+			//				alert("地址不能为空")
+			//				return
+			//			}
+			if(tk == '') {
+				alert("Complete the verification please")
+				return
+			}
+			isback = false;
+			req(USER_IPG_REGISTER_URL, {
+				'phone': phone,
+				'password': password,
+				//				'email': email,
+				//				'weixin': weixin,
+				'inviteCode': inviteCode,
+				//				'username': name,
+				'address': address,
+				'token': tk
+			}, function(data) {
+
+				alert("Register completed! Please remeber your password：" + password)
+				uid = data.user.uid
+				setItem("pigUID", uid)
+				setLocal("pigUID", uid)
+				setLocal("pigphone", phone)
+				setItem("pigphone", phone)
+				isback = true;
+				window.location = 'index.html'
+
+			}, function(err) {
+				isback = true;
+				console.log(err.msg)
+				alert(err.msg)
+			})
+
+		}
+
+		function back() {
+			window.location.href="denglu.html"
+		}
+
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+			if(r != null) return unescape(r[2]);
+			return null; //返回参数值
+		}
+
+		var myCaptcha = _dx.Captcha(document.getElementById('c1'), {
+			appId: 'ccd387e44f717b10b6edf16c83261cb0', //appId,开通服务后可在控制台中“服务管理”模块获取
+			style: 'embed',
+			width: 300,
+			// 下面开始自定义语言
+			customLanguage: {
+				init_inform: 'Slide the block below', // <-- 初始化时的提示文案
+				load_fail: 'Loading failed，<a href="#">Please try again</a>！',
+				loading: 'Loading...',
+				pass_by_server: 'Verification completed',
+				slide_inform: 'Slide to the right to finish the verification', // <-- 滑块中的提示文案
+				smart_checking: 'Verifying',
+				verify_success: 'Verification completed',
+				verify_fail: 'Verification failed',
+				verifying: 'Verifying......'
+			},
+			success: function(token) {
+				console.log('token:', token)
+				tk = token
+			},
+			fail: function(e) {
+				console.log(e)
+				alert("Verification failed，please try again試")
+				myCaptcha.reload()
+			}
+		})
+
+		function agreement() {
+			window.location = 'agreementText.html'
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_zhuce2"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+</html>

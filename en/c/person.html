@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="" />
+		<title>Me</title>
+		<meta name="keywords" content="Gopig battle game">
+		<meta name="description" content="Gopig battle game">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/clipboard.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+	</head>
+	
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+		
+		.fr {
+			float: right;
+			display: inline-block;
+		}
+		
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	</style>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-inverse" style="margin-bottom: 0;">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!--<ul class="nav navbar-nav">
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">語言 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">中文</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cen', 'Chinese_to_English', 'resizable,scrollbars,status'))">English</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cja', 'Chinese_to_Japanese', 'resizable,scrollbars,status'))">日本語</a>
+								</li>
+								<li>
+									<a href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cko', 'Chinese_to_Korean', 'resizable,scrollbars,status'))">한국어.</a>
+								</li>
+							</ul>
+						</li>
+					</ul>-->
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<!--<li>
+							<a href="buy.html">兌換套餐</a>
+						</li>-->
+						<li>
+							<a href="twoDimension.html">Invite Friends</a>
+						</li>
+						<li>
+							<a href="http://gopig.io/en/IPGWhitePaper.pdf">Download Whitepaper</a>
+						</li>
+						<li class="active" id="logn" style="display: none;">
+							<a href="person.html"><span class="glyphicon glyphicon-user"> </span></a>
+						</li>
+						<li class="active" id="nologn">
+							<a href="denglu.html">Login</a>
+						</li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div class="row" style="margin-left: 0;margin-right: 0;">
+			<div style="padding-left: 0;padding-right: 0;" class="col-md-12">
+				<img src="images/img3.png" class="img-responsive" alt="Responsive image">
+				<img class="img-responsive" alt="Responsive image" style="width: 35%;position: absolute;margin-left: 32%;margin-top: -25%;" src="images/img3.gif" />
+			</div>
+		</div>
+		<div class="row">
+			<div style="padding-right: 0;padding-left: 0;width: 15%;" class="col-md-2">
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+			</div>
+
+			<div style="padding-right: 0;padding-left: 0;background-color: #3da900;width: 70%;" class="col-md-8">
+				<div style="height:  0.4rem;"></div>
+				<div style="width: 90%;margin-left: 5%;background-color: white;border-radius: 0.3rem;">
+					<div style="height:  0.4rem;"></div>
+					
+					<div style="height: 0.8rem;line-height: 0.8rem;">
+						<div style="float: left;font-size: 0.3rem;color: #333;margin-left: 10%;">First tier：</div>
+						<div style="float: left;margin-left: 0.2rem;background-color: rgb(93,166,21);width: 25%;height: 0.8rem;border-radius: 1rem;">
+							<span id="num" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.3rem;"></span>
+						</div>
+						<div style="float: left;font-size: 0.3rem;color: #333;margin-left: 2%;">Second tier：</div>
+						<div style="float: left;margin-left: 0.2rem;background-color: rgb(93,166,21);width: 25%;height: 0.8rem;border-radius: 1rem;">
+							<span id="num2" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.3rem;"></span>
+						</div>
+						
+					</div>
+					<div style="margin-top: 0.32rem;height: 0.8rem;line-height: 0.8rem;">
+						
+						<a href="twoDimension.html">
+							<div style="float: left;margin-left: 0.35rem;width: 20%;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.25rem;background-color: rgb(255,211,68);border-radius: 1rem;line-height: 0.8rem;margin-left: 40%;">Invite to get reward</div>
+						</a>
+					</div>
+					<div style="margin-top: 0.32rem;height: 0.8rem;line-height: 0.8rem;">
+						<div style="float: left;font-size: 0.3rem;color: #333;margin-left: 10%;">The amount of IPG：</div>
+						<div style="float: left;margin-left: 0.32rem;background-color: rgb(93,166,21);width: 40%;height: 0.8rem;border-radius: 1rem;">
+							<span id="coint" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.3rem;"></span>
+						</div>
+						<!--<a href="buy.html">
+							<div style="float: left;margin-left: 0.35rem;width: 20%;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.25rem;background-color: rgb(255,211,68);border-radius: 1rem;line-height: 0.8rem;">Sales offer</div>
+						</a>-->
+					</div>
+					<!--<div style="margin-top: 0.32rem;height: 0.8rem;line-height: 0.8rem;">
+						<div style="float: left;font-size: 0.3rem;color: #333;margin-left: 10%;">邀&nbsp;请&nbsp;码：</div>
+						<div style="float: left;margin-left: 0.34rem;background-color: rgb(93,166,21);width: 40%;height: 0.8rem;border-radius: 1rem;">
+							<span id="inviteCode" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.2rem;"></span>
+						</div>
+						<div style="float: left;margin-left: 0.35rem;width: 20%;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.25rem;background-color: rgb(255,211,68);border-radius: 1rem;line-height: 0.8rem;" data-clipboard-text="http://gopig.io/zhuce.html" class="btn1">复制</div>
+					</div>-->
+					<div style="width: 90%;border-radius: 0.3rem;margin-top: 0.66rem;background-color: rgb(74,133,17);margin-left: 5%;">
+						<div style="height: 0.39rem;"></div>
+						<div style="text-align: center;font-size: 0.3rem;color: rgb(255,255,255);">My Ethereum address：</div>
+						<div style="width: 90%;height: 0.79rem;margin-left: 5%;margin-top: 0.22rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;background-color: white;">
+							<img style="width: 0.32rem;height: 0.36rem;float: left;margin-left: 0.46rem;margin-top: 0.22rem;" src="images/gr2.png" />
+							<input style="float: left;border: 0;border-left: 0.03rem solid rgb(204, 204, 204);margin-left: 0.22rem;height: 0.39rem;margin-top: 0.2rem;width: 86%;padding-left: 0.15rem;font-size: 0.28rem;color: #535376;line-height: 0.39rem;border-radius: 0;" placeholder="Please insert your Ethereum address" type="text" id="address" />
+						</div>
+						<div onclick="changeAddress()" style="margin-left: 35%;width: 30%;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.25rem;background-color: rgb(255,211,68);border-radius: 1rem;line-height: 0.8rem;margin-top: 0.2rem;">Change address</div>
+						<div style="height: 0.39rem;"></div>
+					</div>
+					<div style="width: 90%;border-radius: 0.3rem;margin-top: 0.34rem;background-color: rgb(74,133,17);margin-left: 5%;">
+						<div style="height: 0.36rem;"></div>
+						<input style="border: 0;margin-left: 5%;height: 0.8rem;width: 90%;padding-left: 0.43rem;font-size: 0.28rem;color: #535376;line-height: 0.8rem;border-radius: 1rem;" placeholder="Ethereum address" type="text" disabled="disabled" />
+						<input style="border: 0;margin-left:5%;height: 0.8rem;width: 90%;padding-left: 0.43rem;font-size: 0.28rem;color: #535376;line-height: 0.8rem;border-radius: 1rem;margin-top: 0.31rem;" placeholder="Amount" type="text" disabled="disabled" />
+						<div style="width: 30%;height: 0.79rem;margin-left: 35%;margin-top: 0.31rem;text-align: center;line-height: 0.79rem;border-radius: 1rem;background-color: rgb(190,190,190);color: rgb(255,255,255);font-size: 0.25rem;" id="do_money">Collect</div>
+						<div style="text-align: center;color: rgb(255,255,255);font-size: 0.18rem;margin-top: 0.3rem;">Coming soon（QQ Customer Service：2791823419）</div>
+						<div style="height: 0.36rem;"></div>
+					</div>
+
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<img src="images/zc11.png" />
+			</div>
+
+			<div style="padding-right: 0;padding-left: 0;width: 15%;" class="col-md-2">
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />
+				<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+				<!--<img class="img-responsive" alt="Responsive image" src="images/img46.png" />-->
+			</div>
+		</div>
+
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+	<script>
+		var is_back = true;
+		var uid = '';
+		var code = '';
+		$(document).ready(function() {
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			$("#phone").text(phone)
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			req(IPG_USER_MONEY_QUERY, {
+					'uid': uid
+				}, function(data) {
+					var dat = data.userMoney;
+					var money = dat.money;
+					$("#coint").text(money)
+					var num = data.Count;
+					$("#num").text(num);
+					var num2 = data.Count2;
+					$("#num2").text(num2);
+					var address = data.address;
+					$("#address").val(address)
+
+					$.ajax({
+						type: "post",
+						url: IPG_USER_GET_INVIT_CODE,
+						async: true,
+						dataType: "json",
+						data: {
+							"uid": uid
+						},
+						success: function(obj) {
+							if(obj.err == "NOT ACCOUNT ERR") {} else {
+								var data = obj.data;
+								$("#inviteCode").text(data.code)
+								$(".btn1").attr("data-clipboard-text", data.code);
+								code = data.code
+								maidian()
+							}
+
+						},
+						error: function(e) {
+
+						}
+					});
+
+				},
+				function(e) {
+
+				})
+			$("#do_money").on("click", function() {
+				alert("Coming soon")
+			})
+		})
+
+		function changeAddress() {
+			var address = $("#address").val()
+			if(!address) {
+				alert("Please insert your Ethereum address")
+				return
+			}
+			if(uid == '' || uid == 'null' || uid == null) {
+				alert("Log in first")
+				window.location.href = "denglu.html"
+				return
+			}
+			if(!is_back) {
+				return;
+			}
+			is_back = false
+			req(USER_IPG_CHANGE_ADDRESS, {
+					'uid': uid,
+					'address': address
+				}, function(data) {
+					alert("Done！")
+					is_back = true
+				},
+				function(e) {
+					alert("Your change is failed, try again.")
+				})
+
+		}
+		var clipboard = new Clipboard('.btn1');
+
+		clipboard.on('success', function(e) {
+			alert("Copied！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = code
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('Copied！');
+		}
+
+		function back() {
+			history.go(-1)
+		}
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_person_pc"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>

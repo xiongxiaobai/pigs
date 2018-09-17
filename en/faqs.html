@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #080808;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>查看更多</title>
+		<meta name="keywords" content="对战版愤怒的小鸟">
+		<meta name="description" content="对战版愤怒的小鸟">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">-->
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body style="background-color: #080808;">
+
+		<div class="wrap" id="app" style="background-color: #080808;">
+			<div class="header2 clearfix" style="color: #080808;background-color: white;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: #080808;">查看更多&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.26rem;">
+					<a href="denglu.html" style="color: #080808;">登录</a>/
+					<a href="zhuce.html" style="color: #080808;">注册</a>
+				</div>
+				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
+					<a href="person.html" style="color: #080808;"><span class="glyphicon glyphicon-user"> </span></a>
+				</div>
+			</div>
+
+			<img style="width: 100%;" src="images/leanmore.jpg" />
+			<div style="width: 90%;margin-left: 5%;margin-top: 0.6rem;color: white;">
+				<div style="font-size: 0.7rem;color: white;font-weight: bold;">FAQ<span style="font-size: 0.5rem;">s</span></div>
+				<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">复仇的小猪为什么要和区块链结合？</div>
+				<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运用区块链技术，我们平台上每一局游戏都会生成一个智能合约。每次的胜负结果，和玩家赢得得代币，会被分布式存储。革命性的实现了线上游戏竞技的绝对公平，绝对透明，彻底杜绝了作弊行为。</div>
+				<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">IPG如何流通和怎么升值呢？</div>
+				<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每局对战游戏，都会要求双方玩家锁定一定量的IPG作为奖池。我们平台独有的精彩刺激的对战体验，必将引发玩家们蜂拥而至，使得IPG需求上涨。同时，特殊道具的买卖会进一步推高IPG的价值。</div>
+				<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">为什么能吸引到币圈以外的玩家？</div>
+				<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;复仇的小猪本身具有超高的可玩性，有情怀，有粉丝，非常适合邀请朋友家人参与。目标能够把5％以上的游戏用户转成币圈用户打造下一个币圈的传奇。</div>
+				<div style="margin-top: 0.6rem;font-size: 0.5rem;font-weight: bold;">为什么要邀请好友？</div>
+				<div style="margin-top: 0.4rem;font-size: 0.35rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邀请好友来对战，一起收获更多的IPG。</div>
+				<div style="margin-top: 0.4rem;font-size: 0.35rem;"><img style="width: 90%;margin-left: 5%;" src="images/yq.jpg" /></div>
+			</div>
+
+			<div style="height: 0.4rem;"></div>
+
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+	<script>
+		var uid = "";
+		$(document).ready(function() {
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			if(uid&&uid!=null&&uid!="null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+		})
+
+		function back() {
+			history.go(-1)
+		}
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>

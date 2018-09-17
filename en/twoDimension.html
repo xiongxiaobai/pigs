@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<!--<meta name="format-detection" content="telephone=no">-->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>Invitation</title>
+		<meta name="keywords" content="Gopig battle game">
+		<meta name="description" content="Gopig battle game">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css?3">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<!--<script type="text/javascript" src="js/index.js"></script>-->
+		<script src="js/clipboard.min.js"></script>
+		<link rel="stylesheet" href="css/nativeShare.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	</head>
+	<style>
+		html,
+		body {
+			height: 100%;
+			/*display: -webkit-box;*/
+			display: -ms-flexbox;
+			/*display: flex;*/
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		.panel {
+			/*width: 340px;*/
+			padding: 10px;
+			text-align: center;
+			/*background-color: #FF3C3C;*/
+			border-radius: 0 0 8px 8px;
+		}
+		
+		.activity {
+			width: 80%;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			height: 3.6rem;
+			background-color: #fff;
+			border-radius: 5px;
+			border: 1px solid #ff8d09;
+		}
+		
+		.activity ul {
+			top: -15px;
+			padding: 0;
+			color: #666;
+			position: relative;
+		}
+		
+		.activity li {
+			height: 34px;
+			padding: 0;
+			font-size: 12px;
+			line-height: 34px;
+			list-style: none;
+			border-bottom: 1px dotted #ff8d09;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" style="background: rgb(255, 255, 255);">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
+				<div class="head_txt" style="color: white;">Invitation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div id="logn" style="margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
+					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+				</div>
+			</div>
+			<img style="width: 100%;" src="images/zc1.png" />
+			<div style="height: 0.39rem;"></div>
+			<div style="width: 9.6rem;margin-top: 0.39rem;margin: auto;">
+				<div style="width: 9.6rem;display: table;">
+					<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;">1</div>
+					<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">Register completed, 100 IPG got!</div>
+				</div>
+				<div style="width: 9.6rem;display: table;margin-top: 0.2rem;">
+					<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;">2</div>
+					<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">First tier friends register：50 IPG per person</div>
+				</div>
+				<div style="width: 9.6rem;display: table;margin-top: 0.2rem;">
+					<div style="color: white;background-color: #5d9d15;width: 0.46rem;height: 0.46rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.5rem;font-weight: bold;font-size: 0.38rem;">3</div>
+					<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">Second tier friends register：30 IPG per person</div>
+				</div>
+				<div style="width: 9.6rem;margin-top: 0.2rem;font-size: 0.36rem;color: #333;">EX：A completed registration and invited his friend B and C(A's first tier). B and C completed registration, and each of them invited 2 of their friends(A's second tier friends), A's reward equals 100+2*50+4*30=320（IPG）</div>
+			</div>
+			<!--<img style="width: 8.08rem;height: 3.47rem;margin-top: 0.39rem;margin-left: 0.95rem;" src="images/yq1.png" />-->
+
+			<img style="width: 3.5rem;height: 3.47rem;margin-left: 3.26rem;margin-top: 0.6rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/index.html" />
+			<div style="text-align: center;font-size: 0.34rem;color: rgb(0,0,0);margin-top: 0.16rem;font-weight: bold;">
+				Earn IPG with your friends now!
+			</div>
+			<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">Invitation code：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+			<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">Reward from invitation：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>IPG amount</div>
+
+			<div id="copy" style="background-color: rgb(255, 255, 255);margin-top: 1%;height: 1rem;line-height: 1.4rem;" class="copy">
+				<div id="nativeShare">
+					<div class="list clearfix">
+						<span onclick="call('wechatTimeline')" class="nativeShare weixin_timeline fenx"><i></i></span>
+						<span onclick="call('wechatFriend')" class="nativeShare weixin fenx"><i></i></span>
+						<span onclick="call('qqFriend')" class="nativeShare qq fenx"><i></i></span>
+						<span onclick="call('weibo')" class="nativeShare weibo fenx"><i></i></span>
+					</div>
+				</div>
+				<button style="display: none;" onclick="call()">通用分享</button>
+				<button style="display: none;" onclick="setTitle('fa-ge NativeShare')">設置標題</button>
+			</div>
+			<div style="margin-top: 1rem;color: #333;font-size: 0.3rem;text-align: center;">Please take a screenshot, when browser is not supported</div>
+			<div style="height: 0.6rem;"></div>
+		</div>
+
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/nativeShare.js"></script>
+
+	<script>
+		var uid = "";
+		var code = '';
+		var nativeShare = new NativeShare()
+		$(document).ready(function() {
+			uid = getLocal("pigUID")
+			phone = getLocal("pigphone")
+			setItem("pigphone", phone)
+			setItem("pigUID", uid)
+			setItem("pigphone", phone)
+			setLocal("pigphone", phone)
+			setItem("pigUID", uid)
+			setLocal("pigUID", uid)
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			req(IPG_USER_MONEY_QUERY, {
+				'uid': uid
+			}, function(data) {
+				var dat = data.userMoney;
+				var money = dat.invite_money;
+				$("#coint").text(money)
+				$.ajax({
+					type: "post",
+					url: IPG_USER_GET_INVIT_CODE,
+					async: true,
+					dataType: "json",
+					data: {
+						"uid": uid
+					},
+					success: function(obj) {
+						if(obj.err == "NOT ACCOUNT ERR") {} else {
+							var data = obj.data;
+							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/zhuce2.html?info_id=" + data.code;
+							$("#twoDimension").attr("src", urlss)
+							$("#code").text(data.code)
+							var urls = "http://gopig.io/zhuce2.html?info_id=" + data.code
+							$(".btn1").attr("data-clipboard-text", urls);
+							code = data.code
+							maidian()
+							var shareData = {
+								title: 'Gopig',
+								desc: 'Played Angry Birds before? Come to register and win 100 IPG!',
+								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+								link: 'http://gopig.io/zhuce.html?info_id=' + data.code,
+								icon: '',
+								// 不要过于依赖以下两个回调，很多浏览器是不支持的
+								success: function() {
+									alert('success')
+
+								},
+								fail: function() {
+									alert('fail')
+								}
+							}
+							nativeShare.setShareData(shareData)
+						}
+
+					},
+					error: function(e) {
+
+					}
+				});
+			}, function(e) {
+
+			})
+		})
+		var shareData = {
+			title: 'Gopig',
+			desc: 'Played Angry Birds before? Come to register and win 100 IPG!',
+			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+			link: 'http://gopig.io/zhuce2.html?info_id=' + code,
+			icon: '',
+			// 不要过于依赖以下两个回调，很多浏览器是不支持的
+			success: function() {
+				alert('success')
+
+			},
+			fail: function() {
+				alert('fail')
+			}
+		}
+		nativeShare.setShareData(shareData)
+
+		function call(command) {
+			try {
+				nativeShare.call(command)
+			} catch(err) {
+				// 如果不支持，你可以在这里做降级处理
+				//		alert(err.message)
+				alert("Your browser cannot support the function.")
+			}
+		}
+
+		var clipboard = new Clipboard('.btn1');
+
+		clipboard.on('success', function(e) {
+			alert("Copied！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "http://gopig.io/zhuce2.html?info_id=" + code
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('Copied！');
+		}
+
+		function back() {
+			history.go(-1)
+		}
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_twodimension"
+			}, function(data) {}, function(err) {})
+		}
+	</script>
+
+</html>

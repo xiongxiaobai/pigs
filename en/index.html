@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>Gopig</title>
+		<meta name="keywords" content="Gopig battle game">
+		<meta name="description" content="Gopig battle game">
+		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script src="js/clipboard.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgba(0, 0, 0, 0.51);
+			font-size: 0.38rem;
+			letter-spacing: 0;
+			text-align: left;
+		}
+	</style>
+
+	<body>
+
+		<div class="wrap" id="app">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;z-index: 1000;position: fixed;width: 100%;">
+				<div class="head_txt" style="color: white;">Gopig</div>
+				<!--<div style="position: absolute;margin-left: 0.4rem;margin-top: -1.26rem;" class="dropdown">
+					<button style="background-color: #333;color: white;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    語言
+					    <span class="caret"></span>
+					  </button>
+					<ul style="background-color: #333;color: white;" style="width: 2.5rem;min-width: 2.5rem;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;">中文</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cen', 'Chinese_to_English', 'resizable,scrollbars,status'))">English</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cja', 'Chinese_to_Japanese', 'resizable,scrollbars,status'))">日本語</a>
+						</li>
+						<li style="background-color: #333;color: white;">
+							<a style="background-color: #333;color: white;" href="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'&amp;langpair=zh-CN%7Cko', 'Chinese_to_Korean', 'resizable,scrollbars,status'))">한국어.</a>
+						</li>
+					</ul>
+				</div>-->
+				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.24rem;">
+					<a href="denglu.html" style="color: white;">Login</a>/
+					<a href="zhuce.html" style="color: white;">Register</a>
+				</div>
+				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.24rem;" class="fr">
+					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
+				</div>
+
+			</div>
+			<div style="width: 7.96rem;height: 0.67rem;margin-left: 1.12rem;">
+				<!--<img style="width: 100%;" src="images/img1.png" />-->
+			</div>
+			<div style="width: 8.67rem;height: 4.42rem;margin-left: 0.63rem;margin-top: 1.52rem;">
+				<img style="width: 100%;" src="images/img0.png" />
+			</div>
+			<div style="width: 10rem;">
+				<img style="width: 100%;" src="images/img3.png" />
+				<div style="width: 7.34rem;height: 1.43rem;color: rgb(255,255,255);font-size: 1.54rem;margin-left: 1.36rem;margin-top: -2rem;text-align: center;font-weight: bold;">Play&amp;Earn</div>
+			</div>
+			<div style="width: 10rem;background-color: #5DA615;">
+				<div style="text-align: center;height: 0.7rem;font-size: 0.75rem;color: rgb(255,255,255);margin-top: 0.5rem;">Win the Game World's BTC </div>
+				<!--<div id="gogame" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
+					<img style="width: 100%;" src="images/img4.png" />
+					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">试玩赢ETH</div>
+				</div>-->
+				<div onclick="gozc()" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
+					<img style="width: 100%;" src="images/img4.png" />
+					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">Register now</div>
+				</div>
+				<div style="width: 8.84rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
+					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;padding-top: 0.9rem;">We are under attack！</div>
+					<div style="text-align: center;color: RGB(93,157,21);font-size: 0.68rem;font-weight: bold;">The war of revenge is coming soon！</div>
+					<div style="margin-top: 0.76rem;width: 7.62rem;margin-left: 0.62rem;color: rgb(51,51,51);font-size: 0.4rem;">The most difficult thing in the world is to change your fate. Life sucks. Gopig provides opportunity of truly fairness. The change of role can change your fate, restart your whole life.</div>
+					<div style="width: 7.64rem;height: 4.34rem;margin-left: 0.6rem;margin-top: 0.79rem;margin-bottom: 0.56rem;">
+						<video id="video" src="http://ozlo7ug2t.bkt.clouddn.com/381d5ff9df27e325524613bb96a4152e.mp4" poster="images/vidie.jpg" controls="controls" loop="loop" autoplay="autoplay" style="width: 100%;">
+							Your browser cannot support your service！
+						</video>
+					</div>
+					
+					<!--<div onclick="gogame()" style="height: 1.58rem;width: 7.23rem;margin-top: 1.22rem;margin: auto;">
+						<img style="width: 100%;" src="images/img25.png" />
+					</div>-->
+					<div style="height: 0.4rem;"></div>
+				</div>
+				<div style="width: 8.84rem;margin-left: 0.56rem;margin-top: 1.18rem;border-radius: 0.3rem;background-color: white;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">Introduction</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">Introduction</div>
+					<!--<div style="width: 7.62rem;height: 4.9rem;font-size: 0.4rem;color: rgb(51,51,51);margin-left: 0.62rem;margin-top: 0.5rem;line-height: 0.6rem;">Block chain technology makes the result of battle reliable and unchangeable. The online E-sports game would be perfectly fair and open. <br /><br />100 million IPG offered during the limited period<br />Register now to get the reward！</div>-->
+					<!--<img style="width: 3.56rem;margin-left: 5.28rem;margin-top: -3.4rem;" src="images/img6.png" />-->
+					<img style="width: 8.06rem;margin-left: 0.8rem;margin-top: 0.8rem;" src="images/img7.png" />
+				</div>
+				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">Introduction</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">How to play</div>
+
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">1</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">Prepare the battle</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">Users can exchange IPG to each kind of items for the increasement of capability. You can DIY your castle with materials before the battle, and test the castle.</div>
+					</div>
+					<!--<img style="width: 7.43rem;height: 1.82rem;margin-left: 0.62rem;margin-top: 0.9rem;" src="images/img7.png" />-->
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img8.jpg" />
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">2</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">Choose battlefield</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">Players choose battle field and lock some IPG in the reward pool.</div>
+					</div>
+					<!--<img style="width: 7.34rem;height: 1.16rem;margin-left: 0.62rem;margin-top: 1.1rem;" src="images/img9.png" />-->
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img10.jpg" />
+					<!--<img style="width: 7.63rem;height: 3.11rem;margin-left: 0.62rem;margin-top: 1.08rem;" src="images/img11.png" />-->
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">3</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">In the battle</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">Pigs(Defender) select a castle to defend, Birds(Attacker) choose the proper birds and decide the order of the birds.<br />Birds attack in limited time. Both players would change their role if every birds have attacked or all of the pigs have been destroyed.</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img12.jpg" />
+					<!--<img style="width: 6.16rem;height: 1.18rem;margin-left: 0.62rem;margin-top: 1.07rem;" src="images/img13.png" />-->
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">4</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">Summary of the game</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">The player who got the higher score would get the reward from the pool.</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img14.jpg" />
+					<!--<img style="width: 7.62rem;height: 1.83rem;margin-left: 0.62rem;margin-top: 1.04rem;" src="images/img15.png" />-->
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">5</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">Win IPG</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">Do your best, win others' IPG</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.72rem;margin-top: 0.36rem;margin-left: 0.22rem;" src="images/img16.jpg" />
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<div style="background-color: white;border-radius: 0.3rem;margin-top: 1.18rem;margin-left: 0.58rem;width: 8.84rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">Reservation</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">Reservation</div>
+					<!--<img style="width: 7.35rem;margin-top: 0.7rem;margin-left: 0.71rem;" src="images/img17.png" />-->
+					<div style="margin-top: 0.7rem;text-align: center;color: #00b400;font-size: 0.48rem;font-weight: bold;">
+						CAMPAIGN IS HOT AND OFFERS ARE LIMITED
+					</div>
+					<!--<div style="text-align: center;width: 90%;margin-left: 5%;font-size: 0.3rem;font-weight: bold;margin-top: 0.2rem;line-height: 0.5rem;"></div>-->
+					<img style="width: 7.42rem;margin-left: 0.72rem;margin-top: 0.2rem;" src="images/img24.png" />
+					<div style="width: 7.42rem;height: 7.02rem;border-radius: 0.3rem;margin-top: 0.44rem;margin-left: 0.72rem;background-color: #eaf4ea;">
+						<div style="text-align: center;padding-top: 0.67rem;font-size: 0.51rem;color: rgb(51,51,51);height: 0.45rem;font-weight: bold;">Latest players amount</div>
+						<div style="height: 1.06rem;margin-top: 1.16rem;">
+							<img id="w" style="height: 1.06rem;width: 0.66rem;margin-left: 1.9rem;float: left;" src="images/n0.png" />
+							<img id="q" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<img id="b" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<img id="s" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<img id="g" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.54rem;margin-left: 0.1rem;margin-top: 0.4rem;float: left;font-weight: bold;">people</div>
+						</div>
+						<div style="text-align: center;font-size: 0.51rem;margin-top: 0.79rem;color: rgb(51,51,51);height: 0.5rem;font-weight: bold;">
+							Count down
+						</div>
+						<div style="height: 1.06rem;margin-top: 0.58rem;">
+							<img id="t1" style="height: 1.06rem;width: 0.66rem;margin-left: 0.6rem;float: left;" src="images/n0.png" />
+							<img id="t2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;float: left;width: 0.12rem;font-size: 0.7rem;font-weight: bold;margin-left: 0.05rem;">:</div>
+							<img id="s1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="s2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;width: 0.12rem;font-size: 0.7rem;font-weight: bold;float: left;margin-left: 0.05rem;">:</div>
+							<img id="f1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="f2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+							<div style="font-size: 0.51rem;width: 0.12rem;font-size: 0.7rem;font-weight: bold;float: left;margin-left: 0.05rem;">:</div>
+							<img id="m1" style="height: 1.06rem;width: 0.66rem;float: left;margin-left: 0.05rem;" src="images/n0.png" />
+							<img id="m2" style="height: 1.06rem;width: 0.66rem;margin-left: 0.07rem;float: left;" src="images/n0.png" />
+						</div>
+						<div style="height: 0.36rem;margin-top: 0.27rem;">
+							<div style="float: left;margin-left:1.08rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.35rem;width: 0.36rem;font-weight: bold;">Day</div>
+							<div style="float: left;margin-left:1.27rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.35rem;width: 0.35rem;font-weight: bold;">Hour</div>
+							<div style="float: left;margin-left:1.26rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.36rem;width: 0.36rem;font-weight: bold;">Min</div>
+							<div style="float: left;margin-left:1.24rem ;font-size: 0.38rem;color: rgb(51,51,51);height: 0.36rem;width: 0.38rem;font-weight: bold;">Sec</div>
+						</div>
+					</div>
+					<div onclick="gozc()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">Register now</div>
+					</div>
+					<div style="height: 0.4rem;"></div>
+				</div>
+				<div style="width: 8.84rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">Introduction of IPG</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">Introduction of IPG</div>
+					<div style="width: 7.42rem;margin-left: 0.74rem;margin-top: 0.9rem;">
+						<div style="font-size: 0.58rem;font-weight: 500;color: #63a11e;">About IPG：</div>
+						<div style="margin-top: 0.2rem;font-weight: bold;color: #767676;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register to receive 100 IPG. First tier friend：50 IPG. Second tier friend: 30 IPG. After the game released, users can get IPG by accumulating game time, winning streak, upgrading level, completing missions and so on.</div>
+					</div>
+					<div style="width: 7.42rem;margin-left: 0.74rem;margin-top: 0.6rem;">
+						<div style="font-size: 0.58rem;font-weight: 500;color: #63a11e;">The usage of IPG：</div>
+						<div style="margin-top: 0.2rem;font-weight: bold;color: #767676;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Both sides need to take some IPG as pool reward for each game, the winner will win all of the token. Players need to exchange birds, material, pigs by IPG to increase the capability. We will set up a platform where players can exchange IPG and items with each other.</div>
+					</div>
+					<div style="width: 7.42rem;margin-left: 0.74rem;margin-top: 0.6rem;">
+						<div style="font-size: 0.58rem;font-weight: 500;color: #63a11e;">The value of IPG：</div>
+						<div style="margin-top: 0.2rem;font-weight: bold;color: #767676;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The game will attract unlimited amount of players. When the game have more updates, the user demand of IPG or items will increase rapidly. Win the reward with your friends now!</div>
+					</div>
+					<!--<div onclick="gobuy()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">獲取IPG</div>
+					</div>-->
+					<div style="height: 0.8rem;"></div>
+					<!--<img style="width: 7.42rem;height: 16.47rem;margin-left: 0.74rem;margin-top: 0.9rem;" src="images/img18.png" />-->
+
+				</div>
+				<!--<div style="width: 8.84rem;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">兌換計劃</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">兌換計劃</div>
+					<img style="width: 6.78rem;height: 2.26rem;margin-left: 1.04rem;margin-top: 0.8rem;" src="images/img19.png" />
+					<div style="font-size: 0.4rem;color: rgb(51,51,51);width: 7.54rem;height: 1.03rem;margin-left: 0.52rem;margin-top: 0.59rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;復仇的小猪小鳥對戰版發行遊戲IPG鳥幣1ETH=8800 IPG鳥幣+贈送（X為ETH數量）</div>
+					<img style="width: 7.7rem;margin-top: 0.87rem;margin-left: 0.56rem;" src="images/img20.png" />
+					<div style="text-align: center;margin-top: 0.2rem;">
+						收藏者請將兌換憑證發至：<br />
+						郵箱：info@gopig.io<br />
+						基金會確認後會統一打幣。<br />
+						志願者招募中，有意者請聯係鳥司。<br />
+						微信：1504997349
+					</div>
+					<div onclick="gobuy()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">兌換套餐</div>
+					</div>
+					<div style="height: 0.8rem;"></div>
+				</div>-->
+				<div style="width: 8.84rem;height: auto;margin-top: 1.18rem;margin-left: 0.58rem;background-color: white;border-radius: 0.3rem;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">Reservation</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">Invite Friends</div>
+					<!--<img style="width: 7.14rem;height: 2.26rem;margin-left: 0.9rem;margin-top: 0.9rem;" src="images/img21.png" />-->
+					<div style="text-align: center;margin-top: 0.9rem;color: #00b400;font-size: 0.48rem;font-weight: bold;">INVITE FRIENDS TO GET EXTRA REWARDS</div>
+					<div style="height: 0.6rem;"></div>
+					<div style="width: 8.4rem;margin-top: 0.88rem;margin:auto;display: table;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.53rem;font-weight: bold;font-size: 0.4rem;">1</div>
+						<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">Register completed: 100IPG</div>
+					</div>
+					<div style="width: 8.4rem;margin-top: 0.2rem;margin: auto;display: table;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.53rem;font-weight: bold;font-size: 0.4rem;">2</div>
+						<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">Invite your friends to register: 50IPG per person</div>
+					</div>
+					<div style="width: 8.4rem;margin-top: 0.2rem;margin: auto;display: table;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.53rem;font-weight: bold;font-size: 0.4rem;">3</div>
+						<div style="float: left;font-weight: bold;margin-left: 0.1rem;font-size: 0.4rem;">Your friends invite their friends: 30IPG per person</div>
+					</div>
+					<div style="width: 7.59rem;margin-top: 0.2rem;margin-left: 0.63rem;">Eg:A registered and invited B,B reigstered and invited C,C also finished register,A's reward is 100+2*50+4*50+4*30=320(IPG)</div>
+					<!--<img style="width: 7.59rem;height: 4.5rem;margin-top: 0.88rem;margin-left: 0.63rem;" src="images/img22.png" />-->
+					<div onclick="goyq()" style="width: 7.23rem;height: 1.6rem;margin-left: 0.82rem;margin-top: 0.76rem;">
+						<img style="width: 7.23rem;height: 1.6rem;" src="images/img4.png" />
+						<div style="text-align: center;font-size: 0.66rem;color: rgb(255,255,255);margin-top: -1.3rem;">Invite Now</div>
+					</div>
+					<div style="height: 0.6rem;"></div>
+				</div>
+				<img style="width: 100%;margin-top: 0.55rem;" src="images/img23.png" />
+				<div data-clipboard-text="gopig.io" style="position: absolute;width: 0.5rem;height: 0.5rem;margin-top: -15.1rem;margin-left: 5.4rem;" class="btn1"></div>
+				<div data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="position: absolute;width: 0.5rem;height: 0.5rem;margin-top: -12.4rem;margin-left: 8.4rem;" class="btn2"></div>
+				<img style="width: 3.55rem;height: 3.55rem;position: absolute;margin-left: 3.225rem;margin-top: -10.6rem;border-radius: 0.2rem;" src="images/qun.png" />
+				<div style="position: absolute;margin-top: -6.8rem;font-size: 0.28rem;color: white;text-align: center;width: 100%;">Join Go Pig Groups(@ Owner To Join)</div>
+				<a href="http://gopig.io/en/IPGWhitePaper.pdf">
+					<div style="position: absolute;margin-top: -6rem;font-size: 0.32rem;color: white;margin-left: 4rem;">Download Whitepaper</div>
+				</a>
+			</div>
+
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/base/util.js"></script>
+		<script src="js/base/url.js"></script>
+		<script src="js/base/base_net.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+	<script type="text/javascript">
+		var uid = "";
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setItem("pigphone", phone)
+		setLocal("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigUID", uid)
+
+		$(document).ready(function() {
+			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+
+			} else {
+				window.location.href = "http://gopig.io/en/c/index.html"
+			}
+
+			document.getElementById('video').play()
+			//Vertical Tab
+			if(uid && uid != null && uid != "null") {
+				$("#nologn").hide()
+				$("#logn").show()
+			} else {
+				$("#nologn").show()
+				$("#logn").hide()
+			}
+			$("#gosign").on("click", function() {
+				if(uid) {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("Log in first")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gobuy").on("click", function() {
+				if(uid) {
+					window.location.href = "buy.html"
+				} else {
+					alert("Log in first")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#twoDimension").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("Log in first")
+					window.location.href = "denglu.html"
+				}
+			})
+//			$("#gogame").on("click", function() {
+//				if(uid && uid != null && uid != "null") {
+//					window.open("game.html");
+//				} else {
+//					window.open("game.html");
+//					//					alert("请先登录")
+//					//					window.location.href = "denglu.html"
+//				}
+//			})
+			$("#gozhuce").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					alert("You've already registered")
+				} else {
+					window.location.href = "zhuce.html"
+				}
+			})
+			//			var ndate = new Date().toLocaleDateString();
+			//			var ndate = new Date(ndate)
+			var ndate = 1539619200
+			//			var ndate = Math.round(ndate.getTime() / 1000)
+			var nnn = new Date()
+			nnn = Math.round(nnn.getTime() / 1000)
+			var nu = 1539619200 - nnn
+			//			var hour = Math.round(nu / 3600)
+			//			var minute = Math.round((nu % 3600) / 60)
+			//			var second = (nu % 3600) % 60
+			//			if(hour < 10) {
+			//				hour = '0' + hour
+			//			}
+			//			if(minute < 10) {
+			//				minute = '0' + minute
+			//			}
+			//			if(second < 10) {
+			//				second = '0' + second
+			//			}
+			//			$("#hour").text(hour)
+			//			$("#minute").text(minute)
+			//			$("#second").text(second)
+			countDown(nu)
+			//			countDown(ndate)
+			req(GET_USER_IPG_C, {
+
+				}, function(data) {
+					var num = data.user;
+					num = Number(num)
+					var g = parseInt(num % 10);
+					var s = parseInt(num / 10 % 10);
+					var b = parseInt(num / 100 % 10);
+					var q = parseInt(num / 1000 % 10);
+					var w = parseInt(num / 10000 % 10);
+					$("#g").attr("src", "images/n" + g + ".png");
+					$("#s").attr("src", "images/n" + s + ".png");
+					$("#b").attr("src", "images/n" + b + ".png");
+					$("#q").attr("src", "images/n" + q + ".png");
+					$("#w").attr("src", "images/n" + w + ".png");
+					maidian()
+
+				},
+				function(e) {
+					//					$("#pn").text(888)
+				})
+
+		});
+
+		function gozc() {
+			if(uid && uid != null && uid != "null") {
+				alert("You've already registered")
+			} else {
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function goyq() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "twoDimension.html"
+			} else {
+				alert("Please register")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function gobuy() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "buy.html"
+			} else {
+				alert("Please register")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function countDown(times) {
+			var timer = null;
+			timer = setInterval(function() {
+				var day = 0,
+					hour = 0,
+					minute = 0,
+					second = 0; //时间默认值
+				if(times > 0) {
+					day = Math.floor(times / (60 * 60 * 24));
+					hour = Math.floor(times / (60 * 60)) - (day * 24);
+					minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				} else {
+					times = 86400;
+				}
+
+				if(day <= 9) {
+					$("#t1").attr("src", "images/n0.png")
+					$("#t2").attr("src", "images/n" + day + ".png")
+					//					day = '0' + day;
+				} else {
+					var day1 = parseInt(Number(day) / 10 % 10);
+					var day2 = parseInt(Number(day) % 10);
+					$("#t1").attr("src", "images/n" + day1 + ".png")
+					$("#t2").attr("src", "images/n" + day2 + ".png")
+				}
+				if(hour <= 9) {
+					$("#s1").attr("src", "images/n0.png")
+					$("#s2").attr("src", "images/n" + hour + ".png")
+					//					hour = '0' + hour;
+				} else {
+					var hour1 = parseInt(Number(hour) / 10 % 10);
+					var hour2 = parseInt(Number(hour) % 10);
+					$("#s1").attr("src", "images/n" + hour1 + ".png")
+					$("#s2").attr("src", "images/n" + hour2 + ".png")
+				}
+				if(minute <= 9) {
+					$("#f1").attr("src", "images/n0.png")
+					$("#f2").attr("src", "images/n" + minute + ".png")
+					//					minute = '0' + minute;
+				} else {
+					var minute1 = parseInt(Number(minute) / 10 % 10);
+					var minute2 = parseInt(Number(minute) % 10);
+					$("#f1").attr("src", "images/n" + minute1 + ".png")
+					$("#f2").attr("src", "images/n" + minute2 + ".png")
+				}
+				if(second <= 9) {
+					$("#m1").attr("src", "images/n0.png")
+					$("#m2").attr("src", "images/n" + second + ".png")
+					//					second = '0' + second;
+				} else {
+					var second1 = parseInt(Number(second) / 10 % 10);
+					var second2 = parseInt(Number(second) % 10);
+					$("#m1").attr("src", "images/n" + second1 + ".png")
+					$("#m2").attr("src", "images/n" + second2 + ".png")
+				}
+
+				$("#day").text(day)
+				$("#hour").text(hour)
+				$("#minute").text(minute)
+				$("#second").text(second)
+
+				//
+				//  console.log(day+"天:"+hour+"小时："+minute+"分钟："+second+"秒");
+				times--;
+			}, 1000);
+			if(times <= 0) {
+				clearInterval(timer);
+			}
+		}
+		var clipboard = new Clipboard('.btn1');
+		var clipboard2 = new Clipboard('.btn2');
+
+		clipboard.on('success', function(e) {
+			alert("Copied！")
+		});
+		clipboard2.on('success', function(e) {
+			alert("Copied！")
+		});
+
+		clipboard.on('error', function(e) {
+			var copy_body = "gopig.io"
+			Copy(copy_body);
+		});
+		clipboard2.on('error', function(e) {
+			var copy_body = "0x6750b81427fa648db03c7a09e88e62ecc65b55d1"
+			Copy(copy_body);
+		});
+
+		function Copy(str) {
+			var save = function(e) {
+				e.clipboardData.setData('text/plain', str);
+				e.preventDefault();
+			}
+			document.addEventListener('copy', save);
+			document.execCommand('copy');
+			document.removeEventListener('copy', save);
+			alert('Copied！');
+		}
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_index"
+			}, function(data) {}, function(err) {})
+		}
+		
+		function gogame(){
+			window.open("http://gopig.io/game/");
+		}
+		
+	</script>
+
+	<!--<script src="js/zhuce2.js?1"></script>-->
+
+</html>
