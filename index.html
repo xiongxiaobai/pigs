@@ -571,6 +571,25 @@
 		}
 		
 	</script>
+	<script type="text/javascript" language="javascript">
+		var Browser_Agent = navigator.userAgent;
+		//浏览器为ie的情况
+		if(Browser_Agent.indexOf("MSIE") != -1) {
+			var a = navigator.browserLanguage;
+			
+//			console.log(a)
+			if(a != "zh-cn") {
+				location.href = "http://gopig.io/en/index.html";
+			}
+		}
+		//浏览器非ie的情况
+		else {
+			var b = navigator.language;
+			if(b != "zh-CN") {
+				location.href = "http://gopig.io/en/index.html";
+			}
+		}
+	</script>
 
 	<!--<script src="js/zhuce2.js?1"></script>-->
 
