@@ -216,7 +216,7 @@
 							<img style="width: 12%;margin-left: 2%;float: left;" src="images/webwxgetmsgimg-16.gif" />
 							<img style="width: 12%;margin-left: 2%;float: left;" src="images/webwxgetmsgimg-17.gif" />
 							<!--<img style="width: 12%;margin-left: 2%;float: left;" src="images/webwxgetmsgimg-18.gif" />-->
-							<a href="http://ozlo7ug2t.bkt.clouddn.com/%E8%A1%A8%E6%83%85.zip"><img style="width: 12%;margin-left: 2%;float: left;" src="images/img63.png" /></a>
+							<a href="http://ozlo7ug2t.bkt.clouddn.com/gif.zip"><img style="width: 12%;margin-left: 2%;float: left;" src="images/img63.png" /></a>
 						</div>
 					</div>
 					<div style="height: 0.4rem;"></div>
@@ -754,7 +754,8 @@
 					$("#img57").attr("src", "images/img57n.png")
 					$("#img58").attr("src", "images/img58x.png")
 					$("#img59").attr("src", "images/img59n.png")
-				}if(scrollTop >= 5000) {
+				}
+				if(scrollTop >= 5000) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -1039,6 +1040,25 @@
 				'uid': uid,
 				'name': "pig_index_pc"
 			}, function(data) {}, function(err) {})
+		}
+	</script>
+	<script type="text/javascript" language="javascript">
+		var Browser_Agent = navigator.userAgent;
+		//浏览器为ie的情况
+		if(Browser_Agent.indexOf("MSIE") != -1) {
+			var a = navigator.browserLanguage;
+			console.log(a)
+//			if(a != "zh-cn") {
+//				location.href = "英文网站";
+//			}
+		}
+		//浏览器非ie的情况
+		else {
+			var b = navigator.language;
+			console.log(b)
+//			if(b != "zh-CN") {
+//				location.href = "英文网站";
+//			}
 		}
 	</script>
 
