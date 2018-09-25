@@ -17,7 +17,7 @@
 <body>
     <script>
     (function() {
-        var game = new Phaser.Game(screen.width, screen.height, Phaser.AUTO, null);
+        var game = new Phaser.Game(screen.width*3, screen.height*3, Phaser.AUTO, null);
 
         game.state.add('Game', Game);
         game.state.start('Game');
