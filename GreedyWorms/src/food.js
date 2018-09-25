@@ -9,11 +9,11 @@ Food = function(game, x, y) {
     this.game = game;
     this.debug = false;
     this.sprite = this.game.add.sprite(x, y, 'food');
-    this.sprite.tint = 0xff0000;
+    this.sprite.tint = 0xFFFFFF;
 
     this.game.physics.p2.enable(this.sprite, this.debug);
     this.sprite.body.clearShapes();
-    this.sprite.body.addCircle(this.sprite.width * 0.5);
+    this.sprite.body.addCircle(this.sprite.width * 2);
     //set callback for when something hits the food   当食物碰到食物时设置回调
     this.sprite.body.onBeginContact.add(this.onBeginContact, this);
 
