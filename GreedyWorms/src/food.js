@@ -13,7 +13,7 @@ Food = function(game, x, y) {
 
     this.game.physics.p2.enable(this.sprite, this.debug);
     this.sprite.body.clearShapes();
-    this.sprite.body.addCircle(this.sprite.width * 2);
+    this.sprite.body.addCircle(this.sprite.width * 0.5);
     //set callback for when something hits the food   当食物碰到食物时设置回调
     this.sprite.body.onBeginContact.add(this.onBeginContact, this);
 
