@@ -19,10 +19,12 @@
 
 	<body>
 		<div style="text-align: center;margin-top: 10px;margin-bottom: 10px;width: 100%;display: table;position: fixed;">
-			<div style="color: red;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">倒计时：</div>
+			<div style="color: white;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">倒计时：</div>
 			<div style="float: left;"><img id="m1" style="float: left;width: 40%;" src="asset/n6.png" /><img id="m2" style="float: left;margin-left: 5%;width: 40%;" src="asset/n0.png" /> </div>
-			<div style="color: red;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">吃币数：</div>
+			<div style="color: white;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">吃币数：</div>
 			<div id="cc" style="float: left;font-weight: bold;color: white;font-size: 36px;">0</div>
+			<div style="color: white;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">本局筹码：</div>
+			<div id="cm" style="float: left;font-weight: bold;color: white;font-size: 36px;">100</div>
 		</div>
 		<script>
 			var name = '';
@@ -30,11 +32,13 @@
 			var pointy = 0;
 			var point1 = 0;
 			var point2 = 0;
+			
 			(function() {
 				coin = getUrlParam("coin");
 				name = getUrlParam("name");
-				console.log(coin)
-				console.log(name)
+				$("#cm").text(coin)
+//				console.log(coin)
+//				console.log(name)
 				var game = new Phaser.Game(screen.width * 3, screen.height * 3, Phaser.AUTO, null);
 
 				game.state.add('Game', Game);
