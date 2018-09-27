@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>Greedy Worms</title>
-    <script src="lib/phaser.min.js"></script>
-    <script src="src/game.js"></script>
-    <script src="src/snake.js"></script>
-    <script src="src/playerSnake.js"></script>
-    <script src="src/botSnake.js"></script>
-    <script src="src/eye.js"></script>
-    <script src="src/eyePair.js"></script>
-    <script src="src/shadow.js"></script>
-    <script src="src/food.js"></script>
-    <script src="src/util.js"></script>
-</head>
-<body>
-    <script>
-    (function() {
-        var game = new Phaser.Game(screen.width*3, screen.height*3, Phaser.AUTO, null);
 
-        game.state.add('Game', Game);
-        game.state.start('Game');
-    })();
-    </script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title>Greedy Worms</title>
+		<script src="lib/phaser.min.js"></script>
+		<script src="src/game.js"></script>
+		<script src="src/snake.js"></script>
+		<script src="src/playerSnake.js"></script>
+		<script src="src/botSnake.js"></script>
+		<script src="src/eye.js"></script>
+		<script src="src/eyePair.js"></script>
+		<script src="src/shadow.js"></script>
+		<script src="src/food.js"></script>
+		<script src="src/util.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+	</head>
+
+	<body>
+		<div style="text-align: center;margin-top: 10px;margin-bottom: 10px;width: 100%;display: table;position: fixed;">
+			<div style="color: red;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">倒计时：</div>
+			<div style="float: left;"><img id="m1" style="float: left;width: 40%;" src="asset/n6.png" /><img id="m2" style="float: left;margin-left: 5%;width: 40%;" src="asset/n0.png" /> </div>
+			<div style="color: red;float: left;margin-left: 10%;font-size: 36px;font-weight: bold;">吃币数：</div>
+			<div id="cc" style="float: left;font-weight: bold;color: white;font-size: 36px;">0</div>
+		</div>
+		<script>
+			var name = '';
+			var coin = 100;
+			var pointy = 0;
+			var point1 = 0;
+			var point2 = 0;
+			(function() {
+				coin = getUrlParam("coin");
+				name = getUrlParam("name");
+				console.log(coin)
+				console.log(name)
+				var game = new Phaser.Game(screen.width * 3, screen.height * 3, Phaser.AUTO, null);
+
+				game.state.add('Game', Game);
+				game.state.start('Game');
+				countDown(60)
+			})();
+
+			function countDown(times) {
+				var timer = null;
+				timer = setInterval(function() {
+					var day = 0,
+						hour = 0,
+						minute = 0,
+						second = 0; //时间默认值
+					if(times > 0) {
+						day = Math.floor(times / (60 * 60 * 24));
+						hour = Math.floor(times / (60 * 60)) - (day * 24);
+						minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+						second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+					} else {
+						clearInterval(timer);
+						alert("游戏结束，您获得："+pointy+"IPG")
+						window.location.href="end.html"
+					}
+
+					if(second <= 9) {
+						$("#m1").attr("src", "asset/n0.png")
+						$("#m2").attr("src", "asset/n" + second + ".png")
+						//					second = '0' + second;
+					} else {
+						var second1 = parseInt(Number(second) / 10 % 10);
+						var second2 = parseInt(Number(second) % 10);
+						$("#m1").attr("src", "asset/n" + second1 + ".png")
+						$("#m2").attr("src", "asset/n" + second2 + ".png")
+					}
+
+					times--;
+					if(times < 0) {
+						clearInterval(timer);
+					}
+				}, 1000);
+				if(times <= 0) {
+					clearInterval(timer);
+				}
+			}
+
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg); //匹配目标参数
+				if(r != null) return unescape(r[2]);
+				return null; //返回参数值
+			}
+		</script>
+	</body>
+
 </html>

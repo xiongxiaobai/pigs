@@ -12,6 +12,7 @@ Game.prototype = {
     	this.game.load.image('eye-black', 'asset/eye-black.png');
 
         this.game.load.image('food', 'asset/hex.png');
+//      this.game.load.image('n0', 'asset/n0.png');
     },
     create: function() {
         var width = this.game.width;
@@ -31,7 +32,7 @@ Game.prototype = {
         this.foodCollisionGroup = this.game.physics.p2.createCollisionGroup();
 
         //add food randomly  随即添加食物
-        for (var i = 0 ; i < 100 ; i++) {
+        for (var i = 0 ; i < coin*3 ; i++) {
             this.initFood(Util.randomInt(-width, width), Util.randomInt(-height, height));
         }
 
@@ -44,6 +45,7 @@ Game.prototype = {
         //create bots    创建机器人
         new BotSnake(this.game, 'circle', -200, 0);
         new BotSnake(this.game, 'circle', 200, 0);
+//      this.sprite = this.game.add.sprite(100, 100, 'n0');
 
         //initialize snake groups and collision    初始化蛇群和碰撞
         for (var i = 0 ; i < this.game.snakes.length ; i++) {

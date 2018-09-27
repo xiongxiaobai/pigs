@@ -30,6 +30,18 @@ Food.prototype = {
             //Create constraint between the food and the snake head that
             //it collided with. The food is then brought to the center of
             //the head sprite   在食物和蛇头之间产生约束。然后把食物带到头部雪碧的中心。
+//          console.log((p2Body.id)%100)
+            if((p2Body.id)%100==5){
+            	pointy = pointy+1;
+            	$("#cc").text(pointy)
+            }
+            if((p2Body.id)%100==41){
+            	point1 = point1+1;
+            }
+            if((p2Body.id)%100==77){
+            	point2 = point2+1;
+            }
+//          console.log(pointy)
             this.constraint = this.game.physics.p2.createRevoluteConstraint(
                 this.sprite.body, [0,0], phaserBody, [0,0]
             );
