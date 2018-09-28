@@ -58,8 +58,8 @@
 				<input style="float: left;border: 0;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;font-size: 0.28rem;color: white;line-height: 0.56rem;border-radius: 0;background-color: rgba(0,0,0,0);margin-left: 0.6rem;" placeholder="NAME" type="text" id="name" />
 			</div>
 			<div style="height: 1rem;"></div>
-			<img onclick="chose(100)" style="width: 30%;float: left;margin-left: 15%;" src="asset/100coin.png" />	
-			<img onclick="chose(500)" style="width: 30%;float: left;margin-left: 10%;" src="asset/500coin.png" />
+			<img id="coins100" onclick="chose(100)" style="width: 30%;float: left;margin-left: 15%;" src="asset/100coiny.png" />	
+			<img id="coins500" onclick="chose(500)" style="width: 30%;float: left;margin-left: 10%;" src="asset/500coinn.png" />
 			<div style="height: 1rem;clear: both;"></div>
 			<img onclick="start()" style="width: 30%;margin-left: 35%;" src="asset/loginstart.png" />
 		</div>
@@ -86,6 +86,14 @@
 
 		})
 		function chose(x){
+			if(x==100){
+				$("#coins100").attr("src","asset/100coiny.png")
+				$("#coins500").attr("src","asset/500coinn.png")
+			}
+			if(x==500){
+				$("#coins100").attr("src","asset/100coinn.png")
+				$("#coins500").attr("src","asset/500coiny.png")
+			}
 			coin = x;
 		}
 		function start(){
