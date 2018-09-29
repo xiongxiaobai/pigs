@@ -39666,7 +39666,7 @@ false,false,1726069966773403,false
 						1,
 						[
 							2,
-							"http://www.dmaku.com/jquery-game-1.html"
+							"http://gopig.io"
 						]
 					]
 ,					[
