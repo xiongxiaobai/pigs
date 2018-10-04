@@ -34,7 +34,7 @@
 			var point2 = 0;
 			
 			(function() {
-				coin = getUrlParam("coin");
+				coin = getUrlParam("coin")||100;
 				name = getUrlParam("name");
 				$("#cm").text(coin)
 //				console.log(coin)
