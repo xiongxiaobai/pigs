@@ -45456,7 +45456,7 @@ false,false,673722091883352,false
 					1,
 					[
 						2,
-						"http://www.dmaku.com/jquery-game-1.html"
+						"http://gopig.io"
 					]
 				]
 ,				[
@@ -45504,7 +45504,7 @@ false,false,673722091883352,false
 					1,
 					[
 						2,
-						"http://www.dmaku.com/jquery-game-1.html"
+						"http://gopig.io"
 					]
 				]
 ,				[
