@@ -99,9 +99,12 @@
 					<img style="width: 100%;" src="images/img4.png" />
 					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">试玩赢ETH</div>
 				</div>-->
-				<div onclick="gozc()" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
+				<div class="nologin" onclick="gozc()" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;">
 					<img style="width: 100%;" src="images/img4.png" />
 					<div style="color: rgb(255,255,255);font-size: 0.66rem;margin-top: -1.3rem;text-align: center;">立即注冊</div>
+				</div>
+				<div class="islogin" onclick="goint()" style="height: 1.58rem;width: 7.23rem;margin-left: 1.4rem;margin-top: 1.22rem;display: none;">
+					<img style="width: 100%;" src="images/img27.png" />
 				</div>
 				
 				<!--<div style="width: 8.84rem;margin-left: 0.59rem;background-color: white;border-radius: 0.3rem;margin-top: 1.06rem;">
@@ -348,9 +351,13 @@
 			if(uid && uid != null && uid != "null") {
 				$("#nologn").hide()
 				$("#logn").show()
+				$(".nologin").hide()
+				$(".islogin").show()
 			} else {
 				$("#nologn").show()
 				$("#logn").hide()
+				$(".nologin").show()
+				$(".islogin").hide()
 			}
 			$("#gosign").on("click", function() {
 				if(uid) {
@@ -576,6 +583,9 @@
 		
 		function gogame(){
 			window.open("http://gopig.io/game/");
+		}
+		function goint(){
+			window.location.href = "twoDimension.html"
 		}
 		
 	</script>
