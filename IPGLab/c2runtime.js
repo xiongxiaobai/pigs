@@ -3386,6 +3386,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			this.plugins.push(plugin);
 		}
 		pm = cr.getProjectModel();
+		console.log(pm[3][19])
 		for (i = 0, len = pm[3].length; i < len; i++)
 		{
 			m = pm[3][i];

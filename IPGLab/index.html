@@ -1,109 +1,167 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
-<head>
-    <meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>IPG实验室</title>
-	
-	<!-- Standardised web app manifest -->
-	<link rel="manifest" href="app.manifest" />
-	
-	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
-	<meta name="HandheldFriendly" content="true" />
-	
-	<!-- Chrome for Android web app tags -->
-	<meta name="mobile-web-app-capable" content="yes" />
-	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+<html lang="en" style="">
 
-    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
-	<style type="text/css">
-		* {
-			padding: 0;
-			margin: 0;
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="icon" href="" />
+		<title>IPGLab</title>
+		<link rel="stylesheet" type="text/css" href="../css/AngryBirds.css?2">
+		<script type="text/javascript" src="../js/flexible.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery-2.1.4.min.js"></script>
+	</head>
+	<style>
+		#cnzz_stat_icon_1270505203 {
+			display: none;
 		}
-		html, body {
-			background: #000;
-			color: #fff;
-			overflow: hidden;
-			touch-action: none;
-			-ms-touch-action: none;
+		
+		input::-webkit-input-placeholder {
+			/*WebKit browsers*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
-		canvas {
-			touch-action-delay: none;
-			touch-action: none;
-			-ms-touch-action: none;
+		
+		input::-moz-input-placeholder {
+			/*Mozilla Firefox*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
 		}
-    </style>
-	
+		
+		input::-ms-input-placeholder {
+			/*Internet Explorer*/
+			color: rgb(204, 204, 204);
+			line-height: 0.56rem;
+			font-size: 0.28rem;
+		}
+	</style>
 
-</head> 
- 
-<body> 
-	<div id="fb-root"></div>
-	
-	<script>
-	// Issue a warning if trying to preview an exported project on disk.
-	(function(){
-		// Check for running exported on file protocol
-		if (window.location.protocol.substr(0, 4) === "file")
-		{
-			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
-		}
-	})();
-	</script>
-	
-	<!-- The canvas must be inside a div called c2canvasdiv -->
-	<div id="c2canvasdiv">
-	
-		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
-		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
-		<canvas id="c2canvas" width="720" height="1280">
+	<body style="background:url(images/indexbg.jpg) no-repeat;background-size: 100% 100%; height: 18rem;">
+
+		<div class="wrap" id="app" >
 			
-		</canvas>
-		
-	</div>
-	
-	<!-- Pages load faster with scripts at the bottom -->
-	
-	<!-- Construct 2 exported games require jQuery. -->
-	<script src="jquery-2.0.0.min.js"></script>
 
+			<!--<div style="margin-top: 1rem;text-align: center;font-size: 0.8rem;font-weight: bold;color: yellow;">
+				吃币虫<br />
+				GREEDY WOREMS
+			</div>-->
+			<!--<img style="width: 80%;margin-left: 10%;margin-top: 2rem;" src="images/login.png" />-->
+			<!--<img style="width: 7.79rem;height: 0.43rem;margin-left: 1.11rem;margin-top: 0.46rem;" src="images/zc2.png" />-->
+			<div style="background:url(images/indexipg.png) no-repeat;background-size: 100% 100%;width: 6.4rem;height: 2.2rem;margin-left: 1.9rem;margin-top: 5.4rem;">
+				<div style="height: 1.2rem;margin-top: 0.5rem;width: 3rem;font-size: 0.5rem;color: white;line-height: 1.2rem;margin-left: 2.4rem;position: absolute;" id="ipgs">X0</div>
+			</div>
+			<!--<div style="width: 5.84rem;height: 1.15rem;margin-left: 2.2rem;margin-top: 6rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;background-color: rgba(0,0,0,0.4);">
+				
+				<input style="float: left;border: 0;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;font-size: 0.28rem;color: white;line-height: 0.56rem;border-radius: 0;background-color: rgba(0,0,0,0);margin-left: 0.6rem;" placeholder="NAME" type="text" id="name" />
+			</div>-->
+			<div style="height: 0.4rem;"></div>
+			<div style="background:url(images/indexchose.png) no-repeat;background-size: 100% 100%;width: 6.4rem;height: 2.2rem;margin-left: 1.9rem;">
+				<img id="coins100" onclick="chose(100)" style="width: 30%;float: left;margin-left: 2%;margin-top: 0.16rem;" src="images/100coinn.png" />	
+				<img id="coins500" onclick="chose(500)" style="width: 30%;float: left;margin-left: 36%;margin-top: 0.16rem;" src="images/500coinn.png" />
+			</div>
+			
+			<div style="height: 0.5rem;clear: both;"></div>
+			<img id="startbutton" onclick="start()" style="width: 30%;margin-left: 35%;" src="images/indexstartn.png" />
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="../js/base/util.js"></script>
+		<script src="../js/base/url.js"></script>
+		<script src="../js/base/base_net.js"></script>
+		<script src="../js/gVerify.js"></script>
+	</body>
+	<script src="../js/bootstrap.min.js"></script>
+	<script>
+		var coin = 0;
+		var name = '';
+		var uid = "";
+		var phone = "";
+		var moneyi = 0;
+		var isback = true;
+		uid = getLocal("pigUID");
+		phone = getLocal("pigphone");
+		$(document).ready(function() {
+			if(uid && uid != null && uid != "null") {
+				
+			} else {
+				window.location.href="login.html";
+			}
+			req(IPG_USER_MONEY_QUERY, {
+					'uid': uid
+				}, function(data) {
+					var dat = data.userMoney;
+					var money = dat.money;
+					moneyi = money
+					$("#ipgs").text("X"+money)
+				},
+				function(e) {
+					alert("獲取用戶信息失敗，請刷新頁面重試")
+				})
+		})
+		function chose(x){
+			if(moneyi<x){
+				alert("您沒有那麽多籌碼")
+				return
+			}
+			if(x==100){
+				$("#coins100").attr("src","images/100coiny.png")
+				$("#coins500").attr("src","images/500coinn.png")
+			}
+			if(x==500){
+				$("#coins100").attr("src","images/100coinn.png")
+				$("#coins500").attr("src","images/500coiny.png")
+			}
+			$("#startbutton").attr("src","images/indexstarty.png")
+			coin = x;
+		}
+		function start(){
+			if(isback == false) {
+				return;
+			}
+			if(coin==0){
+				alert("請先選擇籌碼！")
+				return
+			}
+			if(uid && uid != null && uid != "null") {
+				
+			} else {
+				alert("請先登錄")
+				window.location.href="login.html";
+				return
+			}
+			if(moneyi<coin){
+				alert("您沒有那麽多籌碼")
+				return
+			}
+			window.location.href="game.html?coin="+coin;
+//			isback = false
+//			req(IPG_GAME_CASH, {
+//					'uid': uid,
+//					'game_cash_money1':coin
+//				}, function(data) {
+//					isback = true;
+//					window.location.href="game.html?coin="+coin;
+//				},
+//				function(e) {
+//					isback = true;
+//					alert("IPG數量不足")
+//				})
+//			name = $("#name").val()
+			
+		}
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+			if(r != null) return unescape(r[2]);
+			return null; //返回参数值
+		}
 
 	
-    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
-    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="c2runtime.js"></script>
+	</script>
 
-    <script>
-		// Size the canvas to fill the browser viewport.
-		jQuery(window).resize(function() {
-			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
-		});
-		
-		// Start the Construct 2 project running on window load.
-		jQuery(document).ready(function ()
-		{			
-			// Create new runtime using the c2canvas
-			cr_createRuntime("c2canvas");
-		});
-		
-		// Pause and resume on page becoming visible/invisible
-		function onVisibilityChanged() {
-			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
-				cr_setSuspended(true);
-			else
-				cr_setSuspended(false);
-		};
-		
-		document.addEventListener("visibilitychange", onVisibilityChanged, false);
-		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-		
-    </script>
-</body> 
-</html> 
+</html>
