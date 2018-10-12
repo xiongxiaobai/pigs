@@ -131,19 +131,19 @@
 						<a onclick="goi(1241)">
 							<img id="img54" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img54n.png" />
 						</a>
-						<a onclick="goi(2299)">
+						<a onclick="goi(2983)">
 							<img id="img55" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img55n.png" />
 						</a>
 						<a onclick="">
 							<img id="img56" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.9rem;" src="images/img56n.png" />
 						</a>
-						<a onclick="goi(3072)">
+						<a onclick="goi(3744)">
 							<img id="img57" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img57n.png" />
 						</a>
-						<a onclick="goi(3898)">
+						<a onclick="goi(4571)">
 							<img id="img58" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img58n.png" />
 						</a>
-						<a onclick="goi(4624)">
+						<a onclick="goi(5280)">
 							<img id="img59" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img59n.png" />
 						</a>
 					</div>
@@ -163,19 +163,25 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 
 		</div>
 		
-		<div style="background-color: #999999;display: table;width: 100%;">
+		<div style="display: table;width: 100%;background: url(images/gamebg.png) no-repeat;background-size: 100% 100%;">
 			<div style="height: 0.4rem;"></div>
 			<div style="text-align: center;font-weight: bold;font-size: 0.5rem;color: #000000;">GAME</div>
 			<div style="height: 0.4rem;"></div>
 			<div style="width: 60%;margin: auto;">
-				<div style="float: left;width: 30%;">
-					<img style="width: 100%;" src="images/game1.png" />
+				<div style="float: left;width: 45%;">
+					<img onclick="playgame(1)" style="width: 100%;" src="images/game1.png" />
 				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game2.png" />
+				<div style="float: left;width: 45%;margin-left: 10%;">
+					<img onclick="playgame(2)" style="width: 100%;" src="images/game2.png" />
 				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game3.png" />
+			</div>
+			<div style="height: 0.4rem;clear: both;"></div>
+			<div style="width: 60%;margin: auto;">
+				<div style="float: left;width: 45%;">
+					<img onclick="playgame(3)" style="width: 100%;" src="images/game3.png" />
+				</div>
+				<div style="float: left;width: 45%;margin-left: 10%;">
+					<img onclick="playgame(4)" style="width: 100%;" src="images/game4.png" />
 				</div>
 			</div>
 			<div style="height: 0.4rem;clear: both;"></div>
@@ -183,25 +189,25 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 			<div style="height: 0.4rem;"></div>
 			<div style="width: 60%;margin: auto;">
 				<div style="float: left;width: 30%;">
-					<img style="width: 100%;" src="images/game4.png" />
-				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
 					<img style="width: 100%;" src="images/game5.png" />
 				</div>
 				<div style="float: left;width: 30%;margin-left: 5%;">
 					<img style="width: 100%;" src="images/game6.png" />
 				</div>
+				<div style="float: left;width: 30%;margin-left: 5%;">
+					<img style="width: 100%;" src="images/game7.png" />
+				</div>
 			</div>
 			<div style="height: 0.4rem;"></div>
 			<div style="width: 60%;margin: auto;">
 				<div style="float: left;width: 30%;">
-					<img style="width: 100%;" src="images/game7.png" />
-				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
 					<img style="width: 100%;" src="images/game8.png" />
 				</div>
 				<div style="float: left;width: 30%;margin-left: 5%;">
 					<img style="width: 100%;" src="images/game9.png" />
+				</div>
+				<div style="float: left;width: 30%;margin-left: 5%;">
+					<img style="width: 100%;" src="images/game10.png" />
 				</div>
 			</div>
 			
@@ -366,7 +372,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 				var scrollTop = $(this).scrollTop();
 				var scrollHeight = $(document).height();
 				var windowHeight = $(this).height();
-//				console.log(scrollTop)
+				console.log(scrollTop)
 				if(scrollTop < 568) {
 					$("#headlink").css("position", "relative")
 					$("#headlinkn").hide()
@@ -392,7 +398,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 1241 && scrollTop < 2299) {
+				if(scrollTop >= 1241 && scrollTop < 2983) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -405,7 +411,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 2299 && scrollTop < 3072) {
+				if(scrollTop >= 2983 && scrollTop < 3744) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -419,7 +425,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					$("#img59").attr("src", "images/img59n.png")
 
 				}
-//				if(scrollTop >= 2805 && scrollTop < 2299) {
+//				if(scrollTop >= 2805 && scrollTop < 2983) {
 //					$("#headlink").css("position", "fixed")
 //					$("#headlink").css("top", "0rem")
 //					$("#headlink").css("width", "100%")
@@ -432,7 +438,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 //					$("#img58").attr("src", "images/img58n.png")
 //					$("#img59").attr("src", "images/img59n.png")
 //				}
-				if(scrollTop >= 3072 && scrollTop < 3898) {
+				if(scrollTop >= 3744 && scrollTop < 4571) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -445,7 +451,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 3898 && scrollTop < 4624) {
+				if(scrollTop >= 4571 && scrollTop < 5280) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -458,7 +464,7 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					$("#img58").attr("src", "images/img58x.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 4624) {
+				if(scrollTop >= 5280) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -741,6 +747,22 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
 			alert('Copied！');
+		}
+		function playgame(x){
+			switch(x){
+				case 1:
+					alert("Open with your moble phone")
+					break;
+				case 2:
+					window.open("../../CoinMiner/login.html");
+					break;
+				case 3:
+					window.open("../../OceanTreasure/login.html");
+					break;
+				case 4:
+					alert("Open with your moble phone")
+					break;
+			}
 		}
 
 		function maidian() {

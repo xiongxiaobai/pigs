@@ -128,8 +128,13 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">GAME</div>
 
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game1.png" />
+					<img onclick="playgame(1)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game2.png" />
+					<img onclick="playgame(2)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game3.png" />
+					<img onclick="playgame(3)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game4.png" />
+					<img onclick="playgame(4)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<div style="height: 0.8rem;"></div>
 				</div>
 				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
@@ -138,13 +143,12 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 						<img style="width: 100%;" src="images/img5.png" />
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">COMING SOON</div>
-
-					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game4.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game5.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game6.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game7.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game8.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game9.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game10.png" />
 					<div style="height: 0.8rem;"></div>
 				</div>
 				<div style="background-color: white;border-radius: 0.3rem;margin-top: 1.18rem;margin-left: 0.58rem;width: 8.84rem;">
@@ -532,6 +536,22 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 			document.execCommand('copy');
 			document.removeEventListener('copy', save);
 			alert('Copied！');
+		}
+		function playgame(x){
+			switch(x){
+				case 1:
+					window.open("../GreedyWorms/login.html");
+					break;
+				case 2:
+					alert("Open with your PC browser")
+					break;
+				case 3:
+					alert("Open with your PC browser")
+					break;
+				case 4:
+					window.open("../IPGLab/login.html");
+					break;
+			}
 		}
 
 		function maidian() {
