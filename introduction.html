@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #080808;">
+<html lang="en" style="background-color: white;">
 
 	<head>
 		<meta charset="utf-8">
@@ -9,13 +9,15 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<link rel="icon" href="" />
-		<title>复仇的小猪游戏介绍</title>
-		<meta name="keywords" content="对战版愤怒的小鸟">
-		<meta name="description" content="对战版愤怒的小鸟">
+		<title>復仇的小豬游戲介紹</title>
+		<meta name="keywords" content="GOPIG平臺">
+		<meta name="description" content="GOPIG平台">
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-<!--		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">-->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script src="js/clipboard.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
 	</head>
 	<style>
 		#cnzz_stat_icon_1270505203 {
@@ -50,81 +52,179 @@
 	<body>
 
 		<div class="wrap" id="app">
-			<div class="header2 clearfix" style="color: white;background-color: #080808;">
+			<div class="header2 clearfix" style="color: white;background-color: #080808;z-index: 1000;position: fixed;width: 100%;">
 				<div class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
-				<div class="head_txt" style="color: white;">游戏介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.26rem;">
-					<a href="denglu.html" style="color: white;">登录</a>/
-					<a href="zhuce.html" style="color: white;">注册</a>
+				<div class="head_txt" style="color: white;">复仇的小猪介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				
+				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.24rem;">
+					<a href="denglu.html" style="color: white;">登錄</a>/
+					<a href="zhuce.html" style="color: white;">注冊</a>
 				</div>
-				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.26rem;" class="fr">
+				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.24rem;" class="fr">
 					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
 				</div>
-			</div>
-			<div style="text-align: center;font-weight: bold;margin-top: 0.4rem;">
-				兑换计划
-			</div>
-			<a href="buy.html">
-				<img style="width: 100%;" src="images/buy.jpg" />
-			</a>
-			
-			<div style="text-align: center;font-weight: bold;margin-top: 0.4rem;">
-				战前准备：堡垒坚固，把猪藏好
-			</div>
-			<img style="width: 90%;margin-left: 5%;margin-top: 0.2rem;" src="images/ai7.jpg" />
-			<div style="text-align: center;font-weight: bold;margin-top: 0.4rem;">
-				对战过程：小鸟来袭公平竞技拼实力
-			</div>
-			<img style="width: 90%;margin-left: 5%;margin-top: 0.2rem;" src="images/ai3.jpg" />
-			<div style="text-align: center;font-weight: bold;margin-top: 0.4rem;">
-				结算方式：用最小的代价赢取最高比分
-			</div>
-			<img style="width: 90%;margin-left: 5%;margin-top: 0.2rem;" src="images/ai5.jpg" />
-			<div style="text-align: center;font-weight: bold;margin-top: 0.4rem;">
-				赢取IPG：赚到的IPG去交易ETH！
-			</div>
-			<img style="width: 90%;margin-left: 5%;margin-top: 0.2rem;" src="images/ai6.jpg" />
-			
 
-			<div style="height: 0.4rem;"></div>
+			</div>
+			<div style="height: 1rem;"></div>
+			<!--<img style="width: 100%;" src="images/zc1.png" />-->
+			<div style="width: 10rem;margin-top: 0.4rem;">
+				<img style="width: 100%;" src="images/img3.png" />
+			</div>
+			<div style="width: 10rem;background-color: #ffbda6;">
+				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;">
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);">游戲簡介</div>
+					<div style="width: 6.75rem;height: 1.1rem;margin-left: 1.04rem;margin-top: -1rem;">
+						<img style="width: 100%;" src="images/img5.png" />
+					</div>
+					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">游戲玩法</div>
+
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">1</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">戰前準備</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">玩家可用IPG兌換各類道具加强戰鬥力，游戲正式開始前可以先搭建，然後測試搭建好的堡壘。</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img8.jpg" />
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">2</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">選擇戰場</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">玩家選擇對戰場并鎖定IPG作爲獎池籌碼。</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img10.jpg" />
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">3</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">對戰過程</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">小猪方（防禦方）挑選堡壘。小鳥方（進攻方）選擇合適的小鳥幷决定出戰順序。<br />小鳥方在限定時間內攻擊。小鳥全部出戰或猪被全殲後，雙方互換角色。</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img12.jpg" />
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">4</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">結算方式</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">得分高的一方勝利，獲得獎池籌碼。</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.71rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/img14.jpg" />
+					<div style="width: 7.43rem;margin-left: 0.62rem;margin-top: 0.9rem;">
+						<div style="color: white;background-color: #5d9d15;width: 0.5rem;height: 0.5rem;float: left;border-radius: 1rem;text-align: center;line-height: 0.54rem;font-weight: bold;">5</div>
+						<div style="float: left;color: #5d9d15;margin-left: 0.2rem;font-weight: bold;font-size: 0.5rem;line-height: 0.5rem;height: 0.5rem;">贏取IPG</div>
+						<div style="clear: both;"></div>
+						<div style="font-weight: bold;color: #606060;margin-top: 0.2rem;">發揮聰明才智，把別人的IPG贏過來吧。</div>
+					</div>
+					<img style="width: 8.38rem;height: 4.72rem;margin-top: 0.36rem;margin-left: 0.22rem;" src="images/img16.jpg" />
+					<div style="height: 0.8rem;"></div>
+				</div>
+				<div style="height: 3rem;"></div>
+			</div>
 
 		</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="js/base/util.js"></script>
 		<script src="js/base/url.js"></script>
 		<script src="js/base/base_net.js"></script>
-		<script src="js/bootstrap.min.js">
-		</script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
-	<script>
+	<script type="text/javascript">
 		var uid = "";
+		var phone = "";
+		uid = getLocal("pigUID")
+		phone = getLocal("pigphone")
+		setItem("pigphone", phone)
+		setItem("pigUID", uid)
+		setLocal("pigphone", phone)
+		setLocal("pigUID", uid)
+
 		$(document).ready(function() {
-			uid = getLocal("pigUID")
-			phone = getLocal("pigphone")
-			setItem("pigphone", phone)
-			setItem("pigUID", uid)
-			setItem("pigphone", phone)
-			setLocal("pigphone", phone)
-			setItem("pigUID", uid)
-			setLocal("pigUID", uid)
-			if(uid&&uid!=null&&uid!="null") {
-				console.log(1)
+//			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+//
+//			} else {
+//				window.location.href = "http://gopig.io/c/index.html"
+//			}
+
+			//			document.getElementById('video').play()
+			//Vertical Tab
+			if(uid && uid != null && uid != "null") {
 				$("#nologn").hide()
 				$("#logn").show()
+				$(".nologin").hide()
+				$(".islogin").show()
 			} else {
-				console.log(2)
 				$("#nologn").show()
 				$("#logn").hide()
+				$(".nologin").show()
+				$(".islogin").hide()
 			}
-		})
-		
+			$("#gosign").on("click", function() {
+				if(uid) {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#gobuy").on("click", function() {
+				if(uid) {
+					window.location.href = "buy.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			$("#twoDimension").on("click", function() {
+				if(uid && uid != null && uid != "null") {
+					window.location.href = "twoDimension.html"
+				} else {
+					alert("請先登錄")
+					window.location.href = "denglu.html"
+				}
+			})
+			
 
-		function back() {
-			history.go(-1)
+		});
+
+		function gozc() {
+			if(uid && uid != null && uid != "null") {
+				alert("您已注冊")
+			} else {
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function goyq() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "twoDimension.html"
+			} else {
+				alert("請先注冊")
+				window.location.href = "zhuce.html"
+			}
+		}
+
+		function gobuy() {
+			if(uid && uid != null && uid != "null") {
+				window.location.href = "buy.html"
+			} else {
+				alert("請先注冊")
+				window.location.href = "zhuce.html"
+			}
 		}
 
 		
+
+		function maidian() {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': "pig_introduction"
+			}, function(data) {}, function(err) {})
+		}
+
+	
+		function back() {
+			history.go(-1)
+		}
 	</script>
+	
 
 	<!--<script src="js/zhuce2.js?1"></script>-->
 
