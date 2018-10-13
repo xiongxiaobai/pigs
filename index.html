@@ -158,6 +158,14 @@
 					<img onclick="playgame(1)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game3.png" />
 					<img onclick="playgame(3)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game11.png" />
+					<img onclick="playgame(5)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game12.png" />
+					<img onclick="playgame(6)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game13.png" />
+					<img onclick="playgame(7)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game14.png" />
+					<img onclick="playgame(8)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<div style="height: 0.8rem;"></div>
 				</div>
 				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
@@ -617,7 +625,12 @@
 		function playgame(x){
 			switch(x){
 				case 1:
-					window.open("GreedyWorms/login.html");
+					if(uid && uid != null && uid != "null"){
+						window.open("GreedyWorms/login.html");
+					}else{
+						alert("請先登錄")
+						window.location.href="zhuce.html"
+					}
 					break;
 				case 2:
 					window.open("CoinMiner/login.html");
@@ -627,6 +640,18 @@
 					break;
 				case 4:
 					window.open("IPGLab/login.html");
+					break;
+				case 5:
+					window.open("FlappyCoin/index.html");
+					break;
+				case 6:
+					window.open("BrickBroke/index.html");
+					break;
+				case 7:
+					window.open("DontCut/index.html");
+					break;
+				case 8:
+					window.open("PandaRun/index.html");
 					break;
 			}
 		}

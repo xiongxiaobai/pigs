@@ -4116,6 +4116,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			{
 				type = this.types_by_index[i];
 				if (type.is_family)
+					
 					continue;
 				if (type.unloadTextures && (!type.global || type.instances.length === 0) && changeToLayout.initial_types.indexOf(type) === -1)
 				{
@@ -4301,7 +4302,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 					}
 				}
 			}
-			if (inst.onDestroy)
+			if (inst.onDestroy)   //结束会跑6边
 				inst.onDestroy();
 			if (this.objectsByUid.hasOwnProperty(inst.uid.toString()))
 				delete this.objectsByUid[inst.uid.toString()];
@@ -18876,7 +18877,7 @@ cr.plugins_.Spritefont2 = function(runtime)
 		this.runtime = type.runtime;
 	};
 	var instanceProto = pluginProto.Instance.prototype;
-	instanceProto.onDestroy = function()
+	instanceProto.onDestroy = function()//结束走5遍
 	{
 		freeAllLines (this.lines);
 		freeAllClip  (this.clipList);
@@ -19672,7 +19673,7 @@ cr.plugins_.TiledBg = function(runtime)
 		this.has_own_texture = false;
 		this.texture_img = this.type.texture_img;
 	};
-	instanceProto.onDestroy = function ()
+	instanceProto.onDestroy = function ()    //结束走一遍
 	{
 		if (this.runtime.glwrap && this.has_own_texture && this.webGL_texture)
 		{
@@ -21378,7 +21379,7 @@ cr.behaviors.custom = function(runtime)
 	};
 	behaviorProto.cnds = new Cnds();
 	function Acts() {};
-	Acts.prototype.Stop = function ()
+	Acts.prototype.Stop = function ()// 结束会走
 	{
 		this.dx = 0;
 		this.dy = 0;

@@ -15,6 +15,10 @@
 		<script src="src/food.js"></script>
 		<script src="src/util.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<script src="../js/base/util.js"></script>
+		<script src="../js/base/url.js"></script>
+		<script src="../js/base/base_net.js"></script>
+		<script src="../js/gVerify.js"></script>
 	</head>
 
 	<body>
@@ -32,13 +36,19 @@
 			var pointy = 0;
 			var point1 = 0;
 			var point2 = 0;
-			
+			var uid = getLocal("pigUID");
+			var phone = getLocal("pigphone");
 			(function() {
-				coin = getUrlParam("coin")||100;
+				if(uid && uid != null && uid != "null") {
+
+				} else {
+					window.location.href = "../index.html";
+				}
+				coin = getUrlParam("coin") || 100;
 				name = getUrlParam("name");
 				$("#cm").text(coin)
-//				console.log(coin)
-//				console.log(name)
+				//				console.log(coin)
+				//				console.log(name)
 				var game = new Phaser.Game(screen.width * 3, screen.height * 3, Phaser.AUTO, null);
 
 				game.state.add('Game', Game);
@@ -60,8 +70,19 @@
 						second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
 					} else {
 						clearInterval(timer);
-						alert("游戏结束，您获得："+pointy+"IPG")
-						window.location.href="end.html"
+						alert("游戏结束，您获得：" + pointy + "IPG")
+						req(IPG_GAME_GET, {
+								'uid': uid,
+								'game_get_money1': pointy,
+								'game_name': 'greedyworms'
+							}, function(data) {
+								window.location.href = "end.html"
+							},
+							function(e) {
+								isback = true;
+								alert("IPG數量不足")
+							})
+
 					}
 
 					if(second <= 9) {

@@ -53,15 +53,17 @@
 			</div>-->
 			<img style="width: 80%;margin-left: 10%;margin-top: 2rem;" src="asset/login.png" />
 			<!--<img style="width: 7.79rem;height: 0.43rem;margin-left: 1.11rem;margin-top: 0.46rem;" src="images/zc2.png" />-->
-
-			<div style="width: 7.84rem;height: 1.15rem;margin-left: 1.08rem;margin-top: 0.86rem;border: 1px solid rgb(204, 204, 204);border-radius: 1rem;background-color: rgba(0,0,0,0.4);">
-				<input style="float: left;border: 0;height: 0.56rem;margin-top: 0.3rem;width: 5.64rem;font-size: 0.28rem;color: white;line-height: 0.56rem;border-radius: 0;background-color: rgba(0,0,0,0);margin-left: 0.6rem;" placeholder="NAME" type="text" id="name" />
+			<div style="background:url(asset/indexipg.png) no-repeat;background-size: 100% 100%;width: 6.4rem;height: 2.2rem;margin-left: 1.9rem;margin-top:0.6rem;">
+				<div style="height: 1.2rem;margin-top: 0.5rem;width: 3rem;font-size: 0.5rem;color: white;line-height: 1.2rem;margin-left: 2.4rem;position: absolute;" id="ipgs">X0</div>
 			</div>
-			<div style="height: 1rem;"></div>
-			<img id="coins100" onclick="chose(100)" style="width: 30%;float: left;margin-left: 15%;" src="asset/100coiny.png" />	
-			<img id="coins500" onclick="chose(500)" style="width: 30%;float: left;margin-left: 10%;" src="asset/500coinn.png" />
-			<div style="height: 1rem;clear: both;"></div>
-			<img onclick="start()" style="width: 30%;margin-left: 35%;" src="asset/loginstart.png" />
+			<div style="height: 0.4rem;"></div>
+			<div style="background:url(asset/indexchose.png) no-repeat;background-size: 100% 100%;width: 6.4rem;height: 2.2rem;margin-left: 1.9rem;">
+				<img id="coins100" onclick="chose(100)" style="width: 30%;float: left;margin-left: 2%;margin-top: 0.16rem;" src="asset/100coinn.png" />	
+				<img id="coins500" onclick="chose(500)" style="width: 30%;float: left;margin-left: 36%;margin-top: 0.16rem;" src="asset/500coinn.png" />
+			</div>
+			
+			<div style="height: 0.5rem;clear: both;"></div>
+			<img id="startbutton" onclick="start()" style="width: 22%;margin-left: 39%;" src="asset/indexstartn.png" />
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
 		<script src="../js/base/util.js"></script>
@@ -71,21 +73,37 @@
 	</body>
 	<script src="../js/bootstrap.min.js"></script>
 	<script>
-		var coin = 100;
+		var coin = 0;
 		var name = '';
-		
-		uid = getLocal("pigUID")
-		phone = getLocal("pigphone")
-		setItem("pigphone", phone)
-		setItem("pigUID", uid)
-		setLocal("pigphone", phone)
-		setLocal("pigUID", uid)
+		var uid = "";
+		var phone = "";
+		var moneyi = 0;
+		var isback = true;
+		uid = getLocal("pigUID");
+		phone = getLocal("pigphone");
 		$(document).ready(function() {
-			var info_id = getUrlParam("info_id");
-			$("#inviteCode").val(info_id);
-
+			if(uid && uid != null && uid != "null") {
+				
+			} else {
+				window.location.href="../index.html";
+			}
+			req(IPG_USER_MONEY_QUERY, {
+					'uid': uid
+				}, function(data) {
+					var dat = data.userMoney;
+					var money = dat.money;
+					moneyi = money
+					$("#ipgs").text("X"+money)
+				},
+				function(e) {
+					alert("獲取用戶信息失敗，請刷新頁面重試")
+				})
 		})
 		function chose(x){
+			if(moneyi<x){
+				alert("您沒有那麽多籌碼")
+				return
+			}
 			if(x==100){
 				$("#coins100").attr("src","asset/100coiny.png")
 				$("#coins500").attr("src","asset/500coinn.png")
@@ -94,11 +112,42 @@
 				$("#coins100").attr("src","asset/100coinn.png")
 				$("#coins500").attr("src","asset/500coiny.png")
 			}
+			$("#startbutton").attr("src","asset/indexstarty.png")
 			coin = x;
 		}
 		function start(){
-			name = $("#name").val()
-			window.location.href="index.html?coin="+coin+"&name="+name;
+			if(isback == false) {
+				return;
+			}
+			if(coin==0){
+				alert("請先選擇籌碼！")
+				return
+			}
+			if(uid && uid != null && uid != "null") {
+				
+			} else {
+				alert("請先登錄")
+				window.location.href="login.html";
+				return
+			}
+			if(moneyi<coin){
+				alert("您沒有那麽多籌碼")
+				return
+			}
+			isback = false
+			req(IPG_GAME_CASH, {
+					'uid': uid,
+					'game_cash_money1':coin,
+					'game_name':'greedyworms'
+				}, function(data) {
+					isback = true;
+					window.location.href="index.html?coin="+coin+"&name="+phone;
+				},
+				function(e) {
+					isback = true;
+					alert("IPG數量不足")
+				})
+			
 		}
 		function getUrlParam(name) {
 			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象

@@ -75,4 +75,7 @@ var IPG_USER_MONEY_QUERY =  BASE_URL + 'ipg_user_money/query'
 var IPG_USER_GET_INVIT_CODE = BASE_URL + 'ipg_invite/getInviteCode'
 
 
+var IPG_GAME_CASH =  BASE_URL + 'ipg_game/cash'
+var IPG_GAME_GET = BASE_URL + 'ipg_game/get'
+
 
