@@ -134,16 +134,16 @@
 						<a onclick="goi(1697)">
 							<img id="img55" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img55n.png" />
 						</a>
-						<a onclick="goi(3444)">
+						<a onclick="goi(4425)">
 							<img id="img56" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.9rem;" src="images/img56n.png" />
 						</a>
-						<a onclick="goi(4211)">
+						<a onclick="goi(5191)">
 							<img id="img57" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img57n.png" />
 						</a>
-						<a onclick="goi(4977)">
+						<a onclick="goi(5956)">
 							<img id="img58" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img58n.png" />
 						</a>
-						<a onclick="goi(5573)">
+						<a onclick="goi(6544)">
 							<img id="img59" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img59n.png" />
 						</a>
 						<!--<a onclick="goi(568)">
@@ -314,6 +314,24 @@
 				</div>
 				<div style="float: left;width: 45%;margin-left: 10%;">
 					<img onclick="playgame(4)" style="width: 100%;" src="images/game4.png" />
+				</div>
+			</div>
+			<div style="height: 0.4rem;clear: both;"></div>
+			<div style="width: 60%;margin: auto;">
+				<div style="float: left;width: 45%;">
+					<img onclick="playgame(5)" style="width: 100%;" src="images/game11.png" />
+				</div>
+				<div style="float: left;width: 45%;margin-left: 10%;">
+					<img onclick="playgame(6)" style="width: 100%;" src="images/game12.png" />
+				</div>
+			</div>
+			<div style="height: 0.4rem;clear: both;"></div>
+			<div style="width: 60%;margin: auto;">
+				<div style="float: left;width: 45%;">
+					<img onclick="playgame(7)" style="width: 100%;" src="images/game13.png" />
+				</div>
+				<div style="float: left;width: 45%;margin-left: 10%;">
+					<img onclick="playgame(8)" style="width: 100%;" src="images/game14.png" />
 				</div>
 			</div>
 			<div style="height: 0.4rem;clear: both;"></div>
@@ -723,7 +741,7 @@
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 1697 && scrollTop < 3444) {
+				if(scrollTop >= 1697 && scrollTop < 4425) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -737,7 +755,7 @@
 					$("#img59").attr("src", "images/img59n.png")
 
 				}
-				if(scrollTop >= 3444 && scrollTop < 4211) {
+				if(scrollTop >= 4425 && scrollTop < 5191) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -750,7 +768,7 @@
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 4211 && scrollTop < 4977) {
+				if(scrollTop >= 5191 && scrollTop < 5956) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -763,7 +781,7 @@
 					$("#img58").attr("src", "images/img58n.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 4977 && scrollTop < 5573) {
+				if(scrollTop >= 5956 && scrollTop < 6544) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -776,7 +794,7 @@
 					$("#img58").attr("src", "images/img58x.png")
 					$("#img59").attr("src", "images/img59n.png")
 				}
-				if(scrollTop >= 5573) {
+				if(scrollTop >= 6544) {
 					$("#headlink").css("position", "fixed")
 					$("#headlink").css("top", "0rem")
 					$("#headlink").css("width", "100%")
@@ -1183,6 +1201,18 @@
 					break;
 				case 4:
 					alert("此游戲請用手機端打開")
+					break;
+				case 5:
+					window.open("../FlappyCoin/index.html");
+					break;
+				case 6:
+					window.open("../DontCut/index.html");
+					break;
+				case 7:
+					window.open("../PandaRun/index.html");
+					break;
+				case 8:
+					window.open("../BrickBroke/index.html");
 					break;
 			}
 		}
