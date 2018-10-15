@@ -91,25 +91,34 @@ var Starfield = function(speed,opacity,numStars,clear) {
   // If the clear option is set, 
   // make the background black instead of transparent
   if(clear) {
-    starCtx.fillStyle = "#000";
-    starCtx.fillRect(0,0,stars.width,stars.height);
+  	var img = new Image();
+        img.src = "images/endbg.png";
+        // 加载完成图片之后才能够执行canvas的操作
+        img.onload = function () {
+            stars.width=stars.width;
+            stars.height=stars.height;
+            starCtx.drawImage(img, 0, 0, stars.width,stars.height);
+        }
+//  starCtx.fillStyle = "#000";
+//  starCtx.fillRect(0,0,stars.width,stars.height);
   }
+  
 
   // Now draw a bunch of random 2 pixel
   // rectangles onto the offscreen canvas
-  starCtx.fillStyle = "#FFF";
-  starCtx.globalAlpha = opacity;
-  for(var i=0;i<numStars;i++) {
+starCtx.fillStyle = "#FFF";
+starCtx.globalAlpha = opacity;
+for(var i=0;i<numStars;i++) {
     starCtx.fillRect(Math.floor(Math.random()*stars.width),
                      Math.floor(Math.random()*stars.height),
                      2,
                      2);
-  }
+}
 
   // This method is called every frame
   // to draw the starfield onto the canvas
   this.draw = function(ctx) {
-    var intOffset = Math.floor(offset);
+    var intOffset = Math.floor(offset);  //背景图下移速度
     var remaining = stars.height - intOffset;
 
     // Draw the top half of the starfield

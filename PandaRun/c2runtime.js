@@ -6703,6 +6703,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.pushLocalVarStack = function ()
 	{
+		console.log(this)
 		this.localvar_stack_index++;
 		if (this.localvar_stack_index >= this.localvar_stack.length)
 			this.localvar_stack.push([]);
