@@ -614,6 +614,13 @@
 				'name': "pig_index"
 			}, function(data) {}, function(err) {})
 		}
+		function gamemaidian(game) {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': game
+			}, function(data) {}, function(err) {})
+		}
 
 		function gogame() {
 			window.open("http://gopig.io/game/");
@@ -626,6 +633,7 @@
 			switch(x){
 				case 1:
 					if(uid && uid != null && uid != "null"){
+						gamemaidian("GreedyWorms")
 						window.open("GreedyWorms/login.html");
 					}else{
 						alert("請先登錄")
