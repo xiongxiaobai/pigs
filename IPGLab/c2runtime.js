@@ -20738,7 +20738,7 @@ cr.behaviors.custom = function(runtime) {
 
 				},
 				function(e) {
-
+					alert(e.msg)
 				})
 		}
 
