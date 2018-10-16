@@ -74,6 +74,7 @@
 						</li>
 					</ul>
 				</div>
+				
 				<div id="nologn" class="fr" style="margin-right:0.4rem ;margin-top: -1.24rem;">
 					<a href="denglu.html" style="color: white;">登錄</a>/
 					<a href="zhuce.html" style="color: white;">注冊</a>
@@ -81,7 +82,9 @@
 				<div id="logn" style="display: none;margin-right:0.4rem ;margin-top: -1.24rem;" class="fr">
 					<a href="person.html" style="color: white;"><span class="glyphicon glyphicon-user"> </span></a>
 				</div>
-
+				<div class="fr islogin" style="margin-right:0.4rem ;margin-top: -1.24rem;color: white;display: none;">
+					IPG：<span id="userIpg"></span>
+				</div>
 			</div>
 			<div style="margin-top: 2.1rem;width: 7.96rem;height: 2rem;margin-left: 1.12rem;">
 				<img style="width: 100%;" src="images/img28.png" />
@@ -393,6 +396,7 @@
 				$("#logn").show()
 				$(".nologin").hide()
 				$(".islogin").show()
+
 			} else {
 				$("#nologn").show()
 				$("#logn").hide()
@@ -478,7 +482,12 @@
 					$("#b").attr("src", "images/n" + b + ".png");
 					$("#q").attr("src", "images/n" + q + ".png");
 					$("#w").attr("src", "images/n" + w + ".png");
-					maidian()
+					if(uid && uid != null && uid != "null") {
+						getmoney()
+
+					} else {
+						maidian()
+					}
 
 				},
 				function(e) {
@@ -486,6 +495,20 @@
 				})
 
 		});
+
+		function getmoney() {
+			req(IPG_USER_MONEY_QUERY, {
+					'uid': uid
+				}, function(data) {
+					var dat = data.userMoney;
+					var money = dat.money;
+					$("#userIpg").text(money)
+					maidian()
+				},
+				function(e) {
+					maidian()
+				})
+		}
 
 		function gozc() {
 			if(uid && uid != null && uid != "null") {
