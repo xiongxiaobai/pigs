@@ -7683,6 +7683,7 @@ window["cr_setSuspended"] = function(s) {
 			console.log("Estimated VRAM at layout end: " + this.runtime.glwrap.textureCount() + " textures, approx. " + Math.round(this.runtime.glwrap.estimateVRAM() / 1024) + " kb");
 		}
 		*/
+		//console.log(this.runtime.all_global_vars[1].data)  分数
 		if(!this.runtime.isLoadingState) {
 			this.runtime.trigger(cr.system_object.prototype.cnds.OnLayoutEnd, null);
 		}
@@ -14567,6 +14568,7 @@ cr.plugins_.Audio = function(runtime) {
 		this.is_silent = false;
 		this.volume = 1;
 		this.onended_handler = function(e) {
+			console.log(this)
 			if(self.is_paused || self.resume_me)
 				return;
 			var bufferThatEnded = this;
