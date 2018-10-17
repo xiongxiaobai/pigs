@@ -60,11 +60,11 @@
 					<div style="height: 0.8rem;line-height: 0.8rem;">
 						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">一級邀請：</div>
 						<div style="float: left;margin-left: 0.2rem;background-color: white;width: 1.8rem;height: 0.8rem;border-radius: 1rem;">
-							<span id="num" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span>
+							<span id="num" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span><span style="float: right;margin-right: 0.2rem;">人</span>
 						</div>
 						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">二級邀請：</div>
 						<div style="float: left;margin-left: 0.2rem;background-color: white;width: 1.8rem;height: 0.8rem;border-radius: 1rem;">
-							<span id="num2" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span>
+							<span id="num2" style="height: 0.27rem;margin-left: 0.3rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span><span style="float: right;margin-right: 0.2rem;">人</span>
 						</div>
 
 					</div>
@@ -76,9 +76,23 @@
 				<div style="width: 9.07rem;border-radius: 0.3rem;background-color: rgba(0,0,0,0.3);margin-left: 0.48rem;margin-top: 0.4rem;">
 					<div style="height: 0.4rem;"></div>
 					<div style="height: 0.8rem;line-height: 0.8rem;">
-						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">IPG數量：</div>
+						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">一級邀請游戲玩家贏分提成：</div>
+						<div style="float: left;margin-left: 0.2rem;background-color: white;width: 3rem;height: 0.8rem;border-radius: 1rem;">
+							<span id="game_get_f" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span><span style="float: right;margin-right: 0.3rem;">IPG</span>
+						</div>
+					</div>
+					<div style="height: 0.4rem;"></div>
+					<div style="height: 0.8rem;line-height: 0.8rem;">
+						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">二級邀請游戲玩家贏分提成：</div>
+						<div style="float: left;margin-left: 0.2rem;background-color: white;width: 3rem;height: 0.8rem;border-radius: 1rem;">
+							<span id="game_get_gf" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span><span style="float: right;margin-right: 0.3rem;">IPG</span>
+						</div>
+					</div>
+					<div style="height: 0.4rem;"></div>
+					<div style="height: 0.8rem;line-height: 0.8rem;">
+						<div style="float: left;font-size: 0.4rem;color: rgb(255,255,255);margin-left: 0.4rem;">IPG總量：</div>
 						<div style="float: left;margin-left: 0.2rem;background-color: white;width: 3.3rem;height: 0.8rem;border-radius: 1rem;">
-							<span id="coint" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span>
+							<span id="coint" style="height: 0.27rem;margin-left: 0.44rem;margin-top: 0.28rem;color: rgb(0,0,0);font-size: 0.35rem;"></span><span style="float: right;margin-right: 0.3rem;">IPG</span>
 						</div>
 						<a href="buy.html">
 							<div style="float: left;margin-left: 0.35rem;width: 2.56rem;height: 0.8rem;text-align: center;color: rgb(0,0,0);font-size: 0.35rem;background-color: rgb(255,211,68);border-radius: 1rem;">優惠套餐</div>
@@ -139,7 +153,8 @@
 					$("#num2").text(num2);
 					var address = data.address;
 					$("#address").val(address)
-
+					$("#game_get_f").text(dat.game_get_f)
+					$("#game_get_gf").text(dat.game_get_gf)
 					$.ajax({
 						type: "post",
 						url: IPG_USER_GET_INVIT_CODE,
