@@ -47,6 +47,39 @@
 			letter-spacing: 0;
 			text-align: left;
 		}
+		.panel {
+			/*width: 340px;*/
+			padding: 10px;
+			text-align: center;
+			/*background-color: #FF3C3C;*/
+			border-radius: 0 0 8px 8px;
+		}
+		.activity {
+			width: 100%;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			height: 2.6rem;
+			background-color: #fff;
+			border-radius: 5px;
+			/*border: 1px solid #ff8d09;*/
+		}
+		
+		.activity ul {
+			top: -15px;
+			padding: 0;
+			color: #666;
+			position: relative;
+		}
+		
+		.activity li {
+			height: 34px;
+			padding: 0;
+			font-size: 12px;
+			line-height: 34px;
+			list-style: none;
+			/*border-bottom: 1px dotted #ff8d09;*/
+		}
 	</style>
 
 	<body>
@@ -157,8 +190,19 @@
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">玩游戲賺IPG</div>
 					<img style="width: 8.38rem;margin-top: 0.4rem;margin-left: 0.24rem;" src="images/img31.jpg" />
-					<img onclick="playgame(4)" style="width: 5rem;margin-top: -2.4rem;margin-left: auto;margin-right: auto;" src="images/gameplay.png" />
-					<div style="height: 1.6rem;"></div>
+					
+					<div style="position: absolute;margin-top: -5.6rem;width: 7.4rem;margin-left: 0.7rem;border-radius: 0.3rem;" class="panel">
+
+						<div class="activity" id="J_Activity">
+							<ul style="background-color: white; color: #ff8d09;" id="name_list">
+
+							</ul>
+						</div>
+					</div>
+					
+					<img onclick="playgame(4)" style="width: 5rem;margin-top: -1.8rem;margin-left: auto;margin-right: auto;" src="images/gameplay.png" />
+					
+					<div style="height: 1rem;"></div>
 				</div>
 
 				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
@@ -401,6 +445,40 @@
 			} else {
 				window.location.href = "http://gopig.io/c/index.html"
 			}
+			var page = '';
+			var phone_head = ["176", "185", "186", "157", "187", "188", "147", "178"];
+			var phone_head_num = 0;
+			var phone_num = "176";
+			var rest_number = 0;
+			var rest_name = 1;
+			for(var i = 0; i < 40; i++) {
+				pagec = Math.floor(Math.random() * (6-1) + 1);
+				if(pagec>1){
+					rest_name = Math.floor(Math.random() * (500 - 60) + 1);
+					phone_head_num = parseInt(phone_head.length * Math.random());
+					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
+					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>刚刚通过游戏赚取<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
+				}else{
+					rest_name = (Math.floor(Math.random() * (20-1) + 1) * 1232);
+					phone_head_num = parseInt(phone_head.length * Math.random());
+					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
+					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>参与首充获得<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
+				}
+			}
+			$("#name_list").html(page);
+			var listPanel = $('#J_Activity ul');
+			var z = 0; //向上滚动top值  
+			function up() { //向上滚动       
+				listPanel.animate({ //中奖结果          
+					'top': (z - 35) + 'px'
+				}, 1500, 'linear', function() {
+					listPanel.css({
+						'top': '0px'
+					}).find("li:first").appendTo(listPanel);
+					up();
+				});
+			}
+			up();
 
 			//			document.getElementById('video').play()
 			//Vertical Tab
