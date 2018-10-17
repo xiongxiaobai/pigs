@@ -20729,7 +20729,7 @@ cr.behaviors.custom = function(runtime) {
 	{
 		if(isb) {
 			isb = false;
-			fenshu = parseInt(Number(fenshu) * Number(coin) / 200)
+			fenshu = parseInt(Number(fenshu) * Number(coin) / 500)
 			req(IPG_GAME_GET, {
 					'uid': uid,
 					'game_get_money1': fenshu,
