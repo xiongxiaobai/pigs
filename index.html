@@ -47,6 +47,7 @@
 			letter-spacing: 0;
 			text-align: left;
 		}
+		
 		.panel {
 			/*width: 340px;*/
 			padding: 10px;
@@ -54,6 +55,7 @@
 			/*background-color: #FF3C3C;*/
 			border-radius: 0 0 8px 8px;
 		}
+		
 		.activity {
 			width: 100%;
 			margin: 0 auto;
@@ -79,6 +81,23 @@
 			line-height: 34px;
 			list-style: none;
 			/*border-bottom: 1px dotted #ff8d09;*/
+		}
+		
+		#scroll_div {
+			height: 26px;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 100%;
+			/*margin-left: 10px;*/
+		}
+		
+		#scroll_begin,
+		#scroll_end {
+			display: inline;
+		}
+		
+		.pad_right {
+			padding-right: 5rem;
 		}
 	</style>
 
@@ -120,6 +139,12 @@
 					IPG：<span id="userIpg"></span>
 				</div>-->
 			</div>
+			<div id="scroll_div" class="fl" style="position: fixed;margin-top: 1.2rem;">
+				<div style="color:white;background-color: rgba(0,0,0,0.5);" id="scroll_begin">
+					<span style="margin-left: 1.2rem;">&nbsp;</span>恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得 <span style="margin-right: 1.2rem;">50元巨人点卡奖励</span>
+				</div>
+				<div style="color:white;background-color: rgba(0,0,0,0.5);" id="scroll_end"></div>
+			</div>
 			<div style="margin-top: 2.1rem;width: 7.96rem;height: 2rem;margin-left: 1.12rem;">
 				<img style="width: 100%;" src="images/img28.png" />
 			</div>
@@ -129,7 +154,7 @@
 			<div style="width: 8.67rem;height: 1.42rem;margin-left: 0.63rem;margin-top: 0.52rem;">
 				<img style="width: 100%;" src="images/img2.png" />
 			</div>-->
-			<div style="width: 10rem;margin-top: 0.4rem;">
+			<div style="width: 10rem;margin-top: 0.8rem;">
 				<img style="width: 100%;" src="images/img3.png" />
 				<div style="width: 7.34rem;height: 1.43rem;color: rgb(255,255,255);font-size: 1.54rem;margin-left: 1.36rem;margin-top: -2rem;text-align: center;font-weight: bold;">Play&amp;Earn</div>
 			</div>
@@ -190,7 +215,7 @@
 					</div>
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">玩游戲賺IPG</div>
 					<img style="width: 8.38rem;margin-top: 0.4rem;margin-left: 0.24rem;" src="images/img31.jpg" />
-					
+
 					<div style="position: absolute;margin-top: -5.6rem;width: 7.4rem;margin-left: 0.7rem;border-radius: 0.3rem;" class="panel">
 
 						<div class="activity" id="J_Activity">
@@ -199,9 +224,9 @@
 							</ul>
 						</div>
 					</div>
-					
+
 					<img onclick="playgame(4)" style="width: 5rem;margin-top: -1.8rem;margin-left: auto;margin-right: auto;" src="images/gameplay.png" />
-					
+
 					<div style="height: 1rem;"></div>
 				</div>
 
@@ -452,18 +477,18 @@
 			var rest_number = 0;
 			var rest_name = 1;
 			for(var i = 0; i < 40; i++) {
-				pagec = Math.floor(Math.random() * (8-1) + 1);
-				if(pagec>1){
+//				pagec = Math.floor(Math.random() * (8 - 1) + 1);
+//				if(pagec > 1) {
 					rest_name = Math.floor(Math.random() * (500 - 60) + 1);
 					phone_head_num = parseInt(phone_head.length * Math.random());
 					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
 					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>刚刚通过游戏赚取<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
-				}else{
-					rest_name = (Math.floor(Math.random() * (20-1) + 1) * 1232);
-					phone_head_num = parseInt(phone_head.length * Math.random());
-					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
-					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>参与首充获得<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
-				}
+//				} else {
+//					rest_name = (Math.floor(Math.random() * (20 - 1) + 1) * 1232);
+//					phone_head_num = parseInt(phone_head.length * Math.random());
+//					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
+//					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>参与首充获得<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
+//				}
 			}
 			$("#name_list").html(page);
 			var listPanel = $('#J_Activity ul');
@@ -479,6 +504,59 @@
 				});
 			}
 			up();
+
+			var page = '<span style="margin-left: 2.1rem;">&nbsp;</span>';
+			var phone_head = ["176", "185", "186", "157", "187", "188", "147", "178"];
+			var phone_head_num = 0
+			var phone_num = "176"
+			var rest_number = 0;
+			var rest_name = 1
+			for(var i = 0; i < 20; i++) {
+				rest_name = (Math.floor(Math.random() * (20 - 1) + 1) * 1232);
+				phone_head_num = parseInt(phone_head.length * Math.random());
+				phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
+				page += '<span style="color:#ffff00;">'+phone_num + '</span>参与首充获得<span style="color:#white;background-color: rgba(0,0,0,0);" class="pad_right"><span style="color:#ffff00;">' + rest_name + '</span>IPG</span>'
+				if(i == 19) {
+					page += '<span style="color:#ffff00;">'+phone_num + '</span>参与首充获得<span style="margin-right: 2.1rem;color:white;background-color: rgba(0,0,0,0);"><span style="color:#ffff00;">' + rest_name + '</span>IPG</span>'
+				}
+				//		page += '<li style="text-align:center;width:90%;margin-left:5%"><div style="text-align:center;color:#F0506E;">恭喜' + phone_num + '网赚获得' + rest_name + '元</div></li>';
+			}
+			$("#scroll_begin").html(page);
+			//文字横向滚动
+			function ScrollImgLeft() {
+				var speed = 10;
+				var MyMar = null;
+				var scroll_begin = document.getElementById("scroll_begin");
+				var scroll_end = document.getElementById("scroll_end");
+				var scroll_div = document.getElementById("scroll_div");
+				scroll_end.innerHTML = scroll_begin.innerHTML;
+
+				function Marquee() {
+					if(scroll_end.offsetWidth - scroll_div.scrollLeft <= 0) {
+						scroll_div.scrollLeft -= scroll_begin.offsetWidth
+					} else {
+						scroll_div.scrollLeft++;
+						//				if(Math.floor(scroll_div.scrollLeft) % 387 == 0) {
+						//					
+						//					clearInterval(MyMar)
+						//					setTimeout(function() {
+						//						MyMar = setInterval(Marquee, speed)
+						//						//							console.log(22)
+						//					}, 1000);
+						//				}
+
+					}
+
+				}
+				MyMar = setInterval(Marquee, speed);
+				scroll_div.onmouseover = function() {　　　　　　　
+					clearInterval(MyMar);　　　　　
+				}　　　　
+				//			scroll_div.onmouseout = function() {　　　　　　　
+				//				MyMar = setInterval(Marquee, speed);　　　　　　　　　
+				//			}
+			}
+			ScrollImgLeft();
 
 			//			document.getElementById('video').play()
 			//Vertical Tab
