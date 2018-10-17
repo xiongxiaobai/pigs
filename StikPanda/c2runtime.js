@@ -2,6 +2,8 @@
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
+var fenshu = 1;
+var isb = true;
 if(typeof Object.getPrototypeOf !== "function") {
 	if(typeof "test".__proto__ === "object") {
 		Object.getPrototypeOf = function(object) {
@@ -1403,7 +1405,7 @@ if(typeof Object.getPrototypeOf !== "function") {
 	var localeCompare_works1 = (has_localeCompare && "a".localeCompare("A", undefined, localeCompare_options) === 0);
 	var localeCompare_works2 = (has_localeCompare && "a".localeCompare("á", undefined, localeCompare_options) !== 0);
 	var supports_localeCompare = (has_localeCompare && localeCompare_works1 && localeCompare_works2);
-	*/  //压缩代码
+	*/ //压缩代码
 	cr.equals_nocase = function(a, b) {
 		if(typeof a !== "string" || typeof b !== "string")
 			return false;
@@ -6673,7 +6675,7 @@ quat4.str = function(a) {
 		}
 		return ret;
 	};
-	Runtime.prototype.executeSingleTrigger = function(inst, type_name, trig, index) {
+	Runtime.prototype.executeSingleTrigger = function(inst, type_name, trig, index) { //事件方法都会走
 		var i, leni;
 		var ret = false;
 		this.trigger_depth++;
@@ -6728,6 +6730,25 @@ quat4.str = function(a) {
 			this.ClearDeathRow();
 		}
 		this.trigger_depth--;
+		if(current_event && current_event.sid == "8184751771536891") {
+			if(isb) {
+				isb = false;
+				fenshu = parseInt(Number(this.all_global_vars[1].data) * Number(coin))
+				req(IPG_GAME_GET, {
+						'uid': uid,
+						'game_get_money1': fenshu,
+						'game_name': 'StikPanda'
+					}, function(data) {
+
+					},
+					function(e) {
+						alert(e.msg)
+					})
+			}
+		}
+		if(current_event && current_event.sheet && current_event.sheet.name == "GameOverEvent") {
+			window.location.href = "index.html"
+		}
 		return ret;
 	};
 	Runtime.prototype.getCurrentCondition = function() {
@@ -14568,7 +14589,6 @@ cr.plugins_.Audio = function(runtime) {
 		this.is_silent = false;
 		this.volume = 1;
 		this.onended_handler = function(e) {
-			console.log(this)
 			if(self.is_paused || self.resume_me)
 				return;
 			var bufferThatEnded = this;

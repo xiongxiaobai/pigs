@@ -61,8 +61,8 @@
 			margin: 0 auto;
 			position: relative;
 			overflow: hidden;
-			height: 2.6rem;
-			background-color: #fff;
+			height: 3.6rem;
+			background-color: rgba(0,0,0,0);
 			border-radius: 5px;
 			/*border: 1px solid #ff8d09;*/
 		}
@@ -216,18 +216,23 @@
 					<div style="text-align: center;font-size: 0.58rem;color: rgb(255,255,255);margin-top: -1rem;">玩游戲賺IPG</div>
 					<img style="width: 8.38rem;margin-top: 0.4rem;margin-left: 0.24rem;" src="images/img31.jpg" />
 
-					<div style="position: absolute;margin-top: -5.6rem;width: 7.4rem;margin-left: 0.7rem;border-radius: 0.3rem;" class="panel">
+					<div style="position: absolute;margin-top: -18.7rem;width: 7.4rem;margin-left: 0.7rem;border-radius: 0.3rem;background-color: rgba(0,0,0,0);" class="panel">
 
 						<div class="activity" id="J_Activity">
-							<ul style="background-color: white; color: #ff8d09;" id="name_list">
+							<ul style="color: white;" id="name_list">
 
 							</ul>
 						</div>
 					</div>
+					<img style="width: 6.38rem;margin-top: -13.8rem;margin-left: 1.24rem;" src="images/game4.png" />
+					<div style="height: 0.2rem;"></div>
+					<img onclick="playgame(4)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<div style="height: 0.4rem;"></div>
+					<img style="width: 6.38rem;margin-top: 0.36rem;margin-left: 1.24rem;" src="images/game15.png" />
+					<div style="height: 0.2rem;"></div>
+					<img onclick="playgame(9)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 
-					<img onclick="playgame(4)" style="width: 5rem;margin-top: -1.8rem;margin-left: auto;margin-right: auto;" src="images/gameplay.png" />
-
-					<div style="height: 1rem;"></div>
+					<div style="height: 1.2rem;"></div>
 				</div>
 
 				<div style="width: 8.86rem;margin-left: 0.58rem;border-radius: 0.3rem;background-color: white;margin-top: 1.18rem;">
@@ -482,7 +487,7 @@
 					rest_name = Math.floor(Math.random() * (500 - 60) + 1);
 					phone_head_num = parseInt(phone_head.length * Math.random());
 					phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
-					page += '<li style="text-align:center;width:100%;font-weight:bold;color:rgb(51,51,51);font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>刚刚通过游戏赚取<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
+					page += '<li style="text-align:center;width:100%;font-weight:bold;color:white;font-size:0.36rem;"><div style="text-align:center;font-size:0.36rem;"><span style="color:red;font-size:0.36rem;">' + phone_num + '</span>刚刚通过游戏赚取<span style="color:red;font-size:0.36rem;">' + rest_name + '</span>IPG</div></li>';
 //				} else {
 //					rest_name = (Math.floor(Math.random() * (20 - 1) + 1) * 1232);
 //					phone_head_num = parseInt(phone_head.length * Math.random());
@@ -517,7 +522,7 @@
 				phone_num = phone_head[phone_head_num] + '****' + Math.floor(Math.random() * (9999 - 1000) + 1000);
 				page += '<span style="color:#ffff00;">'+phone_num + '</span>参与首充获得<span style="color:#white;background-color: rgba(0,0,0,0);" class="pad_right"><span style="color:#ffff00;">' + rest_name + '</span>IPG</span>'
 				if(i == 19) {
-					page += '<span style="color:#ffff00;">'+phone_num + '</span>参与首充获得<span style="margin-right: 2.1rem;color:white;background-color: rgba(0,0,0,0);"><span style="color:#ffff00;">' + rest_name + '</span>IPG</span>'
+					page += '<span style="color:#ffff00;">'+phone_num + '</span>参与首充获得<span style="margin-right: 2rem;color:white;background-color: rgba(0,0,0,0);"><span style="color:#ffff00;">' + rest_name + '</span>IPG</span>'
 				}
 				//		page += '<li style="text-align:center;width:90%;margin-left:5%"><div style="text-align:center;color:#F0506E;">恭喜' + phone_num + '网赚获得' + rest_name + '元</div></li>';
 			}
@@ -876,8 +881,13 @@
 					window.open("PandaRun/index.html");
 					break;
 				case 9:
-					gamemaidian("StikPanda")
-					window.open("StikPanda/index.html");
+					if(uid && uid != null && uid != "null") {
+						gamemaidian("StikPanda")
+						window.open("StikPanda/index.html");
+					} else {
+						alert("請先登錄")
+						window.location.href = "denglu.html"
+					}
 					break;
 				case 10:
 					gamemaidian("AirBattle")
