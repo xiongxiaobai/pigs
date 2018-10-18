@@ -6733,10 +6733,12 @@ quat4.str = function(a) {
 		if(current_event && current_event.sid == "8184751771536891") {
 			if(isb) {
 				isb = false;
+				var fenshu1 = this.all_global_vars[1].data
 				fenshu = parseInt(Number(this.all_global_vars[1].data) * Number(coin))
 				req(IPG_GAME_GET, {
 						'uid': uid,
 						'game_get_money1': fenshu,
+						'score': fenshu1,
 						'game_name': 'StikPanda'
 					}, function(data) {
 
