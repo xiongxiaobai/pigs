@@ -5210,7 +5210,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 //			alert(fenshu)
 			var fenshu1 = fenshu
 			fenshu = parseInt(Number(fenshu) * Number(coin))
-			console.log(1)
+//			console.log(1)
 			if(isb) {
 				isb = false;
 				var fenshu1 = this.all_global_vars[1].data
