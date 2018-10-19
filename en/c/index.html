@@ -248,24 +248,25 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 			<div style="text-align: center;font-weight: bold;font-size: 0.7rem;color: #00b400;margin-top: 0.4rem;">CAMPAIGN IS HOT AND OFFERS ARE LIMITED</div>
 
 			<div style="display: table;margin: auto;">
-				<div style="width: 25%;margin-left: 5%;margin-top: 0.6rem;float: left;">
+				<div style="width: 34%;margin-left: 16%;margin-top: 0.6rem;float: left;">
 					<img style="width: 100%;margin: auto;" src="images/img51.png" />
 				</div>
 
-				<div style="width: 60%;margin-top: 0.8rem;margin-left: 5%;display: table;float: left;">
-					<div style="float: left;width: 30%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;">
+				<div style="width: 40%;margin-top: 0.8rem;margin-left: 2%;display: table;float: left;">
+					<div style="float: left;width: 70%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;">
 						<div style="height: 0.9rem;"></div>
 						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">Registrations</div>
 						<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
-							<img id="w" style="float: left;width: 15%;height: 0.8rem;margin-left: 8%;" src="images/n0.png" />
-							<img id="q" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="b" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="s" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="g" style="float: left;width: 15%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							<img id="sw" style="float: left;width: 12%;height: 0.8rem;margin-left: 8%;" src="images/n0.png" />
+							<img id="w" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							<img id="q" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							<img id="b" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							<img id="s" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
+							<img id="g" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
 						</div>
 						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);margin-top: 0.2rem;">people</div>
 					</div>
-					<div style="float: left;width: 60%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;margin-left: 8%;">
+					<div style="float: left;width: 60%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;margin-left: 8%;display: none;">
 						<div style="height: 0.9rem;"></div>
 						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">campaign counting down</div>
 						<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
@@ -560,11 +561,13 @@ You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
 					var b = parseInt(num / 100 % 10);
 					var q = parseInt(num / 1000 % 10);
 					var w = parseInt(num / 10000 % 10);
+					var sw = parseInt(num / 100000 % 10);
 					$("#g").attr("src", "images/n" + g + ".png");
 					$("#s").attr("src", "images/n" + s + ".png");
 					$("#b").attr("src", "images/n" + b + ".png");
 					$("#q").attr("src", "images/n" + q + ".png");
 					$("#w").attr("src", "images/n" + w + ".png");
+					$("#sw").attr("src", "images/n" + sw + ".png");
 					maidian()
 
 				},
