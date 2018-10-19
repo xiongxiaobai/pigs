@@ -5219,7 +5219,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 						'uid': uid,
 						'game_get_money1': fenshu,
 						'score': fenshu1,
-						'game_name': 'StikPanda'
+						'game_name': 'PandaRun'
 					}, function(data) {
 						window.location.href = "index.html"
 					},
