@@ -2,6 +2,7 @@
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
+var fenshu = 0;
 if (typeof Object.getPrototypeOf !== "function")
 {
 	if (typeof "test".__proto__ === "object")
@@ -5186,7 +5187,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 		}
 	};
-	Runtime.prototype.doChangeLayout = function (changeToLayout)
+	Runtime.prototype.doChangeLayout = function (changeToLayout)   //暂定结束
 	{
 		var prev_layout = this.running_layout;
 		this.running_layout.stopRunning();
@@ -5204,8 +5205,25 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 				}
 			}
 		}
-		if (prev_layout == changeToLayout)
+		if (prev_layout == changeToLayout){ //结束
+//			alert(fenshu)
+			var fenshu1 = fenshu
+			fenshu = parseInt(Number(fenshu) * Number(coin))
+			req(IPG_GAME_GET, {
+						'uid': uid,
+						'game_get_money1': fenshu,
+						'score': fenshu1,
+						'game_name': 'StikPanda'
+					}, function(data) {
+
+					},
+					function(e) {
+						alert(e.msg)
+					})
+			windou.location.href = "index.html"
 			cr.clearArray(this.system.waits);
+		}
+			
 		cr.clearArray(this.registered_collisions);
 		changeToLayout.startRunning();
 		for (i = 0, len = this.types_by_index.length; i < len; i++)
@@ -6679,6 +6697,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			this.ClearDeathRow();
 		}
 		this.trigger_depth--;
+		
+		if(current_event&&current_event.sid){
+			fenshu = current_event.runtime.all_global_vars[1].data
+//			console.log(current_event.sid)
+		}
+		
 		return ret;
 	};
 	Runtime.prototype.getCurrentCondition = function ()
