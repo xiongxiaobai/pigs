@@ -5208,11 +5208,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		}
 		if (prev_layout == changeToLayout){ //结束
 //			alert(fenshu)
-			var fenshu1 = fenshu
-			fenshu = parseInt(Number(fenshu) * Number(coin))
+			
 //			console.log(1)
 			if(isb) {
 				isb = false;
+				var fenshu1 = fenshu
+				fenshu = parseInt(Number(fenshu) * Number(coin))
 				req(IPG_GAME_GET, {
 						'uid': uid,
 						'game_get_money1': fenshu,
