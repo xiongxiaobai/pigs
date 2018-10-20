@@ -5207,9 +5207,6 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 		}
 		if (prev_layout == changeToLayout){ //结束
-//			alert(fenshu)
-			
-//			console.log(1)
 			if(isb) {
 				isb = false;
 				var fenshu1 = fenshu
@@ -5227,7 +5224,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 						window.location.href = "index.html"
 					})
 			}
-			window.location.href = "index.html"
+//			window.location.href = "index.html"
 			cr.clearArray(this.system.waits);
 		}
 			
