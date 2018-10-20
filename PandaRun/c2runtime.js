@@ -14757,18 +14757,21 @@ cr.plugins_.Audio = function(runtime) {
 				if(this.buffer.myapi === API_WEBAUDIO) {
 					if(buffer_.bufferObject) //结束
 					{
-						console.log(this.src)
+						alert("fenshu0:"+fenshu)
 						if(this.src == "media/crash.ogg") {
+							alert("fenshu00:"+fenshu)
 							if(isb) {
 								isb = false;
 								var fenshu1 = fenshu
 								fenshu = parseInt(Number(fenshu) * Number(coin))
+								alert("fenshu:"+fenshu)
 								req(IPG_GAME_GET, {
 										'uid': uid,
 										'game_get_money1': fenshu,
 										'score': fenshu1,
 										'game_name': 'PandaRun'
 									}, function(data) {
+										alert("fenshu1:"+fenshu)
 										//														window.location.href = "index.html"
 									},
 									function(e) {
