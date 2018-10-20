@@ -14757,7 +14757,7 @@ cr.plugins_.Audio = function(runtime) {
 				if(this.buffer.myapi === API_WEBAUDIO) {
 					if(buffer_.bufferObject) //结束
 					{
-						alert("fenshu0:"+fenshu)
+						alert(this.src)
 						if(this.src == "media/crash.ogg") {
 							alert("fenshu00:"+fenshu)
 							if(isb) {
