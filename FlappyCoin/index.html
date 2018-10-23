@@ -1,93 +1,79 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
-<head>
-    <meta charset="UTF-8" />
-	
-	<!-- This ensures the canvas works on IE9+.  Don't remove it! -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	
-	<!-- Standardised web app manifest -->
-	<link rel="manifest" href="app.manifest" />
-	
-	<title>FlappyCoin</title>
-	<!-- Note: running this exported project from disk may not work exactly like preview, since browsers block some features on the file:// protocol.  Once you've uploaded it to a server, it should work OK. -->
-	
-    <!-- This outlines the canvas with a black border and makes the page background black. -->
-	<style type="text/css">
-		body { background-color: black; color: white; }
-		canvas { -ms-touch-action: none; }
-	</style>
+<html lang="en">
+<!--
+   Copyright 2014 Nebez Briefkani
+   floppybird - index.html
 
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-</head> 
- 
-<body> 
-	<div id="fb-root"></div>
-	<div style="text-align: center;">
+       http://www.apache.org/licenses/LICENSE-2.0
 
-	<script>
-	// Issue a warning if trying to preview an exported project on disk.
-	(function(){
-		// Check for running exported on file protocol
-		if (window.location.protocol.substr(0, 4) === "file")
-		{
-			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
-		}
-	})();
-	</script>
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
 
-		<!-- The canvas must be inside a div called c2canvasdiv -->
-		<div id="c2canvasdiv" style="margin: 0 auto; width: 1280px; height: 720px;">
-		
-			<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
-			ID the runtime looks for in the jQuery ready event (above). -->
-			<canvas id="c2canvas" width="1280" height="720">
-				
-			</canvas>
-			
-		</div>
+   <head>
+      <title>Floppy Bird</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="author" content="Nebez Briefkani" />
+      <meta name="description" content="play floppy bird. a remake of popular game flappy bird using just html/css/js" />
+      <meta name="keywords" content="flappybird,flappy,bird,floppybird,floppy,html,html5,css,css3,js,javascript,jquery,github,nebez,briefkani,nebezb,open,source,opensource" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-        <br />
-		
-
-	</div>
-	
-	<!-- Pages load faster with scripts at the bottom -->
-	
-	<!-- Construct 2 exported games require jQuery. -->
-	<script src="jquery-2.0.0.min.js"></script>
-
-
-	
-    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
-    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="c2runtime.js"></script>
-
-    <script>
-		// Size the canvas to fill the browser viewport.
-		jQuery(window).resize(function() {
-			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
-		});
-		
-		// Start the Construct 2 project running on window load.
-		jQuery(document).ready(function ()
-		{
-			// Create new runtime using the c2canvas
-			cr_createRuntime("c2canvas");
-		});
-		
-		// Pause and resume on page becoming visible/invisible
-		function onVisibilityChanged() {
-			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
-				cr_setSuspended(true);
-			else
-				cr_setSuspended(false);
-		};
-		
-		document.addEventListener("visibilitychange", onVisibilityChanged, false);
-		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-    </script>
-</body> 
-</html> 
+      <!-- Open Graph tags -->
+      <meta property="og:title" content="Floppy Bird" />
+      <meta property="og:description" content="play floppy bird. a remake of popular game flappy bird using just html/css/js" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="http://nebez.github.io/floppybird/assets/thumb.png" />
+      <meta property="og:url" content="http://nebez.github.io/floppybird/" />
+      <meta property="og:site_name" content="Floppy Bird" />
+      
+      <!-- Style sheets -->
+      <link href="css/reset.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="gamecontainer">
+         <div id="gamescreen">
+            <div id="sky" class="animated">
+               <div id="flyarea">
+                  <div id="ceiling" class="animated"></div>
+                  <!-- This is the flying and pipe area container -->
+                  <div id="player" class="bird animated"></div>
+                  
+                  <div id="bigscore"></div>
+                  
+                  <div id="splash"></div>
+                  
+                  <div id="scoreboard">
+                     <div id="medal"></div>
+                     <div id="currentscore"></div>
+                     <div id="highscore"></div>
+                     <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                  </div>
+                  
+                  <!-- Pipes go here! -->
+               </div>
+            </div>
+            <div id="land" class="animated"><div id="debug"></div></div>
+         </div>
+      </div>
+      <div id="footer">
+         <a href="http://www.dotgears.com/">original game/concept/art by dong nguyen</a>
+         <a href="http://nebezb.com/">recreated by nebez briefkani</a>
+         <a href="http://github.com/nebez/floppybird/">view github project</a>
+      </div>
+      <div class="boundingbox" id="playerbox"></div>
+      <div class="boundingbox" id="pipebox"></div>
+      
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.transit.min.js"></script>
+      <script src="js/buzz.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
