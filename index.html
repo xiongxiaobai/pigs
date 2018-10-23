@@ -245,6 +245,8 @@
 
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game14.png" />
 					<img onclick="playgame(8)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game11.png" />
+					<img onclick="playgame(5)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game16.png" />
 					<img onclick="playgame(10)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game2.png" />
@@ -253,8 +255,7 @@
 					<img onclick="playgame(1)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />-->
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game3.png" />
 					<img onclick="playgame(3)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game11.png" />
-					<img onclick="playgame(5)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
+					
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game12.png" />
 					<img onclick="playgame(6)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game13.png" />
@@ -559,7 +560,7 @@
 				//				MyMar = setInterval(Marquee, speed);　　　　　　　　　
 				//			}
 			}
-//			ScrollImgLeft();
+			//			ScrollImgLeft();
 
 			//			document.getElementById('video').play()
 			//Vertical Tab
@@ -862,8 +863,14 @@
 					}
 					break;
 				case 5:
-					gamemaidian("FlappyCoin")
-					window.open("FlappyCoin/index.html");
+					if(uid && uid != null && uid != "null") {
+						gamemaidian("FlappyCoin")
+						window.open("FlappyCoin/index.html");
+					} else {
+						alert("請先登錄")
+						window.location.href = "denglu.html"
+					}
+
 					break;
 				case 6:
 					gamemaidian("BrickBroke")
