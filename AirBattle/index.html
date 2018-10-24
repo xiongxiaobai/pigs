@@ -45,7 +45,7 @@
 
 	</head>
 
-	<body>
+	<body style="position: fixed;">
 		<div id="fb-root"></div>
 
 		<script>
@@ -59,11 +59,11 @@
 		</script>
 
 		<!-- The canvas must be inside a div called c2canvasdiv -->
-		<div id="c2canvasdiv">
+		<div id="c2canvasdiv" style="position: fixed;">
 
 			<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
 		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
-			<canvas id="c2canvas" width="720" height="1280">
+			<canvas id="c2canvas" width="720" height="1280" style="position: fixed;">
 			
 		</canvas>
 
