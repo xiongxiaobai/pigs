@@ -120,6 +120,8 @@
 								for(var j = i + 1; j < dat.length; j++) {
 									if(dat[i].phone == dat[j].phone) {
 										dat.splice(j, 1)
+										len = len -1;
+										j = j-1;
 									}
 								}
 							}
@@ -188,6 +190,7 @@
 				function(e) {
 					isback = true;
 					alert(e.msg)
+					window.location.href = "game.html?coin=" + coin;
 				})
 
 		}

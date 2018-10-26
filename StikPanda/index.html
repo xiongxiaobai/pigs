@@ -106,13 +106,17 @@
 							'game_name': "StikPanda"
 						}, function(data) {
 							var dat = data.game_list;
-							for(var i = 0; i < dat.length; i++) {
-								for(var j = i + 1; j < dat.length; j++) {
+							var len = dat.length;
+							for(var i = 0; i < len; i++) {
+								for(var j = i + 1; j < len; j++) {
 									if(dat[i].phone == dat[j].phone) {
 										dat.splice(j, 1)
+										len = len -1;
+										j = j-1;
 									}
 								}
 							}
+							console.log(data)
 
 							for(var s = 0; s < 3; s++) {
 								$("#phone" + s).text(dat[s].phone.substr(0, 3) + "****" + dat[s].phone.substr(7, 11))
@@ -178,6 +182,7 @@
 				function(e) {
 					isback = true;
 					alert(e.msg)
+					window.location.href = "game.html?coin=" + coin;
 				})
 
 		}
