@@ -78,3 +78,5 @@ var IPG_GAME_CASH = BASE_URL + 'ipg_game/cash'
 var IPG_GAME_GET = BASE_URL + 'ipg_game/get'
 var IPG_GAME_LIST = BASE_URL + 'ipg_game/list'
 
+var USER_IPG_INVITE_LIST = IPG_USER_URL + 'inviteList'
+
