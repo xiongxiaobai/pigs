@@ -1200,7 +1200,13 @@
 					alert("此游戲請用手機端打開")
 					break;
 				case 2:
-					window.open("../CoinMiner/login.html");
+					if(uid && uid != null && uid != "null") {
+						gamemaidian("CoinMiner")
+						window.open("../CoinMiner/index.html");
+					} else {
+						alert("請先登錄")
+						window.location.href = "denglu.html"
+					}	
 					break;
 				case 3:
 					window.open("../OceanTreasure/login.html");
@@ -1210,6 +1216,7 @@
 					break;
 				case 5:
 					if(uid && uid != null && uid != "null") {
+						gamemaidian("FlappyCoin")
 						window.open("../FlappyCoin/index.html");
 					} else {
 						alert("請先登錄")
@@ -1227,6 +1234,13 @@
 					window.open("../BrickBroke/index.html");
 					break;
 			}
+		}
+		function gamemaidian(game) {
+
+			req(BURIED_POINT_RECORD, {
+				'uid': uid,
+				'name': game
+			}, function(data) {}, function(err) {})
 		}
 	</script>
 	<script type="text/javascript" language="javascript">

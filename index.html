@@ -232,7 +232,7 @@
 						<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>
 						<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>
 						<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>-->
-						
+
 					</div>
 
 					<div style="height: 0.3rem;"></div>
@@ -276,7 +276,7 @@
 					<img onclick="playgame(8)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game11.png" />
 					<img onclick="playgame(5)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game16.png" />
+					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game16.png?1" />
 					<img onclick="playgame(10)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
 					<img style="width: 8.38rem;margin-top: 0.36rem;margin-left: 0.24rem;" src="images/game2.png" />
 					<img onclick="playgame(2)" style="width: 5rem;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
@@ -672,16 +672,15 @@
 			req(USER_IPG_INVITE_LIST, {
 
 				}, function(msg) {
-					console.log(msg)
 					var list = msg.list;
 					var len = list.length;
 					var len0 = 0;
 					var page = '';
-					if(len<10){
-						len0 = 10-len;
-						for(var i=0;i<len;i++){
+					if(len < 10) {
+						len0 = 10 - len;
+						for(var i = 0; i < len; i++) {
 							var nub = "";
-							switch(i){
+							switch(i) {
 								case 0:
 									nub = "一"
 									break
@@ -713,17 +712,17 @@
 									nub = "十"
 									break;
 							}
-							
-							if(i==9){
-								page+='<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第十名：<span style="font-size: 0.24rem;font-weight: bold;">'+list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11)+'</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">'+list[i].nus+'</span></span></div>'
-							}else{
-								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第'+nub+'名：<span style="font-size: 0.24rem;font-weight: bold;">'+list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11)+'</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">'+list[i].nus+'</span></span></div>'
+
+							if(i == 9) {
+								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第十名：<span style="font-size: 0.24rem;font-weight: bold;">' + list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11) + '</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">' + list[i].nus + '</span></span></div>'
+							} else {
+								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第' + nub + '名：<span style="font-size: 0.24rem;font-weight: bold;">' + list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11) + '</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">' + list[i].nus + '</span></span></div>'
 							}
-							
+
 						}
-						for(var i=len;i<10;i++){
+						for(var i = len; i < 10; i++) {
 							var nub = "";
-							switch(i){
+							switch(i) {
 								case 0:
 									nub = "一"
 									break;
@@ -755,20 +754,20 @@
 									nub = "十"
 									break;
 							}
-							
-							if(i==9){
-								page+='<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>'
-							}else{
+
+							if(i == 9) {
+								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>'
+							} else {
 								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;"><img style="width: 1.6rem;margin: auto;padding-top: 0.08rem;" src="images/invitelistbody.png"/></div>'
 							}
-							
+
 						}
-						
+
 						$("#invitelist").html(page)
-					}else{
-						for(var i=0;i<10;i++){
+					} else {
+						for(var i = 0; i < 10; i++) {
 							var nub = "";
-							switch(i){
+							switch(i) {
 								case 0:
 									nub = "一"
 									break;
@@ -800,24 +799,18 @@
 									nub = "十"
 									break;
 							}
-							
-							if(i==9){
-								page+='<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第十名：<span style="font-size: 0.24rem;font-weight: bold;">'+list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11)+'</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">'+list[i].nus+'</span></span></div>'
-							}else{
-								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第'+nub+'名：<span style="font-size: 0.24rem;font-weight: bold;">'+list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11)+'</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">'+list[i].nus+'</span></span></div>'
+
+							if(i == 9) {
+								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第十名：<span style="font-size: 0.24rem;font-weight: bold;">' + list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11) + '</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">' + list[i].nus + '</span></span></div>'
+							} else {
+								page += '<div style="font-size: 0.24rem;font-weight: bold;height: 0.6rem;line-height: 0.6rem;border-bottom: 1px solid;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp第' + nub + '名：<span style="font-size: 0.24rem;font-weight: bold;">' + list[i].invite_phone.substr(0, 3) + '****' + list[i].invite_phone.substr(7, 11) + '</span><span style="margin-left: 0.2rem;font-size: 0.24rem;font-weight: bold;">邀請人數：<span style="color: red;font-size: 0.24rem;font-weight: bold;">' + list[i].nus + '</span></span></div>'
 							}
-							
+
 						}
 						$("#invitelist").html(page)
-						
-						
+
 					}
-					
-					
-					
-					
-					
-					
+
 					req(GET_USER_IPG_C, {
 
 						}, function(data) {
@@ -1029,8 +1022,7 @@
 					}
 					break;
 				case 2:
-					gamemaidian("CoinMiner")
-					window.open("CoinMiner/login.html");
+					alert("此游戲請用電腦端打開")
 					break;
 				case 3:
 					alert("此游戲請用電腦端打開")
@@ -1081,8 +1073,23 @@
 					}
 					break;
 				case 10:
-					gamemaidian("AirBattle")
-					window.open("AirBattle/index.html");
+					var u = navigator.userAgent;
+					var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+					var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//					alert('是否是Android：' + isAndroid);
+					//alert('是否是iOS：'+isiOS);
+					if(isiOS){
+						alert("此游戲僅支持安卓手機")
+						return
+					}
+					if(uid && uid != null && uid != "null") {
+						gamemaidian("AirBattle")
+						window.open("AirBattle/index.html");
+					} else {
+						alert("請先登錄")
+						window.location.href = "denglu.html"
+					}
+					
 					break;
 			}
 		}

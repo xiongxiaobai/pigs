@@ -4,6 +4,7 @@ cr.plugins_ = {};
 cr.behaviors = {};
 var fenshu = 0;
 var iii=0
+var isb = true;
 if (typeof Object.getPrototypeOf !== "function")
 {
 	if (typeof "test".__proto__ === "object")
@@ -5520,11 +5521,29 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if(current_event.sheet.name=="GameSettings"&&current_event.sid==6257860014915736){
 			if(iii==2){
 				fenshu = current_event.sheet.events[1].data
+				console.log(current_event.sheet.events[1].data)
+				if(isb) {
+				isb = false;
+				var fenshu1 = fenshu
+				fenshu = 10
+				req(IPG_GAME_GET, {
+						'uid': uid,
+						'game_get_money1': fenshu,
+						'score': fenshu1,
+						'game_name': 'AirBattle'
+					}, function(data) {
+
+					},
+					function(e) {
+						alert(e.msg)
+					})
+			}
 //				alert(current_event.sheet.events[1].data)
 			}
+//			
 			iii++;
 //			console.log(current_event)
-			console.log(current_event.sheet.events[1].data)
+			
 		}
 		
 		

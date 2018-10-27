@@ -774,7 +774,14 @@
 					alert("Open with your moble phone")
 					break;
 				case 2:
-					window.open("../../CoinMiner/login.html");
+					if(uid && uid != null && uid != "null") {
+						gamemaidian("CoinMiner")
+						window.open("../../CoinMiner/index.html");
+					} else {
+						alert("Please log in!")
+						window.location.href = "denglu.html"
+					}
+					
 					break;
 				case 3:
 					window.open("../../OceanTreasure/login.html");

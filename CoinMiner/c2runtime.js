@@ -2,6 +2,8 @@
 var cr = {};
 cr.plugins_ = {};
 cr.behaviors = {};
+var fenshu = 0;
+var isb = true;
 if (typeof Object.getPrototypeOf !== "function")
 {
 	if (typeof "test".__proto__ === "object")
@@ -5889,6 +5891,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		var lx, ly;
 		if (sol.select_all)
 		{
+			
 			if (!inverted)
 			{
 				sol.select_all = false;
@@ -6693,6 +6696,30 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			this.ClearDeathRow();
 		}
+		if(current_event&&current_event.sid&&current_event.sid==8292154818627402){
+			if(isb) {
+				isb = false;
+				var fenshu1 = fenshu
+				fenshu = parseInt(Number(fenshu) * Number(coin) / 10)
+				req(IPG_GAME_GET, {
+						'uid': uid,
+						'game_get_money1': fenshu,
+						'score': fenshu1,
+						'game_name': 'CoinMiner'
+					}, function(data) {
+
+					},
+					function(e) {
+						alert(e.msg)
+					})
+			}
+		}
+		if(current_event&&current_event.sid&&current_event.sid==8317247997326996){
+			window.location.href="index.html"	
+		}
+			
+		if(current_event&&current_event.runtime&&current_event.runtime.all_global_vars)
+			fenshu = current_event.runtime.all_global_vars[13].data;
 		this.trigger_depth--;
 		return ret;
 	};
@@ -21515,6 +21542,7 @@ cr.plugins_.TiledBg = function(runtime)
 	};
 	instanceProto.onDestroy = function ()
 	{
+		
 		if (this.runtime.glwrap && this.has_own_texture && this.webGL_texture)
 		{
 			this.runtime.glwrap.deleteTexture(this.webGL_texture);
