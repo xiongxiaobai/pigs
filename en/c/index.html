@@ -3,8 +3,12 @@
 
 	<head>
 		<meta charset="utf-8">
-		<link rel="icon" href="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Gopig</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+		<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+		<meta name="author" content="FREEHTML5.CO" />
 		<meta name="keywords" content="Gopig battle game">
 		<meta name="description" content="Gopig battle game">
 		<link rel="stylesheet" type="text/css" href="css/AngryBirds.css">
@@ -15,6 +19,45 @@
 
 		<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="all">-->
 		<script src="js/clipboard.min.js"></script>
+		<meta property="og:title" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:description" content="" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Google Webfonts -->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css">
+		<!-- Simple Line Icons-->
+		<link rel="stylesheet" href="css/simple-line-icons.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<!-- Owl Carousel -->
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<!-- Salvattore -->
+		<link rel="stylesheet" href="css/salvattore.css">
+		<!-- Theme Style -->
+		<link rel="stylesheet" href="css/style2.css">
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
 	</head>
 	<style>
 		#cnzz_stat_icon_1270505203 {
@@ -54,6 +97,13 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+		
+		.active_game {
+			-webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+			-webkit-transform: translate3d(0, -2px, 0);
+			transform: translate3d(0, -2px, 0);
+		}
 	</style>
 
 	<body>
@@ -90,7 +140,7 @@
 						<!--<li>
 							<a onclick="gobuy()">兌換套餐</a>
 						</li>-->
-						<li>
+						<li style="cursor: pointer;">
 							<a onclick="goyq()">Invite Friends</a>
 						</li>
 						<li>
@@ -110,262 +160,198 @@
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
-		<div class="row" style="margin-left: 0;margin-right: 0;">
-			<div style="padding-left: 0;padding-right: 0;background: url(images/img48.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 17rem;" class="col-md-12">
-				<div style="height: 1.6rem;"></div>
-				<div style="width: 16rem;margin: auto;display: table;">
-					<div style="margin-top: 0.6rem;margin: auto;width: 6.2rem;height:4.5rem;background: url(images/img24.png) no-repeat;background-size: 100% 100%;float: left;margin-left: 1rem;">
+		<div id="fh5co-page">
+			<div id="fh5co-wrap">
+				<header id="fh5co-hero" data-section="home" role="banner" style="background: url(images/indexheadbody.png) no-repeat; background-size: 100% 100%;height: 650px;background-color: white;">
+					<div style="background-color: white;opacity: 0;" class="fh5co-overlay"></div>
+					<div class="fh5co-intro">
+						<div class="container">
+							<div class="row">
 
-					</div>
-					<img style="width: 4.2rem;float: left;margin-left: 4%;margin-top: 1.6rem;" src="images/img52.png" />
-				</div>
-				<div style="clear: both;"></div>
-				<div id="int" style="height: 0.6rem;"></div>
-				<div id="headlinkn" style="height: 1.36rem;display: none;margin-top: 0.2rem;"></div>
-				<div id="headlink" style="height: 1.36rem;line-height: 1rem;border-bottom: 1px solid #666666;margin-top: 0.2rem;background-color: rgba(0,0,0,0.5);z-index: 99;">
-					<div style="height: 0.5rem;clear: both;"></div>
-					<div style="width: 16rem;margin: auto;display: table;">
-						<a onclick="goi(568)">
-							<img id="img53" style="float: left;width: 2rem;margin-left: auto;margin-top: -0.25rem;" src="images/img53x.png" />
-						</a>
-						<a onclick="goi(1241)">
-							<img id="img54" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img54n.png" />
-						</a>
-						<a onclick="goi(2983)">
-							<img id="img55" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img55n.png" />
-						</a>
-						<a onclick="">
-							<img id="img56" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.9rem;" src="images/img56n.png" />
-						</a>
-						<a onclick="goi(3267)">
-							<img id="img57" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img57n.png" />
-						</a>
-						<a onclick="goi(4165)">
-							<img id="img58" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img58n.png" />
-						</a>
-						<a onclick="goi(4667)">
-							<img id="img59" style="float: left;width: 2rem;margin-left: 2%;margin-top: -0.25rem;" src="images/img59n.png" />
-						</a>
-					</div>
-				</div>
-				<div style="text-align: center;font-weight: bold;color: rgb(254,255,0);margin-top: 0.6rem;font-size: 0.6rem;">Play & Earn</div>
-				<div style="margin-top: 0.4rem;display: table;width: 18rem;margin-right: auto;margin-left: auto;font-family: serif;">
-					<!--<img style="width: 7.96rem;float: left;" src="images/img60.png" />-->
-					<div style="float: left;width: 18rem;color: white;font-size: 0.4rem;margin-top: 0.2rem;">
-						<div style="font-size: 0.3rem;line-height: 0.5rem;">
-							Find the best gaming experiences on GOPIG platform.<br /> IPG LAB, Stick Panda and Panda Run have been already online. Players can earn more IPG by playing games. Gopig will be the first battle game on the platform. Greedy Worms，Ocean Treasure and Coin Miner will be coming soon. You can buy, sell, or trade virtual assets whenever you like! Come and enjoy it!
-						</div>
-						<div style="font-size: 0.3rem;line-height: 0.5rem;margin-top: 0.2rem;padding: 0.2rem;background-color: rgba(0,0,0,0.5);">
-							
-							Climates change. Tokens change. The world changes. With the Gopig.io gaming platform based on blockchain technology, you’ll not only keep pace with that change — you’ll lead it with us.<br />
-							IPG tokens are used as game currency in Gopig.io games. It can be a valuable investment in your future. And, the right investment returns value in ways that go well beyond the monetary.<br />
-							Exploring new ways of global gaming business, and discovering how to make the token works you always believed. Perhaps even in ways you never imagined possible.<br />
-							Yes, you are right! Join our family and let’s make the revolution!
-							
-						</div>
-						
-					</div>
-				</div>
-			</div>
+								<div class="col-md-5 to-animate intro-animate-4">
+									<img style="width: 70%;position: absolute;margin-left: 20.2em;margin-top: 3em;" src="images/indexheadtext.png">
+								</div>
 
-		</div>
+								<div class="col-md-7 text-right fh5co-intro-img to-animate intro-animate-1">
+									<img class="fh5co-intro-img to-animate intro-animate-1" style="margin-left: -10em;margin-top: -11em;" src="images/indexheadimg.png">
+								</div>
 
-		<div style="display: table;width: 100%;background: url(images/gamebg.png) no-repeat;background-size: 100% 100%;">
-			<div style="height: 0.4rem;"></div>
-			<div style="text-align: center;font-weight: bold;font-size: 0.5rem;color: #000000;">GAME</div>
-			<div style="height: 0.4rem;"></div>
-			<div style="width: 80%;margin: auto;">
-				<div style="float: left;width: 22%;">
-					<img style="width: 100%;" src="images/game4.png" />
-					<img onclick="playgame(4)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-				</div>
-				<div style="float: left;width: 22%;margin-left: 4%;">
-					<img style="width: 100%;" src="images/game14.png" />
-					<img onclick="playgame(5)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-				</div>
-				<div style="float: left;width: 22%;margin-left: 4%;">
-					<img style="width: 100%;" src="images/game15.png" />
-					<img onclick="playgame(6)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-				</div>
-				<div style="float: left;width: 22%;margin-left: 4%;">
-					<img style="width: 100%;" src="images/game11.png" />
-					<img onclick="playgame(6)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameplay.png" />
-				</div>
-			</div>
-
-			<div style="height: 0.4rem;clear: both;"></div>
-			<div style="text-align: center;font-weight: bold;font-size: 0.5rem;color: #000000;">COMING SOON</div>
-			<div style="height: 0.4rem;"></div>
-			<div style="width: 60%;margin: auto;">
-				<div style="float: left;width: 30%;">
-					<img style="width: 100%;" src="images/game3.png" />
-					<img onclick="playgame(3)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />
-				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game1.png" />
-					<img onclick="playgame(1)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />
-				</div>
-
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game2.png" />
-					<img onclick="playgame(2)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />
-				</div>
-			</div>
-			<div style="height: 0.4rem;"></div>
-			<div style="width: 60%;margin: auto;">
-				<div style="float: left;width: 30%;">
-					<img style="width: 100%;" src="images/game12.png" />
-					<img onclick="playgame(8)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />
-				</div>
-				
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game13.png" />
-					<img onclick="playgame(9)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />
-				</div>
-				<div style="float: left;width: 30%;margin-left: 5%;">
-					<img style="width: 100%;" src="images/game5.png" />
-					<!--<img onclick="playgame(7)" style="width: 60%;margin-top: 0.1rem;margin: auto;" src="images/gameDemo.png" />-->
-				</div>
-			</div>
-
-			<!--<div style="width: 15rem;margin: auto;background-color: white;border-radius: 0.2rem;display: table;">
-				<div style="height: 0.4rem;"></div>
-				<div style="margin-top: 0.4rem;display: table;margin: auto;width: 90%;">
-					<img style="float: left;width: 3.4rem;" src="images/img8.jpg" />
-					<img style="float: left;margin-left: 2%;border-radius: 0 0.3rem 0.3rem 0;width: 65%;" src="images/img65.png" />
-				</div>
-				<div style="height: 0.4rem;"></div>
-				<div style="margin-top: 0.4rem;display: table;margin: auto;width: 90%;">
-					<img style="float: left;width: 3.4rem;" src="images/img10.jpg" />
-					<img style="float: left;margin-left: 2%;border-radius: 0 0.3rem 0.3rem 0;width: 65%;" src="images/img66.png" />
-				</div>
-				<div style="height: 0.4rem;"></div>
-				<div style="margin-top: 0.4rem;display: table;margin: auto;width: 90%;">
-					<img style="float: left;width: 3.4rem;" src="images/img12.jpg" />
-					<img style="float: left;margin-left: 2%;border-radius: 0 0.3rem 0.3rem 0;width: 65%;" src="images/img67.png" />
-				</div>
-				<div style="height: 0.4rem;"></div>
-				<div style="margin-top: 0.4rem;display: table;margin: auto;width: 90%;">
-					<img style="float: left;width: 3.4rem;" src="images/img14.jpg" />
-					<img style="float: left;margin-left: 2%;border-radius: 0 0.3rem 0.3rem 0;width: 65%;" src="images/img68.png" />
-				</div>
-				<div style="height: 0.4rem;"></div>
-				<div style="margin-top: 0.4rem;display: table;margin: auto;width: 90%;">
-					<img style="float: left;width: 3.4rem;" src="images/img16.png" />
-					<img style="float: left;margin-left: 2%;border-radius: 0 0.3rem 0.3rem 0;width: 65%;" src="images/img69.png" />
-				</div>-->
-
-			<div style="height: 0.4rem;clear: both;"></div>
-
-		</div>
-
-		<div id="ft" style="width: 90%;border-radius: 0.3rem;background-color: rgb(255,255,255);margin-left: 5%;margin-top: 1rem;">
-
-			<!--<img style="width: 43%;margin: auto;margin-top: 0.4rem;" src="images/img32.png" />-->
-			<div style="text-align: center;font-weight: bold;font-size: 0.7rem;color: #00b400;margin-top: 0.4rem;">CAMPAIGN IS HOT AND OFFERS ARE LIMITED</div>
-
-			<div style="display: table;margin: auto;">
-				<div style="width: 34%;margin-left: 16%;margin-top: 0.6rem;float: left;">
-					<img style="width: 100%;margin: auto;" src="images/img51.png" />
-				</div>
-
-				<div style="width: 40%;margin-top: 0.8rem;margin-left: 2%;display: table;float: left;">
-					<div style="float: left;width: 70%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;">
-						<div style="height: 0.9rem;"></div>
-						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">Registrations</div>
-						<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
-							<img id="sw" style="float: left;width: 12%;height: 0.8rem;margin-left: 8%;" src="images/n0.png" />
-							<img id="w" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="q" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="b" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="s" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-							<img id="g" style="float: left;width: 12%;height: 0.8rem;margin-left: 2%;" src="images/n0.png" />
-						</div>
-						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);margin-top: 0.2rem;">people</div>
-					</div>
-					<div style="float: left;width: 60%;height: 4rem;background-color: rgb(232,232,232);border-radius: 0.3rem;margin-left: 8%;display: none;">
-						<div style="height: 0.9rem;"></div>
-						<div style="text-align: center;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);">campaign counting down</div>
-						<div style="margin-top: 0.2rem;height: 0.8rem;display: table;width: 100%;">
-							<img id="t1" style="float: left;width: 8%;height: 0.8rem;margin-left: 13%;" src="images/n0.png" />
-							<img id="t2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
-							<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
-							<img id="s1" style="float: left;width: 8%;height: 0.8rem;;" src="images/n0.png" />
-							<img id="s2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
-							<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
-							<img id="f1" style="float: left;width: 8%;height: 0.8rem;" src="images/n0.png" />
-							<img id="f2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
-							<div style="float: left;font-weight: bold;font-size: 0.5rem;">:</div>
-							<img id="m1" style="float: left;width: 8%;height: 0.8rem;" src="images/n0.png" />
-							<img id="m2" style="float: left;width: 8%;height: 0.8rem;margin-left: 1%;" src="images/n0.png" />
-						</div>
-						<div style="margin-top: 0.2rem;">
-							<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 16%;">day</div>
-							<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 8%;">hour</div>
-							<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 7%;">min</div>
-							<div style="float: left;font-weight: bold;font-size: 0.4rem;color: rgb(51,51,51);text-align: center;margin-left: 10%;">sec</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div style="height: 0.8rem;"></div>
-			<img onclick="gozc()" style="width: 20%;margin-left: 40%;" src="images/img33.png" />
-			<div style="height: 0.8rem;"></div>
-		</div>
-		<div id="ipgint" style="background: url(images/img49.png) no-repeat;background-size: 100% 100%;width: 100%;">
-			<div style="height: 1rem;"></div>
-			<div style="margin-top: 0.4rem;width: 70%;margin-left: 15%;background-color: white;border-radius: 0.2rem;">
-				<div style="height: 0.8rem;"></div>
-				<div style="margin-left: 5%;width: 90%;">
-					<div style="font-size: 0.4rem;font-weight: 600;color: #0ca70c;">About IPG token:</div>
-					<div style="margin-top: 0.2rem;color: black;font-size: 0.3rem;">Registration reward is 100IPG, invite your friends to get 50IPG, and then friends invite friends to get 30IPG.You can also get 5% of your first tier friends’ reward and 1% of your second tier friends’ reward from every game. After the GOPIG launched, players can battle with betting some amounts of IPG, win number of IPG from other players and then use of IPG for in game purchase.</div>
-				</div>
-				<div style="margin-top: 0.6rem;margin-left: 5%;width: 90%;">
-					<div style="font-size: 0.4rem;font-weight: 600;color: #0ca70c;">Usage of IPG token:</div>
-					<div style="margin-top: 0.2rem;color: black;font-size: 0.3rem;">Players need to put down a certain amount of IPG for each game, and they can earn more tokens by winning the game. After the GOPIG launched, players also need to buy items and materials by using IPG as in game purchase. At the same time, players can trade the purchases within the game.</div>
-				</div>
-				<div style="margin-top: 0.6rem;margin-left: 5%;width: 90%;">
-					<div style="font-size: 0.4rem;font-weight: 600;color: #0ca70c;">Proof of work in IPG:</div>
-					<div style="margin-top: 0.2rem;color: black;font-size: 0.3rem;">IPG is the currency of the GOPIG platform. The excellent gameplay and the good quality of gaming experience will attract millions of players. With the increase of the amount of games, players will need more tokens and all kinds of items, the quantity demanded of IPG will keep rising. Invite your friends to join us and get the reward now!</div>
-				</div>
-				<div style="height: 0.8rem;"></div>
-			</div>
-			<div style="height: 1rem;"></div>
-		</div>
-		<div id="inv" style="background: url(images/img61.png) no-repeat;background-size: 100% 100%;width: 100%;">
-			<div style="height: 2rem;"></div>
-			<!--<img style="width: 60%;margin-left: 20%;" src="images/img41.png" />-->
-			<div style="text-align: center;font-weight: bold;font-size: 0.7rem;color: #00b400;">INVITE FRIENDS TO GET EXTRA REWARDS</div>
-			<div style="margin-top: 0.8rem;width: 90%;margin-left: 5%;">
-				<img style="width: 80%;margin: auto;" src="images/img64.png" />
-				<img onclick="goyq()" style="width: 20%;margin-top: 2.8rem;margin-left: 40%;" src="images/img44.png" />
-				<div style="height: 2rem;"></div>
-			</div>
-		</div>
-		<div id="us" style="background-color: rgb(51,51,51);width: 100%;">
-			<div style="height: 0.82rem;"></div>
-			<div style="text-align: center;color: white;display: table;margin: auto;">
-				<img style="width: 20%;margin-left: 40%" src="images/zc12.png" />
-				<div style="margin-top: 0.6rem;font-size: 0.2rem;">gopig.io&nbsp;<span data-clipboard-text="gopig.io" style="" class="glyphicon glyphicon-book btn1"></span></div>
-				<div style="margin-top: 0.1rem;font-size: 0.2rem;">Email：info@gopig.io</div>
-				<div style="margin-top: 0.1rem;font-size: 0.2rem;">Wechat Customer Service：1504997349</div>
-				<div style="margin-top: 0.1rem;font-size: 0.2rem;">Contract Address：</div>
-				<div style="margin-top: 0.1rem;font-size: 0.2rem;">0x6750b81427fa648db03c7a09e88e62ecc65b55d1 &nbsp;<span data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="" class="btn2 glyphicon glyphicon-book"></span></div>
-				<div style="margin-top: 0.1rem;font-size: 0.2rem;">Telegram：t.me/gopig</div>
-				<!--<div style="margin-top: 0.1rem;font-size: 0.2rem;">Join Go Pig Groups(@ Owner To Join)</div>
+				</header>
+				<!-- END .header -->
+
+				<div id="fh5co-main">
+					<div>
+						<div style="text-align: center;font-weight: bold;color: black;font-size: 45px;height: 2em;line-height: 2em;">
+							GOPIG INTRODUCTION
+						</div>
+						<div style="height: 1em;"></div>
+						<div class="row">
+							<div style="margin-left: 25%;font-size: 17px;color: black;line-height: 35px;" class="col-md-6">
+								Gopig gaming platform has combined blockchain technology, to ensure that the game is transparent and user assets is secured, while building up a high-quality game environment and experience.
+								<br /><br /> Now there are about 2.2 billion gamers across the world, and our goal is to turn up to 50% of them into Gopig gaming platform, leading the development of the blockchain industry, and create the future game legend.
+								<br /><br /> The first main APP is Greedy Worms. It is a massively multiplayer online (MMO) game, which means anyone after download can play with you at the same time. The classic game of Snake still remains a fond memory since 1970s. Our greedy worms game wasn’t just addictive, it was “unputdownable.” It’s a competitive game where you decide your skin theme and try to beat the other people and grow longer. The best part is you can get rewards while enjoying the game.
+							</div>
+
+						</div>
+
+						<!--<img class="to-animate intro-animate-4" style="width: 50%;margin-left: 25%;margin-top: 4em;" src="images/indexbody1.png">-->
+						<div id="fh5co-features" style="margin-top: 2em;padding: 0;background-color: white;" data-section="features">
+							<div style="background-color: #e2e2e2;width: 46%;margin-left: 27%;border-radius: 2em 2em 0 0;" class="fh5co-section-heading">
+								<div class="fh5co-sub to-animate" style="width: 100%;">
+
+									<div style="background: url(images/indexbody1.png) no-repeat;background-size: 100% 100%;height: 30em;width: 38em;margin: auto;">
+										<!--<div style="height: 1em;"></div>-->
+										<video style="width: 20.6em;margin-left: 23%;margin-top: 2.8em;" id="video" src="http://qiniu.oo600.com/snake2.mp4" controls="controls" autoplay="autoplay">
+											Your browser does not support this video.
+
+										</video>
+									</div>
+
+									<!--<img style="width: 40em;margin:auto;" src="">-->
+
+								</div>
+
+								<div class="fh5co-section-heading">
+									<h2 class="fh5co-lead to-animate fadeIn animated">
+									<img onclick="goSnake()" style="width: 28%;margin-left: 36%;margin-top: -15em;cursor: pointer;" src="images/indexbutton.png">
+									<div onclick="goSnake()" style="text-align: center;margin-top: -4em;color: white;font-size: 10px;line-height: 3.6em;font-weight: 100;cursor: pointer;">Check Out Greedy Worms!</div>
+								</h2>
+
+								</div>
+								<div style="height: 10em;"></div>
+							</div>
+						</div>
+					</div>
+					<div id="fh5co-features-2" data-section="design" style="width: 100%;background-color: #5a20c5;-webkit-transform:skewY(-5deg);-moz-transform:skewY(-5deg);-o-transform:skewY(-5deg);-ms-transform:skewY(-5deg);transform:skewY(-5deg);margin-top: -12em;">
+						<div style="-webkit-transform:skewY(5deg);-moz-transform:skewY(5deg);-o-transform:skewY(5deg);-ms-transform:skewY(5deg);transform:skewY(5deg);">
+
+							<div class="fh5co-features-2-content">
+								<div class="fh5co-text-wrap">
+									<div class="row text-center">
+										<div class="fh5co-text animate-object features-2-animate-5">
+											<img style="width: 56%;margin-left: 23%;" src="images/indexbody2.png" />
+											<div style="width: 35%;text-align: left;position: absolute;margin-top: -13%;margin-left: 36%;" class="fh5co-uppercase-sm">
+												<div style="color: white;font-weight: bold;font-size: 20px;">
+													About IPG token:
+												</div>
+												<div style="color: white;margin-top: 0em;font-size: 8px;text-transform:none;font-family: 'Open Sans', Arial, sans-serif;text-transform: none;line-height: 2em;">
+													Registration reward is 100IPG, invite your friends to get 50IPG, and then friends invite friends to get 30IPG.You can also get 5% of your first tier friends’ reward and 1% of your second tier friends’ reward from every game. After the GOPIG launched, players can battle with betting some amounts of IPG, win number of IPG from other players and then use of IPG for in game purchase.
+												</div>
+											</div>
+
+										</div>
+
+										<div class="fh5co-text animate-object features-2-animate-4">
+											<img style="width: 56%;margin-left: 23%;" src="images/indexbody3.png" />
+											<div style="width: 35%;text-align: left;position: absolute;margin-top: -13%;margin-left: 24%;" class="fh5co-uppercase-sm">
+												<div style="color: white;font-weight: bold;font-size: 20px;">
+													Usage of IPG token:
+												</div>
+												<div style="color: white;margin-top: 0em;font-size: 8px;text-transform:none;font-family: 'Open Sans', Arial, sans-serif;text-transform: none;line-height: 2em;">
+													Players need to put down a certain amount of IPG for each game, and they can earn more tokens by winning the game. After the GOPIG launched, players also need to buy items and materials by using IPG as in game purchase. At the same time, players can trade the purchases within the game.
+												</div>
+											</div>
+										</div>
+										<div class="fh5co-text animate-object features-2-animate-6">
+											<img style="width: 56%;margin-left: 23%;" src="images/indexbody4.png" />
+											<div style="width: 35%;text-align: left;position: absolute;margin-top: -13%;margin-left: 36%;" class="fh5co-uppercase-sm">
+												<div style="color: white;font-weight: bold;font-size: 20px;">
+													Proof of work in IPG:
+												</div>
+												<div style="color: white;margin-top: 0em;font-size: 8px;text-transform:none;font-family: 'Open Sans', Arial, sans-serif;text-transform: none;line-height: 2em;">
+													IPG is the currency of the GOPIG platform. The excellent gameplay and the good quality of gaming experience will attract millions of players. With the increase of the amount of games, players will need more tokens and all kinds of items, the quantity demanded of IPG will keep rising. Invite your friends to join us and get the reward now!
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="background-color: white;" id="fh5co-testimony" data-section="testimonies">
+						<div class="container">
+							<div class="row animate-box">
+								<div style="height: 4em;"></div>
+								<div style="text-align: center;font-weight: bold;color: #00b400;font-size: 40px;">INVITE FRIENDS TO GET EXTRA REWARDS</div>
+								<!--<img style="width: 60%;margin-left: 20%;" src="images/img41.png" />-->
+								<div style="margin-top: 1.6em;width: 90%;margin-left: 5%;">
+
+									<img style="width: 80%;margin: auto;" src="images/img64.png" />
+									<img onclick="goyq()" style="width: 20%;margin-top: 5.6em;margin-left: 40%;cursor: pointer;" src="images/indexbutton.png" />
+									<div onclick="goyq()" style="text-align: center;margin-top: -4em;color: white;font-size: 16px;line-height: 5em;font-weight: 100;cursor: pointer;">Invite your friends now</div>
+									<div style="height: 4em;"></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="fh5co-features-2-content" data-section="testimonies" style="width: 100%;background-color: #5a20c5;-webkit-transform:skewY(-5deg);-moz-transform:skewY(-5deg);-o-transform:skewY(-5deg);-ms-transform:skewY(-5deg);transform:skewY(-5deg);margin-top: -4em;height: 40em;">
+						<div style="-webkit-transform:skewY(5deg);-moz-transform:skewY(5deg);-o-transform:skewY(5deg);-ms-transform:skewY(5deg);transform:skewY(5deg);">
+							<div style="height: 5em;"></div>
+							<div class="container">
+								<div class="row animate-box">
+									<div style="text-align: center;font-weight: bold;font-weight: bold;font-size: 40px;color: white;">GAME</div>
+									<div style="margin-top: 10em;">
+										<img onclick="playgame(2)" class="gamechose" style="float: left;width: 25%;margin-left: 20%;cursor: pointer;" src="images/game2.png" />
+										<img onclick="playgame(5)" class="gamechose" style="float: right;width: 25%;margin-right: 20%;cursor: pointer;" src="images/game11.png" />
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div id="us" style="background-color: rgb(51,51,51);width: 100%;margin-top: -10em;">
+						<div style="height: 20em;"></div>
+						<div style="text-align: center;color: white;display: table;margin: auto;">
+							<img style="width: 20%;margin-left: 40%" src="images/zc12.png" />
+							<div style="margin-top: 0.6rem;font-size: 0.2rem;">gopig.io&nbsp;<span data-clipboard-text="gopig.io" style="cursor: pointer;" class="glyphicon glyphicon-book btn1"></span></div>
+							<div style="margin-top: 0.1rem;font-size: 0.2rem;">Email：info@gopig.io</div>
+							<div style="margin-top: 0.1rem;font-size: 0.2rem;">Wechat Customer Service：1504997349</div>
+							<div style="margin-top: 0.1rem;font-size: 0.2rem;">Contract Address：</div>
+							<div style="margin-top: 0.1rem;font-size: 0.2rem;">0x6750b81427fa648db03c7a09e88e62ecc65b55d1 &nbsp;<span data-clipboard-text="0x6750b81427fa648db03c7a09e88e62ecc65b55d1" style="cursor: pointer;" class="btn2 glyphicon glyphicon-book"></span></div>
+							<div style="margin-top: 0.1rem;font-size: 0.2rem;">Telegram：t.me/gopig</div>
+							<!--<div style="margin-top: 0.1rem;font-size: 0.2rem;">Join Go Pig Groups(@ Owner To Join)</div>
 				<img style="float: left;margin-left: 20%;width: 10%;margin-top: 0.4rem;" src="images/qun6.png" />
 				<img style="float: left;margin-left: 5%;width: 10%;margin-top: 0.4rem;" src="images/qun7.png" />
 				<img style="float: left;margin-left: 5%;width: 10%;margin-top: 0.4rem;" src="images/qun8.png" />
 				<img style="float: left;margin-left: 5%;width: 10%;margin-top: 0.4rem;" src="images/qun9.png" />-->
+						</div>
+
+						<div style="height: 0.82rem;"></div>
+					</div>
+					<!--<img style="width: 3.7rem;padding-top: 0.82rem;margin-left: 2.4rem;height: 4.54rem;" src="images/zc9.png" />-->
+					<!--<img style="width: 20%;margin-top: 0.36rem;margin-left: 40%;" src="images/zc10.png" />-->
+
+					<!--<div style="height: 0.82rem;"></div>-->
+				</div>
+
 			</div>
 
-			<div style="height: 0.82rem;"></div>
-		</div>
-
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="js/base/util.js"></script>
-		<script src="js/base/url.js"></script>
-		<script src="js/base/base_net.js"></script>
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script src="js/base/util.js"></script>
+			<script src="js/base/url.js"></script>
+			<script src="js/base/base_net.js"></script>
+			<!-- jQuery -->
+			<script src="js/jquery.min.js"></script>
+			<!-- jQuery Easing -->
+			<script src="js/jquery.easing.1.3.js"></script>
+			<!-- Bootstrap -->
+			<!--<script src="js/bootstrap.min.js"></script>-->
+			<!-- Waypoints -->
+			<script src="js/jquery.waypoints.min.js"></script>
+			<!-- Magnific Popup -->
+			<script src="js/jquery.magnific-popup.min.js"></script>
+			<!-- Owl Carousel -->
+			<script src="js/owl.carousel.min.js"></script>
+			<!-- toCount -->
+			<script src="js/jquery.countTo.js"></script>
+			<!-- Main JS -->
+			<script src="js/main.js"></script>
 
 	</body>
 	<script type="text/javascript">
@@ -495,7 +481,7 @@
 					$("#img59").attr("src", "images/img59x.png")
 				}
 			});
-			//			document.getElementById('video').play()
+			document.getElementById('video').play()
 			//Vertical Tab
 			if(uid && uid != null && uid != "null") {
 				$("#nologn").hide()
@@ -543,6 +529,15 @@
 				} else {
 					window.location.href = "zhuce.html"
 				}
+			})
+			$(".gamechose").on("mouseover", function() {
+				$(".gamechose").removeClass("active_game")
+				$(this).addClass("active_game")
+			})
+			$(".gamechose").on("mouseleave", function() {
+				//				console.log(11)
+				$(".gamechose").removeClass("active_game")
+				//				$(this).css("border","5px solid")
 			})
 			//			var ndate = new Date().toLocaleDateString();
 			//			var ndate = new Date(ndate)
@@ -640,6 +635,11 @@
 
 		function closeNews() {
 			$(".news").hide()
+		}
+
+		function goSnake() {
+			console.log(123)
+			window.location.href = "snake/index.html"
 		}
 
 		function gozc() {
@@ -781,7 +781,7 @@
 						alert("Please log in!")
 						window.location.href = "denglu.html"
 					}
-					
+
 					break;
 				case 3:
 					window.open("../../OceanTreasure/login.html");
