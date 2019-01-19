@@ -46,13 +46,16 @@
 	</style>
 
 	<body>
-
+		<div id="dwn" style="position: fixed;display: none;z-index: 99;width: 20%;margin-left: 40%;margin-top: 18%;">
+			<div id="closeDwn" style="position: absolute;margin-left: 95%;">X</div>
+			<img src="../images/snakedd.png"/>
+		</div>
 		<div style="max-width: none;" class="wrap" id="app">
 			<div class="header2 clearfix" style="color: white;background-color: #080808;">
 				<div style="top:0.2rem;" class="fl sanjiao glyphicon glyphicon-chevron-left" onclick="back()"></div>
 				<div class="head_txt" style="color: white;">Greedy Worms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			</div>
-			<div id="downlond" style="position: absolute;width: 15%;height: 1.6%;margin-top: 26.6%;margin-left: 42.4%;"></div>
+			<div id="downlond" style="position: absolute;width: 15%;height: 1.6%;margin-top: 26.6%;margin-left: 42.4%;background: url(../images/snaked.png) no-repeat;background-size: 100% 100%;"></div>
 			<img style="width: 100%;" src="../images/snake.jpg" />
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
@@ -76,7 +79,11 @@
 		setLocal("pigUID", uid)
 		$(document).ready(function() {
 			$("#downlond").on("click", function() {
-				alert("welcome to join our AB testing, start with add a wechat account: 1504997349")
+//				window.open("http://gopig.io/download")	
+				$("#dwn").show()
+			})
+			$("#closeDwn").on("click",function(){
+				$("#dwn").hide()
 			})
 			maidian()
 
